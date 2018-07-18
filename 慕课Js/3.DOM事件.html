@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+</head>
+<body>
+
+	<h1 onclick="this.innerHTML='xiexieouououo'">dianji文本</h1>
+	<div id="main">woshimain</div>
+	<div id="btn">woshi btn</div>
+	<script>
+		var main = document.getElementById('main');
+		main.onclick = function(){
+			alert("main被处罚");
+		}
+
+		var btn = document.getElementById("btn");
+		btn.addEventListener("click",function() {
+			alert("btn被处罚了");
+		});
+	
+	</script>
+</body>
+</html>

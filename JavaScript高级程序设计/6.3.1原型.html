@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承</title>
+</head>
+<body>
+	<script>
+		
+		//Person.prototype --原型
+		//Person.protptype = {} 是祖先
+		// Car.prototype.abc = '123';
+		// function Car () {
+		// }
+		// var car = new Car();
+		// 
+		//var obj = Object.create(原型);
+		// Person.prototype.name = "sunny"
+		// function Person() {
+		// }
+		// var person = Object.create(Person.prototype);
+		// 原型链
+		// 
+		function Wheel( wheelSize,style) {
+			this.style = style;
+			this.wheelSize = wheelSize;
+		}
+		
+		function Sit(c, sitColor) {
+			this.c = c;
+			this.sitColor = sitColor;
+		}
+
+		function Model(height, width, len) {
+			this.height = height;
+			this.width = width;
+			this.len = len;
+		}
+
+		function Car (wheelSize,style,c, sitColor,height, width, len) {
+			Wheel.call(this,wheelSize,style);
+			Sit.call(this,c,sitColor);
+			Model.call(this,height,width,len);
+		}
+
+		var car = new Car (100, 'hualiwushao','z很皮','red',1800,1900,4000);
+
+
+	</script>
+</body>
+</html>

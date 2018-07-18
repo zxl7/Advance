@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+</head>
+<body>
+	
+	<script>
+		//十个数一一对应闭包问题  用立即执行来解决十十对应.
+		 // function test () {
+		 // 	var arr = [];
+		 // 	for (var i = 0; i < 10; i++) {
+		 // 		(function (j) {
+		 // 			arr[j] = function () {
+		 // 				document.write( j + "");
+		 // 			}
+		 // 		}(i));
+		 // 	}
+		 // 	return arr;
+		 // }
+
+		 // var myArr = test();
+		 // for(var j = 0; j<10; j++) {
+		 // 	myArr[j] ();
+		 // }
+		 // 
+		 
+		 // 函数累加器
+		 // function add() {
+		 // 	var num = 0;
+		 // 	function a(){
+		 // 		console.console.log(++num);
+		 // 	}
+		 // 	return  a;
+		 // }
+		 // var myAdd = add();
+		 // myAdd();
+		 // myAdd();
+		 // myAdd();
+		 // 
+		 // 
+		 // 
+		 // eater 做缓存
+		 // function test() {
+		 // 	var food = "apple";
+		 // 	var obj = {
+		 // 		eatFood : function () {
+		 // 			if (food != "") {
+		 // 				console.log("I an eating" + food);
+		 // 				food = "";
+		 // 			}else{
+		 // 				console.log("There is nothing! empty!");
+		 // 			}
+		 // 		},
+		 // 		pushFood : function (myFood) {
+		 // 			food = myFood;
+		 // 		}
+		 // 	}
+		 // 	return obj;
+		 // }
+		 // var person = test();
+
+		 // person.eatFood();
+		 // person.eatFood();
+		 // person.pushFood("banana");
+		 // person.eatFood();
+		 // 
+		 // 
+		 // 
+		//输出1~9数字 
+		// function test() {
+		// 	var arr = [];
+		//  	for (var i = 0; i < 10; i++) {
+
+		// 		(function (j){
+
+		// 			arr[i] = function(){
+		//  				document.write(j);
+		//  			}
+		// 		}(i))
+		 		
+		//  	}
+		//  	return arr;
+		// }
+
+		//  var myArr = test();
+		//  for (var j = 0; j < 10; j++) {
+		//  	myArr[j]();
+		//  }
+		//  
+		//  
+		
+		//计算字节长度
+		function retByteslen(target) {
+			var count = 0;
+			for(var i = 0; i< target.length; i++) {
+				if(target.charCodeAt(i) <=255) {
+					count += 2;
+				}
+			}
+			console.log(count);
+		}
+
+
+
+
+	</script>
+</body>
+</html>

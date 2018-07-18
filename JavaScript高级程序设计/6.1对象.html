@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象</title>
+</head>
+<body>
+	
+
+
+	<script>
+		// var mrDeng = {
+
+		// 	name : "MrDeng",
+		// 	age : 30,
+		// 	sex :"male",
+		// 	health : 100,
+		// 	somke : function () {
+		// 		console.log('I am smoking ! cool');
+		// 		this.health --;
+		// 	},
+		// 	drink : function() {
+		// 		console.log( "i am drink");
+		// 		this.health ++;
+		// 	}
+		// }
+		//
+		//
+		//
+		//duid对象的创建方法
+		//1.var obj = {} plainObject 对象字面量/对象直接量
+		//2.构造函数
+		//		1)自带的object()
+		//		2)自定义
+		//		"加参数可以改变函数"
+		//		
+				
+		//var str = "sfgdfgfdgdfg这是一个字符串!!!" ;
+
+		function bytesLength(str) {
+			方法一 
+			var count = str.length;
+			for (var i = 0; i < str.length; i++) {
+				if (str.charCodeAt(i) > 255){
+					count ++;
+				}
+			}
+			// 
+			// 方法二
+			// var count = 0;
+			// for (var i = 0; i < str.length; i++) {
+			// 	if (str.charCodeAt(i)>255) {
+			// 		count += 2;
+			// 	}else {
+			// 		count ++;
+			// 	} 
+			// }
+			return count;
+		}
+
+		
+		
+
+	</script>
+		
+</body>
+</html>

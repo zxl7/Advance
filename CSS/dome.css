@@ -1,0 +1,26 @@
+html,body,form,ul,h1,h2,h3,h4,p{padding: 0;margin: 0;border: 0;font-weight: normal;}
+body{position: relative;color: #424242;background-color: transparent;font:14px/20px;}
+ul{list-style: none;}
+a{text-decoration: none;color: #002be5;}
+a img{border: 0;}
+i{font-style: normal;}
+em{color: #e50000;font-style: normal;}
+select{
+	-webkit-appearance:none;
+	border: 0;
+	padding: 0;
+	margin: 0;	
+}
+input{
+	-webkit-appearance:none;
+}
+img[show=force]{
+	display: block;
+	visibility: hidden;
+}
+
+
+/*   -moz-transform: ;
+    -ms-transform: ;
+     -o-transform: ;
+        transform: ;}*/
