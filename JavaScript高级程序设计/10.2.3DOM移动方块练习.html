@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var div = document.createElement('div');
+
+		document.body.appendChild(div);
+		// body中插入标签
+		div.style.width = "100px";
+		div.style.height = "100px";
+		div.style.backgroundColor = "red";
+		div.style.position = "absolute";
+		div.style.left = "0";
+		div.style.top = "0";
+
+		setInterval(function () {
+			div.style.left = parseInt(div.style.left) + 2 + "px";
+			// div.style.top = parseInt(div.style.left) + 2 + "px";
+		}, 100);
+		// 1秒移动一次
+
+
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<div></div>
+	<script>
+		// DOM对象
+		var div = document.getElementsByTagName('div')[0];
+		div.style.width = "100px";
+		div.style.height = "100px";
+		div.style.backgroundColor = "red";
+
+		var count = 0;
+		div.onclick = function () {
+			count++;
+			if (count %2 == 1) {
+				this.style.backgroundColor = "green";
+			} else{
+				this.style.backgroundColor = "red";
+			}
+		}
+
+		
+	</script>
+</body>
+</html>
