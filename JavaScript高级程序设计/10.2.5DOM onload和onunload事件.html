@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<!-- <body onload="checkCookies()">
+	<p>提示框会告诉你，浏览器是否已启用 cookie。</p>
+
+	<script>
+		function checkCookies() {
+			if (navigator.cookieEnabled == true) {
+				alert("启用cookie")
+			}else{
+				alert("未启用cookie")
+			}
+		}
+	</script>
+</body> -->
+<body>
+	请输入英文字符: <input type="text" id="fname" onchange="myFunction()">
+	<p>当你离开时,会触发将文本大小写转换?</p>
+	<script>
+		function myFunction() {
+			var x= document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+	</script>
+</body>
+</html>
