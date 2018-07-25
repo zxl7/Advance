@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>remove and replaceChild()</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+    <script>
+    // 查找 id="div1" 的元素：
+    var parent = document.getElementById("div1");
+    // 查找 id="p1" 的 <p> 元素：
+    var child = document.getElementById("p1");
+    // 从父元素中删除子元素
+    parent.removeChild(child);
+
+    
+    // 找到您需要删除的子元素，然后使用 parentNode属性来查找其父元素
+    </script>
+</body>
+
+</html>

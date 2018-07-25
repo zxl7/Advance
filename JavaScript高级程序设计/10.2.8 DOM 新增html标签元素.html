@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>appendChild</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">大家好我是渣渣辉</p>
+        <p id="p2">你是个锤子</p>
+    </div>
+    <!--替换元素.替换p 
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+    <script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    var parent = document.getElementById("div1");
+    var child = document.getElementById("p1");
+    parent.replaceChild(para, child);
+
+    </script> -->
+
+    <script>
+    // 这段代码创建了一个新的 <p> 元素：
+    var para = document.createElement("p");
+    // 如需向 <p> 元素添加文本，您首先必须创建文本节点。这段代码创建文本节点：
+    var node = document.createTextNode("wozhandeshizhahzahui");
+    // 然后您必须向 <p> 元素追加文本节点
+    para.appendChild(node);
+    // 这段代码查找到一个已有的元素：
+    var element = document.getElementById("div1");
+    // 段代码向这个已存在的元素追加新元素
+    // element.appendChild(para);
+    // 
+    var child = document.getElementById("p2");
+    element.insertBefore(para, child);
+
+    /*
+    创建一个新的p元素
+    document.createElement
+    向p天健文本必须给她创建文本节点
+    然后追加文本节点
+    向已有元素追加新元素
+    先找到一个已有元素
+    然后追加xxx.appendChild(xxx)
+
+     */
+    </script>
+</body>
+
+</html>
