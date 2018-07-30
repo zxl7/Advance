@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>节点</title>
+</head>
+
+<body>
+    <div>
+    	123
+    	<!-- jjjjj -->
+    	<strong></strong>
+    	<span></span>
+    	<em></em>
+    	<li></li>
+    	<b></b>
+    </div>
+    <script>
+
+    	var div = document. getElementsByTagName('div')[0];
+
+    	function retElementChild(node) {
+
+    		//no childer
+    		
+    		var arr = [],
+    			child = node.childNodes,
+    			len = child.length;
+    		for (var i = 0; i < len; i++) {
+    			
+    			if (child[i].nodeType === 1) {
+    				arr.push(child[i]);
+    			}
+    		}
+    		return arr;
+    	}
+    </script>
+</body>
+
+</html>
