@@ -1,0 +1,12 @@
+/*利用float+margin实现*/
+
+.left {
+	background: #EF9D9D;
+    float: left;
+    width: 100px;
+}
+
+.right {
+	background: #6AE4F3;
+    margin-left: 100px;
+}
