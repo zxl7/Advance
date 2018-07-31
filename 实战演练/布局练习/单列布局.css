@@ -1,0 +1,74 @@
+/*
+方法一
+优点：兼容性好；
+不足：需要同时设置子元素和父元素
+.parent{
+	texta-align:center;
+
+	background: #8BE0EF;
+	width: 100%;
+	height: 700px;
+}
+.child{
+	display: inline-block;
+
+	background: #EB9494;
+	width: 100%;
+	height: 500px;
+}
+*/
+
+/*
+方法二
+优点：兼容性好
+缺点: 需要指定宽度
+.child{
+	background: #ED9C9C;
+	width: 200px; 
+	height: 200px;
+
+	margin: 0 auto;
+}*/
+
+/*
+方法三
+优点:只需要对自身进行设置
+不足:IE6,7需要调整结构
+.child{
+	display: table;
+	margin:  0 auto;
+
+}
+ */
+
+
+/*方法四
+使用绝对定位
+不足：兼容性差,IE9及以上可用
+.parent{
+	position:relative;
+}
+或者实用margin-left的负值为盒子宽度的一半也可以实现，
+不过这样就必须知道盒子的宽度，但兼容性好
+.child { 
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+}*/
+
+方法五
+flex布局实现
+缺点：兼容性差，如果进行大面积的布局可能会影响效率
+
+(1)
+.parent{
+	display: flex;
+	justify-content: center;
+}
+(2)
+.parent {
+	display: flex;
+}
+.child {
+	margin: 0 auto;
+}
