@@ -1,7 +1,5 @@
 /*利用float+margin实现
 左列定宽，右列自适应*/
-
-
 /*.left {
 	background: #EF9D9D;
     float: left;
@@ -38,6 +36,7 @@
 
 /*使用float+overflow实现 */
 
+
 /*.left {
     width: 100px;
     float: left;
@@ -49,6 +48,8 @@
     overflow: hidden;
 }
 */
+
+
 /*overflow:hidden，
 触发bfc模式，
 浮动无法影响，
@@ -57,3 +58,54 @@ IE6不支持，
 左侧left设置margin-left当作left与right之间的边距，
 右侧利用overflow:hidden 
 进行形成bfc模式*/
+
+
+/*左列定宽，右列自适应
+使用table实现 */
+
+/*.parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.left {
+    width: 100px;
+}
+
+.right,
+.left {
+    display: table-cell;
+}*/
+
+/*
+
+实用flex实现 
+.parent {
+    display: flex;
+}
+
+.left {
+    width: 100px;
+}
+
+.right {
+    flex: 1;
+}
+ */
+
+
+/*
+右列定宽，左列自适应
+实用float+margin实现
+.parent{background:red;height:100px;margin:0 auto;}
+.left{background:green;margin-right:-100px;width:100%;float:left;}
+.right{float:right;width:100px;background:blue;}
+使用table实现
+.parent{display:table;table-layout:fixed;width:100%;}
+.left{display:table-cell;}
+.right{width:100px;display:table-cell;}
+实用flex实现
+.parent{display:flex;}
+.left{flex:1;}
+.right{width:100px;}*/
