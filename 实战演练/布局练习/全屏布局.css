@@ -1,0 +1,81 @@
+/*利用绝对定位实现*/
+
+html,
+body,
+.parent {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/*.top {
+    position: absolute:top:0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background:#90D1F2;
+    margin:10px;
+
+}
+
+.left {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    bottom: 70px;
+    width: 200px;
+    background:#90D1F2;
+    margin:10px;
+}
+
+.right {
+    position: absolute;
+    overflow: auto;
+    left: 210px;
+    right: 0;
+    top: 110px;
+    bottom: 70px;
+    background:#90D1F2;
+    margin:10px;
+}
+
+.bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background:#90D1F2;
+    margin:10px;
+}
+*/
+
+
+/*利用flex实现 */
+
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    height: 100px;
+}
+
+.bottom {
+    height: 50px;
+}
+
+.middle {
+    flex: 1;
+    display: flex;
+}
+
+.left {
+    width: 200px;
+}
+
+.right {
+    flex: 1;
+    overflow: auto;
+}

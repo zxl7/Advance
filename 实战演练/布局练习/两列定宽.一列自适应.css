@@ -1,20 +1,68 @@
-/*两列定宽，一列自适应*/
-clipboard.png
+/*基本html结构为父容器为parent,
+自容器为left,center,right.
+其中，left,center定宽，right自适应*/
 
-基本html结构为父容器为parent,自容器为left,center,right.
-其中，left,center定宽，right自适应
 
-利用float+margin实现
-.left,.center{float:left:width:200px;}
-.right{margin-left:400px;}
-利用float+overflow实现
-.left,.center{float:left:width:200px;}
-.right{overflow:hidden;}
-利用table实现
-.parent{display:table;table-layout:fixed;width:100%;}
-.left,.center,.right{display:table-cell;}
-.left,.center{width:200px;}
-利用flex实现
-.parent{display:flex;}
-.left,.center{width:100px;}
-.right{flex:1}
+/*利用float+margin实现*/
+
+.left,
+.center {
+    float: left;
+    width:200px;
+    background: #EB7C7C;
+    margin-left: 1px;
+}
+
+.right {
+    margin-left: 400px;
+    background: #8AEFEE;
+}
+
+
+/*利用float+overflow实现*/
+
+/*.left,
+.center {
+    float: left;
+    width:200px;
+}
+
+.right {
+    overflow: hidden;
+}
+
+*/
+/*利用table实现*/
+
+/*.parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.left,
+.center,
+.right {
+    display: table-cell;
+}
+
+.left,
+.center {
+    width: 200px;
+}*/
+
+
+/*利用flex实现*/
+
+/*.parent {
+    display: flex;
+}
+
+.left,
+.center {
+    width: 100px;
+}
+
+.right {
+    flex: 1
+}*/
