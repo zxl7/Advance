@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onload</title>
+</head>
+
+<body onload = "checkCookies()">
+	<script>
+		function checkCookies() {
+			if (navigator.cookieEnbled == true) {
+				alert("已启用 cookie")
+			}
+			else {
+				alert("未启用")
+			}
+		}
+	</script>
+    <p>提示框会告诉你，浏览器是否已启用 cookie。</p>
+</body>
+
+</html>
