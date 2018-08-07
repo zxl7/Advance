@@ -1,0 +1,29 @@
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.main {
+	margin-top: 100px;
+	width: 700px;
+	height: 500px;
+	padding: 100px 50px;
+	perspective:800px;
+	background-color: #F3BEBE;
+}
+
+.box{
+	display: flex;
+	position: absolute;
+	left: 40%;
+	width: 120px;
+	height: 100px;
+	margin-top: 150px;
+
+	transform-style: preserve-3d;
+}
+
+.picture {
+	width: 120px;
+    position:absolute;
+    bottom:0;
+}
