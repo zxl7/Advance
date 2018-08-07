@@ -1,30 +1,101 @@
-/*多列等分布局
-多列等分布局常出现在内容中，
-多数为功能的，同阶级内容的并排显示等。*/
+    两侧定宽，中栏自适应利用float+margin实现.left {
+    width：100px;
+    float: left;
+}
+
+.center {
+    float: left;
+    width: 100%;
+    margin-right: -200px;
+}
+
+.right {
+    width: 100px;
+    float: right;
+}
+
+利用table实现.parent {
+    width: 100%;
+    display: table;
+    table-layout: fixed
+}
+
+.left,
+.center,
+.right {
+    display: table-cell;
+}
+
+.left {
+    width: 100px;
+}
+
+.right {
+    width: 100px;
+}
+
+利用flex实现.parent {
+    display: flex;
+}
+
+.left {
+    width: 100px;
+}
+
+.center {
+    flex: 1;
+}
+
+.right {
+    width: 100px;
+}
+
+一列不定宽，一列自适应利用float+overflow实现.left {
+    float: left;
+}
+
+.right {
+    overflow: hidden;
+}
+
+利用table实现.parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.left {
+    width: 0.1%;
+}
+
+.left,
+.right {
+    display: table-cell;
+}
+
+利用flex实现.parent {
+    display: flex;
+}
+
+.right {
+    flex: 1;
+}
+
+多列等分布局多列等分布局常出现在内容中，多数为功能的，同阶级内容的并排显示等。html结构如下所示<divclass="parent"><divclass="column">1</div><divclass="column">1</div><divclass="column">1</div><divclass="column">1</div></div>实用float实现.parent {
+    margin-left: -20px
+}
+
+
+/*假设列之间的间距为20px*/
 
 .column {
-	background: #EC9191;
-	margin:1px;
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
-/*实用float实现*/
 
-/*.parent {
-	display: flex;
-	flex-flow: nowrap;
-    width:100%;
-}
-防止元素排列不在一行 flex方法*/
-
-.column {
-	float: left;
-	width: 24%;
-	margin-left: 2px;
-	box-sizing: border-box;
-
-}
-/*利用table实现*/
-
-/*.parent-fix {
+利用table实现.parent-fix {
     margin-left: -20px;
 }
 
@@ -38,19 +109,47 @@
     display: table-cell;
     padding-left: 20px;
 }
-*/
 
-/*利用flex实现*/
-
-/*.parent {
-	display: flex;
+利用flex实现.parent {
+    display: flex;
 }
 
 .column {
-	flex:1;
+    flex: 1;
+}
+
+.column+.column {
+    margin-left: 20px;
+}
+
+九宫格布局使用table实现.parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.item {
+    display: table-cell;
+    width: 33.3%;
+    height: 200px;
+}
+
+实用flex实现.parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.r;
 
 }
-.column {
-	margin-left: 2px;
+ow {
+    height: 100px;
+    display: flex;
 }
-*/
+.item {
+    width: 100px;
+    background: red
