@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		div {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background-color: #F36A6A;
+			text-align: center;
+			line-height: 100px;
+			animation: first 0.5s linear 3s infinite alternate;
+		}
+
+div{
+	/* animation-name: first; 名字*/
+	/* animation-duration: 5s; 运行时间*/
+	/* animation-timing-function: linear; 速度曲线*/
+	/* animation-delay: 3s; 延迟开始时间*/
+	/* animation-iteration-count: infinite; 播放次数<无限次>*/
+	/* animation-direction: normal; 运行方式*/
+	/* animation-play-state: running/paused; 运行状态*/
+
+
+}
+		@keyframes first{
+			0%{background-color: #A09EA5; left: 0; top:100px;}
+			25%{background-color: #77CFEA;left: 500px; top:100px;}
+			50%{background-color: #3B885D;left: 200px;top:500px;}
+			75%{background-color: #F3FA03;left: 300px; top:0px;}
+			100%{background-color: #F29A12; left:400px;top:500px;}
+		}
+	</style>
+</head>
+<body>
+	<div>走你</div>
+</body>
+</html>
