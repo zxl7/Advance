@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	
+	<script>
+		var div = document.createElement('div');
+		var p = document.createElement('p');
+		div.setAttribute('class','example');
+		p.setAttribute('class','slogan');
+		var text = document.createTextNode('lulululu');
+		p.appendChild(text);
+		div.appendChild(p);
+		document.body.appendChild(div);
+	</script>
+</body>
+</html>
