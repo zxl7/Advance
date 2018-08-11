@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+</head>
+<body>
+	<script>
+		var date = new Date();
+		date.setMinutes(16);
+		setInterval(function () {
+			if (new Date().getTime() - date.getTime() >1000) {
+				console.log('laodengshigebaobao')
+			}
+
+		},1000);
+	</script>
+	<!-- get set time 最重要 -->
+</body>
+</html>
