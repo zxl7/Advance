@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="开始计数!" onclick="timedCount()" />
+        <input type="text" id="txt" />
+        <input type="button" value="停止计数!" onclick="stopCount()" />
+    </form>
+    <p>
+        单击开始计数按钮，按下时开始计数，输入框将从0开始一直计数。单击停止计数按钮，按下时停止计数，再次点击开始计数按钮，又再次开始计数。
+    </p>
+
+    <script>
+    	var c = 0;
+    	var t;
+    	function timedCount(){
+    		document.getElementById('txt').value =c;
+    		c++;
+    		t = setTimeout(function(){timedCount()},1000);
+    	}
+
+    	function stopCount() {
+    		clearTimeout(t);
+
+    	}
+
+    	
+    </script>
+</body>
+
+</html>
