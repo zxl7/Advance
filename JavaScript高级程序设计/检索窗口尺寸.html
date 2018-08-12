@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>window</title>
+</head>
+<body>
+	<script>
+		function getViewportOffset() {
+			if (0 && window.innerWidth) {
+				return {
+					w:window.innerWidth,
+					h:window.innerHeight
+				}
+			}else {
+				if(document.compatMode === "BackCompat") {
+					return {
+						w:document.body.clientWidth,
+						h:document.body.clineHeight
+					}
+				}else{
+					return {
+						w:document.documentElement.clientWidth,
+						h:document.documentElement.clineHeight
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
