@@ -1,90 +1,128 @@
-* {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
-.mySlides {display:none}
- 
+* {
+  margin: 0 auto;
+  box-sizing: border-box
+}
+
+body {  
+  font-family: Verdana, sans-serif;
+}
+
 /* 幻灯片容器 */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
- 
-/* 下一张 & 上一张 按钮 */
-.prev, .next {
-  cursor: pointer;
+
+.container {
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  width: 100%;
+  height: 90%;
 }
- 
-/* 定位 "下一张" 按钮靠右 */
+
+.main {
+  position: absolute;
+  
+}
+
+.main img{
+  width: 100%;
+  height: 750px;
+
+}
+/* 下一张 & 上一张 按钮 */
+
+.prev,
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
 }
- 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+
+
+/* 定位 "下一张" 按钮靠右 */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
- 
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* 标题文本 */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 8px;
+    padding: 8px 12px;
+    font-size: 100px;
+    text-align: center;
+    color: #f2f2f2;
 }
- 
+
+
 /* 数字文本 (1/3 等) */
+
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
- 
+
+
 /* 标记符号 */
+
+.bottom {
+  position: relative;
+  top: 1000px;
+  background-color: #EA0B0B;
+}
+
 .dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.6s ease;
 }
- 
-.active, .dot:hover {
-  background-color: #717171;
+
+.active,
+.dot:hover {
+    background-color: #717171;
 }
- 
+
+
 /* 淡出动画 */
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
- 
+
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
- 
+
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
