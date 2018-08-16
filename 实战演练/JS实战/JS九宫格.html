@@ -20,8 +20,16 @@
             <div class="item"></div>
             <div class="item"></div>
         </div>
-        <div class="begin">开始闪</div>
-        <div class="over">结束闪</div>
+        <div class="begin" onclick="begin">开始闪</div>
+        <div class="over" onclick="over">结束闪</div>
+
+        <script>
+            var item = document.getElementByClassName('item')[arr];
+
+            function random() {
+                var arr =  Math.ceil(Math.random()*10-1);
+            }
+        </script>
 </body>
 
 </html>
