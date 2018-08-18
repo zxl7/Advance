@@ -17,8 +17,8 @@
     border-radius: 10px;
 }
 
-.begin,
-.over {
+#run,
+#over {
 	margin-top: 10px;
 	width: 700px;
 	height: 100px;
@@ -31,8 +31,8 @@
 
 }
 
-.begin:hover,
-.over:hover {
+#run:hover,
+#over:hover {
 	background-color: orange;
 	color: white;
 
