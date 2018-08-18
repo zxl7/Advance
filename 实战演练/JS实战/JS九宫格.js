@@ -1,4 +1,4 @@
-$(function(){})
+
 var boxAA = document.getElementsByClassName('item');
 var run = document.getElementById('run');
 var over = document.getElementById('over');
