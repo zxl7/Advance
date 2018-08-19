@@ -1,4 +1,3 @@
-
 var boxAA = document.getElementsByClassName('item');
 var run = document.getElementById('run');
 var over = document.getElementById('over');
@@ -33,7 +32,7 @@ function colors() {
 }
 
 run.onclick = function() {
-    clearInterval(time); 
+    clearInterval(time);
     time = setInterval(function() {
         for (var i = 0; i < boxAA.length; i++) {
             boxAA[i].style.backgroundColor = '';
@@ -43,8 +42,8 @@ run.onclick = function() {
 }
 
 over.onclick = function() {
-        clearInterval(time);
-        for (var i = 0; i < boxAA.length; i++) {
-            boxAA[i].style.backgroundColor = '';
-        }
-    } 
+    clearInterval(time);
+    for (var i = 0; i < boxAA.length; i++) {
+        boxAA[i].style.backgroundColor = '';
+    }
+}
