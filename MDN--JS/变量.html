@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量</title>
+</head>
+<body>
+	<script>
+		var hhh = 'didijiuwo';
+
+
+		function outer() {
+			inner();
+		}
+
+		function inner() {
+			// alert (inner.caller);
+			alert(arguments.callee.caller);
+		}
+		outer();
+	</script>
+</body>
+</html>
