@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>math对象</title>
+</head>
+<body>
+	<script>
+		// var max = Math.max(3,54,324,23);
+		// alert(max);
+		// var min = Math.min(3,54,324,23);
+		// alert(min);
+		
+		// alert(Math.ceil(57.9));
+		// alert(Math.ceil(57.5));
+		// alert(Math.ceil(57.1));
+		
+		// alert(Math.round(57.9));
+		// alert(Math.round(57.5));
+		// alert(Math.round(57.1));
+
+		// alert(Math.floor(57.9));
+		// alert(Math.floor(57.5));
+		// alert(Math.floor(57.1));
+		
+		// var num = Math.floor(Math.random() * 10 + 1);
+		
+		function selectFrom(min,max) {
+			var choices = max - min + 1;
+			return Math.floor(Math.random() * choices + min);
+		}
+
+		var num = selectFrom(2,10)
+		alert(num);
+	</script>
+</body>
+</html>
