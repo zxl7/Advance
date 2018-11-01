@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归</title>
+</head>
+<body>
+	<script>
+		var factoraial = (function f(num) {
+			if (num <= 1 ) {
+				return 1;
+			} else {
+				return num * f(num-1);
+			}
+		
+		});
+
+		alert(factoraial(5));
+	</script>
+</body>
+</html>
