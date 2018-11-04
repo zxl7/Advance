@@ -12,24 +12,24 @@
     // 	console.log(i);
     // }
 
-				    //十个数一一对应闭包问题  用立即执行来解决十十对应.
-				    // function test () {
-				    // 	var arr = [];
-				    // 	for (var i = 0; i < 10; i++) {
-				    //立即执行函数
-				    // 		(function (j) {
-				    // 			arr[j] = function () {
-				    // 				document.write( j + "");
-				    // 			}
-				    // 		}(i));
-				    // 	}
-				    // 	return arr;
-				    // }
-				    // var myArr = test();
-				    // for(var j = 0; j<10; j++) {
-				    // 	myArr[j] ();
-				    // }
-				    // 
+    //十个数一一对应闭包问题  用立即执行来解决十十对应.
+    // function test () {
+    // 	var arr = [];
+    // 	for (var i = 0; i < 10; i++) {
+    //立即执行函数
+    // 		(function (j) {
+    // 			arr[j] = function () {
+    // 				document.write( j + "");
+    // 			}
+    // 		}(i));
+    // 	}
+    // 	return arr;
+    // }
+    // var myArr = test();
+    // for(var j = 0; j<10; j++) {
+    // 	myArr[j] ();
+    // }  
+    // 
 
     // 函数累加器
     // function add() {
@@ -96,11 +96,27 @@
     //  
 
     //计算字节长度
+    //字符串遍历一遍求字符串长度 
     // function retByteslen(target) {
     //     var count = 0;
     //     for (var i = 0; i < target.length; i++) {
     //         if (target.charCodeAt(i) <= 255) {
-    //             count += 2;
+    //             count ++;
+    //         }else if(target.charCodeAt(i) > 255){
+    // count += 2;
+    //         }
+    //     }
+    //     console.log(count);
+    // }
+    // 
+    // 方法简化
+    // function retByteslen(target) {
+    //     var count,
+    //     len;
+    //     count = len = target.length;
+    //     for (var i = 0; i < len; i++) {
+    //         if (target.charCodeAt(i) > 255) {
+    //             count ++;
     //         }
     //     }
     //     console.log(count);

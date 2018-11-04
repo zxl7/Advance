@@ -37,7 +37,7 @@
 		// 
 		// 圣杯模式--继承
 		// 1
-		function inherit (TArget,Origin) {
+		function inherit (Target,Origin) {
 			function F() {};
 			F.prototype  = Origin.prototype;
 			Target.prototype = new F();
@@ -54,7 +54,6 @@
 			Target.prototype.uber = Origin.prototype;
 			}
 		}());
-
 
 
 
