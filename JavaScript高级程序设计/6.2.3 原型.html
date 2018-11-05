@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型</title>
+</head>
+<body>
+	<script>
+		// Person.prototype  --原型
+		// Person.prototype = {} 祖先
+
+		// function Car(color,owber) {
+		// 	this.owner = owner;
+		// 	this.color = color;
+		// 	this.height = 1400;
+		// 	this.lang = 4900;
+		// }
+
+		// var car = new Car ('red','prof.zheng');
+		// 
+		// 优化1:
+		Car.prototype.height = 1400;
+		Car.prototype.lang = 4900;
+		function Car(color,owner) {
+			this.owner = owner;
+			this.color = color;
+		}
+
+		var car = new Car ('red','prof.zheng');
+
+	</script>
+</body>
+</html>
