@@ -121,6 +121,27 @@
     //     }
     //     console.log(count);
     // }
+    // 
+    // 对象变量私有化:
+    function Deng (name,wife) {
+        var prepareWife = 'xiaozhang';
+
+        this.name=name;
+        this.wife=wife;
+        this.divorce = function () {
+            this.wife = prepareWife;
+        }
+        this.changePrepareWife = function (Target) {
+            prepareWife = target;
+        }
+        this.sayPrepareWife = function () {
+            console.log(prepareWife);
+        }
+    } 
+
+    var deng = new Deng('deng','xiaoliu');
+     
+    
     </script>
 </body>
 

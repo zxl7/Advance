@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call() apply()</title>
+</head>
+<body>
+	<script>
+		function Person(name,age) {
+			//this == obj
+			this.name = name;
+			this.age = age;
+		}
+
+		var person = new Person ('deng',100);
+
+		var obj = {
+
+		}
+		//Person.call (obj,'cheng',300);
+		Person.call(obj);
+
+		//test( ) --->  test.call();
+	</script>
+</body>
+</html>
