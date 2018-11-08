@@ -5,6 +5,47 @@
 	<title>对象程序设计</title>
 </head>
 <body>
-	
+	<p>控制台见</p>
+	<script>
+		// function createNewPerson (name) {
+		// 	var obj = {};
+		// 	obj.name = name;
+		// 	obj.greeting = function () {
+		// 		alert('Hi! I\'m ' + this.name + '.');
+		// 	}
+		// 	return obj;
+		// }
+		// 优化
+		
+		// function Person(name) {
+		// 	this.name = name;
+		// 	this.greeting = function () {
+		// 		alert('hi! i\'m' + this.name + '.');
+		// 	};
+		// }
+
+		// var person1 = new Person('Bob');
+		// var person2 = new Person('dadadd');
+		// 优化2
+		// 
+		function Person(first, last, age, gender, interests) {
+			this.name = {
+				first,
+				last
+			};
+			this.age = age;
+			this.gender = gender;
+			this.interests = interests;
+			this.bio = function () {
+				alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+			};
+			this.greeting = function () {
+				alert('Hi! I\'m ' + this.name.first + '.');
+			};
+
+		};
+		
+		var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+	</script>
 </body>
 </html>
