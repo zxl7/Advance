@@ -17,6 +17,81 @@
     var header = document.querySelector('header');
     var section = document.querySelector('section');
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        var superHeroes = request.response;
+        populateHeader(superHeroes);
+        showHeroes(superHeroes);
+    }
+
+    function populateHeader(jsonObj) {
+        var myH1 = document.createElement('h1');
+        myH1.textContent = jsonObj['squadName'];
+        header.appendChild(myH1);
+
+        var myPara = document.createElement('p');
+        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+        header.appendChild(myPara);
+    }
+
+
+    // 首先，我们保存了 JSON 的 members 属性作为一个变量。这个数组含有多个带有英雄信息的对象。
+
+    // 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
+
+    // 创建几个元素： 一个 <article>,一个 <h2>, 三个 <p>s, 和一个 <ul>。
+    // 设置 <h2> 为当前英雄的 name。
+    // 使用他们的secretIdentity, age, "Superpowers:" 介绍信息列表 填充三个段落来。
+    // 保存 powers 属性于另一个变量 superPowers，包含英雄的superpowers列表。
+    // 使用另一个循环来遍历当前的英雄的 superpowers ，对于每一个元素我们创建<li>元素，把superpower放进去，然后使用appendChild()把 listItem 放入<ul> 元素中。
+    // 最后一件事情是追加<h2>,<p>,还有<ul>进入 <article> (myArticle)。然后将<article> 追加到 <section>。追加的顺序很重要，因为他们将被展示在 HTML 中。
+    function showHeroes(jsonObj) {
+        var heroes = jsonObj['members'];
+
+        for (i = 0; i < heroes.length; i++) {
+            var myArticle = document.createElement('article');
+            var myH2 = document.createElement('h2');
+            var myPara1 = document.createElement('p');
+            var myPara2 = document.createElement('p');
+            var myPara3 = document.createElement('p');
+            var myList = document.createElement('ul');
+
+            myH2.textConent = heroes[i].name;
+            myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
+            myPara2.textContent = 'Age: ' + heroes[i].age;
+            myPara3.textContent = 'Superpowers:';
+
+            var superPowers = heroes[i].powers;
+            for (j = 0; j < superPowers.length; j++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = superPowers[j];
+                myList.appendChild(listItem);
+            }
+
+            myArticle.appendChild(myH2);
+            myArticle.appendChild(myPara1);
+            myArticle.appendChild(myPara2);
+            myArticle.appendChild(myPara3);
+            myArticle.appendChild(myList);
+
+            section.appendChild(myArticle);
+        }
+    };
+
+
+    request.open('GET', requestURL);
+    request.responseType = 'text'; // now we're getting a string!
+    request.send();
+
+    request.onload = function() {
+        var superHeroesText = request.response; // get the string from the response
+        var superHeroes = JSON.parse(superHeroesText); // convert it to an object
+        populateHeader(superHeroes);
+        showHeroes(superHeroes);
+    }
     </script>
 </body>
 
