@@ -15,13 +15,26 @@ function random(min, max) {
 
 //定义Ball构造函数
 
-function Ball(x, y, velX, velY, color, size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
-    this.color = color;
-    this.size = size;
+// function Ball(x, y, velX, velY, color, size) {
+//     this.x = x;
+//     this.y = y;
+//     this.velX = velX;
+//     this.velY = velY;
+//     this.color = color;
+//     this.size = size;
+// }
+
+function Shape (x,y,velX,velY) {
+  this.x = x;
+  this.y = y;
+  this.velX = velX;
+  this.velY = velY;
+  this.exists = 
+}
+
+function Ball (x,y,velX,velY,color,size) {
+  Shape.prototype(this,)
+
 }
 
 //定义球绘制方法
