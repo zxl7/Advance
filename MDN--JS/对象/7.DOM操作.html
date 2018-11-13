@@ -10,7 +10,14 @@
         <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
       </section>
       <script>
-        
+       var link = document.querySelector('a');
+       link.textContent = 'Mozilla Developer Network';
+       link.href = 'https://developer.mozilla.org';
+       var sect = document.querySelector('section');
+       
+
+
+
       </script>
   </body>
 </html>
