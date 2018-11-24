@@ -8,6 +8,15 @@
 
 <body>
     <script>
+        var printNumTwo;
+for (var i = 0; i < 3; i++) {
+  if(i === 2){
+    printNumTwo = function() {
+      return i;
+    };
+  }
+}
+console.log(printNumTwo());
     // for( var i = 0; i < 10; i++){
     // 	console.log(i);
     // }
@@ -125,23 +134,23 @@
     // }
     // 
     // 对象变量私有化:
-    function Deng (name,wife) {
-        var prepareWife = 'xiaozhang';
+    // function Deng (name,wife) {
+    //     var prepareWife = 'xiaozhang';
 
-        this.name=name;
-        this.wife=wife;
-        this.divorce = function () {
-            this.wife = prepareWife;
-        }
-        this.changePrepareWife = function (Target) {
-            prepareWife = target;
-        }
-        this.sayPrepareWife = function () {
-            console.log(prepareWife);
-        }
-    } 
+    //     this.name=name;
+    //     this.wife=wife;
+    //     this.divorce = function () {
+    //         this.wife = prepareWife;
+    //     }
+    //     this.changePrepareWife = function (Target) {
+    //         prepareWife = target;
+    //     }
+    //     this.sayPrepareWife = function () {
+    //         console.log(prepareWife);
+    //     }
+    // } 
 
-    var deng = new Deng('deng','xiaoliu');
+    // var deng = new Deng('deng','xiaoliu');
      
     
     </script>
