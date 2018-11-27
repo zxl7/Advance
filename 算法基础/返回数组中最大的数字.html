@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>返回数组中最大的数字</title>
+</head>
+
+<body>
+    <script>
+    // 创建一个变量以将结果存储为数组。
+    // 创建一个外部循环来迭代外部数组。
+    // 创建第二个变量以保存最大数字并使用第一个数字初始化它。这必须在内部循环之外，因此在我们找到更大的数字之前不会重新分配。
+    // 创建所述内部循环以使用子数组。
+    // 检查子数组的元素是否大于当前存储的最大数字。如果是，则更新变量中的数字。
+    // 在内循环之后，将最大数字保存在results数组内的相应位置。
+    // 最后返回所说的数组。
+    // 
+    // 
+
+    function largestOfFour(arr) {
+        // You can do this!
+        let results = [];
+        for (let n = 0; n < arr.length; n++) {
+            let maxNumber = arr[n][0];
+            for (let nt = 0; nt < arr[n].length; nt++) {
+                if (arr[n][nt] > maxNumber) {
+                    maxNumber = arr[n][nt];
+                }
+            }
+            results[n] = maxNumber;
+        }
+
+        console.log(results);
+    }
+
+    largestOfFour([
+        [4, 5, 1, 3],
+        [13, 27, 18, 26],
+        [32, 35, 37, 39],
+        [1000, 1001, 857, 1]
+    ]);
+
+
+
+// 中级代码解决方案：
+// （声明方法）
+// function largestOfFour(arr) {
+// return arr.map(function(group){
+// return group.reduce(function(prev, current) {
+// return (current > prev) ? current : prev;
+// });
+// });
+// }
+// 代码说明：
+// 我们使用主数组中的所有项目映射到新数组Array.prototype.map()，并将此数组作为最终结果返回
+// 在每个内部数组中，我们使用将其内容减少到单个值 Array.prototype.reduce()
+// 传递给reduce方法的回调函数采用先前的值和当前值并比较这两个值
+// 如果当前值高于前一个值，我们将其设置为新的先前值，以便与数组中的下一个项目进行比较，或者如果它是最后一项，则将其返回到map方法回调
+
+
+
+
+
+
+
+    // 高级代码解决方案（ 声明方法）
+
+    // function largestOfFour(arr) {
+    //     return arr.map(Function.apply.bind(Math.max, null));
+    // }：
+    // 火箭： 运行代码
+
+    // 代码说明：
+    // TL;
+    // DR： 我们构建了一个特殊的回调函数（ 使用该Function.bind方法）， 它的工作方式就像是， Math.max但也有Function.prototype.apply能力将数组作为参数： 笑脸：
+
+    // 我们首先映射主数组中的元素。 意味着每个内部数组。
+    // 现在需要一个回调函数来查找地图提供的每个内部数组的最大值。
+    // 所以我们想要创建一个函数来完成工作Math.max并接受输入作为一个数组（ 默认情况下不是这样）。
+
+    // 换句话说， 如果这个单独工作， 那将是非常好的和简单的：
+
+    // Math.max([9, 43, 20, 6]); // Resulting in 43
+
+    // 唉， 事实并非如此。
+
+    // 做接受在阵列中的形状参数的工作， 有这种Function.prototype.apply方法， 但它由位复杂的事情调用的上下文功能。
+    // ie Math.max.apply(null, [9, 43, 20, 6]);
+    // 会调用类似Max.max方法的东西。 我们正在寻找...几乎。
+
+    // 在这里我们传递null的上下文中的Function.prototype.apply作为方法Math.max不需要任何上下文。
+
+    // 由于arr.map需要一个回调函数， 而不仅仅是一个表达式， 我们使用该Function.bind方法从前一个表达式中创建一个函数。
+
+    // 因为， Function.prototype.apply是一个静态方法相同的Function 对象， 我们可以调用Function.prototype.bind上Function.prototype.apply即Function.prototype.apply.bind。
+
+    // 现在， 我们通过上下文的Function.prototype.apply.bind调用（ 在这种情况下， 我们希望Math.max， 所以我们可以得到它的功能）。
+
+    // 由于嵌入式Function.prototype.apply方法还需要一个上下文作为它的第一个参数， 我们需要将它传递给一个虚假的上下文。
+
+    // 因此， 我们null作为第二个参数传递给该方法Function.prototype.apply.bind的上下文Math.max。
+
+    // 因为， Math.max它独立于任何上下文， 因此忽略了方法调用给出的伪造上下文Function.prototype.apply。
+
+    // 因此， 我们Function.prototype.apply.bind(Math.max, null) 创建了一个接受arr.map值的新函数， 即内部数组。
+    </script>
+</body>
+
+</html>
