@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标拖尾</title>
+</head>
+<body>
+	<div style="height:100px; width:100px;background-color: red;position:absolute;left:0;top:0;"></div>
+	<script>
+		var div = document.getElementsByTagName('div')[0];
+		var disX,
+		disY;
+		div.onmousedown = function (e) {
+			disX = e.pageX - parseInt(div.style.left);
+			disY = e.pageY - parseInt(div.style.top);
+			document.onmousemove = function(e) {
+			var event = e || window.event;
+			console.log(e.pageX + " " + e.pageY);
+			div.style.left = e.pageX-disX + "px";
+			div.style.top = e.pageY-disY + "px";
+		}
+		document.onmouseup = function () {
+div.onmousemove = null;
+		}
+		}
+	</script>
+	
+</body>
+</html>
