@@ -9,6 +9,7 @@ var content = document.getElementById('content');
 var startPage = document.getElementById('startPage');
 
 init();
+
 function init() {
     //地图
     this.mapW = parseInt(window.getComputedStyle(content).width);
@@ -23,7 +24,11 @@ function init() {
     // 蛇
     this.snakeW = 20;
     this.snakeH = 20;
-    this.snakeBody = [[3,1,'head'],[2,1,'body'],[1,1,'body']];
+    this.snakeBody = [
+        [3, 1, 'head'],
+        [2, 1, 'body'],
+        [1, 1, 'body']
+    ];
     startGame();
 }
 
@@ -37,23 +42,23 @@ function food() {
     food.style.width = this.foodW + 'px';
     food.style.height = this.foodH + 'px';
     food.style.borderRadius = '50%';
-    this.foodX = Math.floor(Math.random() * (this.mapW / this.foodW));
-    this.foodY = Math.floor(Math.random() * (this.mapH / this.foodH));
-    
+
     food.style.left = this.foodX * this.foodW + 'px';
     food.style.top = this.foodY * this.foodH + 'px';
 
     food.style.position = 'absolute';
+    this.foodX = Math.floor(Math.random() * (this.mapW / this.foodW));
+    this.foodY = Math.floor(Math.random() * (this.mapH / this.foodH));
     this.mapDiv.appendChild(food).setAttribute('class', 'food');
 }
 
 function snake() {
     for (var i = 0; i < snakeBody.length; i++) {
-    var snake = document.createElement('div');   
-    snake.style.width = this.snakeW + 'px';
-    snake.style.height = this.snakeH + 'px';
-    snake.style.position = 'absolute';
-    snake.style.left = this.snakeBody[i][0] *20 +'px';
-    snake.style.top = this.snakeBody[i][1] *20 +'px';
+        var snake = document.createElement('div');
+        snake.style.width = this.snakeW + 'px';
+        snake.style.height = this.snakeH + 'px';
+        snake.style.position = 'absolute';
+        snake.style.left = this.snakeBody[i][0] * 20 + 'px';
+        snake.style.top = this.snakeBody[i][1] * 20 + 'px';
     }
 }
