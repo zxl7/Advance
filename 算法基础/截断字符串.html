@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>截断字符串</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function truncateString(str, num) {
+        // Clear out that junk in your trunk
+        if (str.length>num) {
+        return str.slice(0,num)+'...';
+        }
+        return str;
+    }
+
+    truncateString("A-tisket a-tasket A green and yellow basket", 8);
+    </script>
+</body>
+
+</html>
