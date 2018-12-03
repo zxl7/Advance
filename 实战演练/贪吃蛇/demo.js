@@ -3,7 +3,6 @@
 //上下左右>>改变方向
 //判断是否吃到食物>>食物消失,狂蛇加一
 //判段游戏结束弹出框
-//
 
 var content = document.getElementById('content');
 var startPage = document.getElementById('startPage');
@@ -60,5 +59,14 @@ function snake() {
         snake.style.position = 'absolute';
         snake.style.left = this.snakeBody[i][0] * 20 + 'px';
         snake.style.top = this.snakeBody[i][1] * 20 + 'px';
+        snake.classList.add(this.snakeBody[i][2]);
+        this.mapDiv.appendChild(snake).classList.add('snake');
+    }
+}
+
+function move() {
+    for (let i = 0; i < this.snakeBody.length; i++){
+        tis.snakeBody[i][0] = this.snakeBody[i-1][0];
+        tis.snakeBody[i][0] = this.snakeBody[i-1][1];
     }
 }

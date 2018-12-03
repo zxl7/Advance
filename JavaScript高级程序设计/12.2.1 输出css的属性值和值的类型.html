@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dom样式属性和方法</title>
+</head>
+
+<body>
+    <div id="myDiv" style='background-color:blue; width:10px; height:25px;'>
+    </div>
+    <script type="text/javascript">
+    myDiv.style.cssText = "width=25px;height=100px;background-color=red";
+    let prop, value, i, len;
+    for (i = 0, len = myDiv.style.length; i < len; i++) {
+        prop = myDiv.style[i];
+        value = myDiv.style.getPropertyCSSValue(prop);
+        alert(prop + ' : ' + value.cssText + '(' + value.cssValueType + ')');
+    }
+    </script>
+</body>
+
+</html>
