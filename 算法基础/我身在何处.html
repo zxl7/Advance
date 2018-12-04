@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>生菜何处</title>
+</head>
+
+<body>
+    <!-- 按升序排序后,插入一个数,输出他的索引 -->
+    <script type="text/javascript">
+    function getIndexToIns(arr, num) {
+        // Find my place in this sorted array.
+        arr.push(num);
+        arr.sort(function(a, b) { return a - b });
+        arr.indexOf(num);
+    }
+
+    // 方法二
+    // function getIndexToIns(arr, num) {
+    // return arr.concat(num).sort((a,b) => a-b).indexOf(num);
+    // }
+    getIndexToIns([40, 60], 50);
+    </script>
+</body>
+
+</html>

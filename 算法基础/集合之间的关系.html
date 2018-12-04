@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>集合石之间的关系</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function mutation(arr) {
+        let arr00 = arr[0].toLowerCase();
+        let arr11 = arr[1].toLowerCase();
+        for (var i = 0; i < arr11.length; i++) {
+            if (arr00.indexOf(arr11[i]) < 0) {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    mutation(["hello", "hey"]);
+    </script>
+</body>
+
+</html>
