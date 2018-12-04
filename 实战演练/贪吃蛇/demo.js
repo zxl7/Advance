@@ -28,6 +28,8 @@ function init() {
         [2, 1, 'body'],
         [1, 1, 'body']
     ];
+    this.direct = 'right';
+    this.
     startGame();
 }
 
@@ -65,8 +67,54 @@ function snake() {
 }
 
 function move() {
-    for (let i = 0; i < this.snakeBody.length; i++){
-        tis.snakeBody[i][0] = this.snakeBody[i-1][0];
-        tis.snakeBody[i][0] = this.snakeBody[i-1][1];
+    for (let i = 0; i < this.snakeBody.length; i++) {
+        tis.snakeBody[i][0] = this.snakeBody[i - 1][0];
+        tis.snakeBody[i][0] = this.snakeBody[i - 1][1];
+    }
+    switch (this.direct) {
+        case 'right':
+            this.snakeBody[0][0] += 1;
+            break;
+        case 'up':
+            this.snakeBody[0][1] -= 1;
+            break;
+        case 'left':
+            this.snakeBody[0][0] -= 1;
+            break;
+        case 'down':
+            this.snakeBody[0][0] += 1;
+            break;
+
+    }
+    removeClass('snake');
+    snake();
+}
+
+function removeClass(className) {
+    var ele = document.getElementsByClassName(className);
+    while (ele.length>0){
+        ele[0].parentNode.removeChild(ele[0]);
     }
 }
+
+function setDerict(code) {
+    switch(code) {
+        case 37:
+        if(this.left){
+            this.direct = 'left';
+            break;
+        }
+        case :
+            
+            break;
+    }
+}
+
+function bindEvent() {
+    document.onkeydown = function (e) {
+        let code = e.keyCode;
+        deetDerict(cpde);
+    }
+}
+
+
