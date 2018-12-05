@@ -61,7 +61,6 @@ function food() {
 
     this.foodX = Math.floor(Math.random() * (this.mapW / this.foodW));
     this.foodY = Math.floor(Math.random() * (this.mapH / this.foodH));
-    
     food.style.left = this.foodX * this.foodW + 'px';
     food.style.top = this.foodY * this.foodH + 'px';
 
