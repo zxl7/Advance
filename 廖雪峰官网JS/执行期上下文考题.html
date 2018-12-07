@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>试题</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    'use strict';
+    // 由于JavaScript的函数可以嵌套，此时，内部函数可以访问外部函数定义的变量，反过来则不行：
+    function foo() {
+        var x = 1;
+
+        function bar() {
+            var y = x + 1; // bar可以访问foo的变量x!
+            console.log('y is ' + y);
+        }
+        var z = y + 1; // ReferenceError! foo不可以访问bar的变量y!
+    }
+    foo();
+
+    // 变量提升   提升的是声明，不是赋值
+    function foo() {
+        var x = 'Hello, ' + y;
+        console.log(x);
+        var y = 'Bob';
+    }
+
+    foo();
+
+
+    // 太简单了,渣渣辉 ,继续努力;
+    </script>
+</body>
+
+</html>
