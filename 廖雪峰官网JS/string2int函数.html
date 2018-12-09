@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>转换</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    'use strict'
+
+    function string2int(s) {
+
+        return s.split('').map(x => x - 0).reduce((x, y) => x * 10 + y);
+    }
+    </script>
+</body>
+
+</html>
