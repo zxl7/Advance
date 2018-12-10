@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表达提交验证</title>
+</head>
+
+<body>
+    <!-- 
+    利用JavaScript检查用户注册信息是否正确，在以下情况不满足时报错并阻止提交表单：
+	用户名必须是3-10位英文字母或数字；
+	口令必须是6-20位；
+	两次输入口令必须一致。 -->
+    <form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+        <p id="test-error" style="color:red"></p>
+        <p>
+            用户名: <input type="text" id="username" name="username">
+        </p>
+        <p>
+            口令: <input type="password" id="password" name="password">
+        </p>
+        <p>
+            重复口令: <input type="password" id="password-2">
+        </p>
+        <p>
+            <button type="submit">提交</button> <button type="reset">重置</button>
+        </p>
+    </form>
+    <script type="text/javascript">
+    'use strict';
+    var checkRegisterForm = function() {
+        // var checkRegisterForm = function () {
+        //        var uname = document.getElementById("username");
+        //        var pas = document.getElementById("password");
+        //        var pastwo = document.getElementById("password-2");
+        //        if (/[A-z0-9]{3,10}/ig.test(uname.value) && /[\S\s]{6,20}/ig.test(pas.value) && pastwo.value === pas.value) {
+        //            return true;
+        //        }
+        //        return false;
+        // }
+        var uname = document.getElementById("username");
+        var pw1 = document.getElementById("password");
+        var pw2 = document.getElementById("password-2");
+        var err = document.getElementById("test-error");
+        var rg = /[0-9a-zA-Z]{3,10}/;
+        var rg2 = /.{6,20}/;
+        if (!(rg.test(uname.value))) {
+            err.innerText = "用户名必须是3-10位英文字母或数字";
+            return false;
+        }
+        if (!(rg2.test(pw1.value))) {
+            err.innerText = "口令必须是6-20位";
+            return false;
+        }
+        if (pw1.value != pw2.value) {
+            err.innerText = "两次输入口令必须一致";
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+
+</html>
