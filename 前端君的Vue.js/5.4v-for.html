@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="item in list">{{item}}</div>
+    </div><!-- 
+    <div id="app">
+        <div v-for="(item,index) in list">
+            {{index}}.{{item}}
+        </div>
+    </div>
+    取的索引 -->
+    <script type="text/javascript">
+    let app = new Vue({
+        el: "#app",
+        data: {
+            list: ['Tom', 'John', 'Lisa']
+        }
+    });
+    </script>
+</body>
+
+</html>

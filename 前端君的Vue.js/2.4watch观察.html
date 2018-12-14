@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>methods</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    	<!-- {{}}可用来读取vm.data的值 -->
+        {{a}}
+        <button v-on:click = "plus">+1</button>
+    </div>
+
+    <script>
+    let vm = new Vue({
+        //挂载元素
+        el: '#app',
+        data: {
+            a:0
+        },
+        // 方法
+        methods: {
+            plus() {
+                return this.a++;
+            }
+        },
+        // 观察
+        watch: {
+            a() {
+                console.log('有变化了,最新值:');
+                console.log(this.a);
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

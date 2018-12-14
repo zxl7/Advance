@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filters</title>
+	<script src="Vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		数字1:{{num1 | toInt}}<br>
+		数字2:{{num2 | toInt}}<br>
+		数字3:{{num3 | toInt}}
+	</div>
+<script>
+	let vm = new Vue({
+		//挂载元素
+		el:'#app',
+		data : {
+			num1:33.34,
+			num2:23.34,
+			num3:343.223
+
+		},
+		//过滤器
+		filters:{
+			toInt(value) {
+				return parseInt(value);
+			}
+		}
+	})
+</script>
+</body>
+</html>

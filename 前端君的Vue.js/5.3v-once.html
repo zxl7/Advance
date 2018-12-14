@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-once</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        <p v-once>你输入:{{ msg }}</p>
+    </div>
+    <script type="text/javascript">
+    let app = new Vue({
+        el: "#app",
+        data: {
+            msg: '我是钢铁侠, 大家好!'
+        }
+    })
+    </script>
+</body>
+
+</html>

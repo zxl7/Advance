@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>computed</title>
+	<script src="Vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		总合:{{sum}}
+	</div>
+<script>
+	let vm = new Vue({
+		//挂载元素
+		el:'#app',
+		data : {
+			num1:33.34,
+			num2:23.34,
+			num3:343.223
+
+		},
+		computed: {
+			sum() {
+				return this.num1+this.num2+this.num3
+			}
+		}
+	})
+</script>
+</body>
+</html>

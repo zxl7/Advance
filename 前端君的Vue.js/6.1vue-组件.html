@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-组件</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+    Vue.component('my-article', {
+        template: <div>div> 
+            <h1 > 这里是文章的标题 < /h1> <
+            div >
+            <span>2017年4月10日</span> <
+            span > 原创 < /span> <
+            /div> <
+            /div> <
+            img src = "cover.jpg"
+        alt = "" >
+        </div>
+    })
+    let vm = new Vue({
+        el: "#app",
+    });
+    </script>
+</body>
+
+</html>

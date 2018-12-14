@@ -1,78 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>继承</title>
+    <meta charset="UTF-8">
+    <title>继承</title>
 </head>
+
 <body>
-	
-	<script>
-		// function Person(name,age,sex){
-		// 	this.name = name;
-		// 	this.age = age;
-		// 	this.sex = sex;
-		// }
-
-		// function Student (name,age,sex,grade) {
-		// 	Person.call(this,name,age,sex);
-		// 	this.grade = grade;
-		// }
-
-		// var student = new Student();
-		// 
-		// 
-		
-		// Father.prototype.LastName = "Deng";
-		// function Father{
-
-		// }
-
-		// function Son () {
-
-		// }
-
-		// Son.prototype = Father.prototype
-		// var son = new Son();
-		// var father = new Father();
-		// 
-		// 圣杯模式--继承
-		// 1
-		function inherit (Target,Origin) {
-			function F() {};
-			F.prototype  = Origin.prototype;
-			Target.prototype = new F();
-			Target.prototype.constuctor = Target;
-			Target.prototype.uber = Origin.prototype;
-		}
-		// 2222
-		var inherit = (function() {
-			var F = function () {};
-			return function (Target,Origin){
-			F.prototype  = Origin.prototype;
-			Target.prototype = new F();
-			Target.prototype.constuctor = Target;
-			Target.prototype.uber = Origin.prototype;
-			}
-		}());
-
-
-
-
-
-		// Father.prototype.LastName = "Deng";
-		// function Father() {
-
-		// }
-		// function Son() {
-
-		// }
-
-		// inherit(Son,Father);
-		// var son = new Son();
-		// var father = new Father();
-
-
-
-	</script>
+    <script>
+    // function Person(name,age,sex){
+    // 	this.name = name;
+    // 	this.age = age;
+    // 	this.sex = sex;
+    // }
+    // function Student (name,age,sex,grade) {
+    // 	Person.call(this,name,age,sex);
+    // 	this.grade = grade;
+    // }
+    // var student = new Student();
+    // 
+    // 
+    // Father.prototype.LastName = "Deng";
+    // function Father{
+    // }
+    // function Son () {
+    // }
+    // Son.prototype = Father.prototype
+    // var son = new Son();
+    // var father = new Father();
+    // 
+    // 圣杯模式--继承
+    // 1
+    function inherit(Target, Origin) {
+        function F() {};
+        F.prototype = Origin.prototype;
+        Target.prototype = new F();
+        Target.prototype.constuctor = Target;
+        Target.prototype.uber = Origin.prototype;
+    }
+    // 2222
+    var inherit = (function() {
+        var F = function() {};
+        return function(Target, Origin) {
+            F.prototype = Origin.prototype;
+            Target.prototype = new F();
+            Target.prototype.constuctor = Target;
+            Target.prototype.uber = Origin.prototype;
+        }
+    }());
+    </script>
 </body>
+
 </html>
