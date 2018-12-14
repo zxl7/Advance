@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>判断数据类型</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // var arr = [1, 2, 3];
+    // var obj = {
+    //     name: 'lyl',
+    //     age: 18,
+    //     1: 'name'
+    // }
+    // console.log(arr instanceof Array); //true
+    // console.log(obj instanceof Array); //false
+
+    // 方法二
+    // var arr = [1, 2, 3];
+    // var obj = {
+    //     name: 'lyl',
+    //     age: 18,
+    //     1: 'name'
+    // }
+    // console.log(arr.constructor === Array); //true
+    // console.log(obj.constructor === Array); //false
+
+    // 方法三
+    var arr = [1, 2, 3];
+    var obj = {
+        name: 'lyl',
+        age: 18,
+        1: 'name'
+    }
+
+    console.log(arr.sort === Array.prototype.sort); //true
+    console.log(obj.sort === Array.prototype.sort); //false
+    </script>
+</body>
+
+</html>

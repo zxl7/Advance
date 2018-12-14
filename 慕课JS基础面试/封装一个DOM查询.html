@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function Elem() {
+        this.elem = document.getElementById(id);
+
+    }
+Elem.prototype.html = function (val) {
+	var elem = this.elem;
+	if(val) {
+		elem.innerHTML = val;
+		return this;//链式操作
+	}else {
+		return elem.innerHTML;
+
+	}
+}
+
+Elem.prototype.on = function ()
+
+
+
+    var div = new Elem('div1')
+    </script>
+</body>
+
+</html>
