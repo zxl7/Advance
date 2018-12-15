@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    	<!-- v-show可以让元素隐藏display:none;
+    	v-if是删除  所以只用一次的元素我们用v-if删除 -->
+        <div v-if="show">Hhhh www</div>
+        <button @click="handleClick"> toggle </button>
+        <li v-for = "item in list">{{item}}</li>
+        <!-- 一组数据循环dom结构 -->
+    </div>
+    <script type="text/javascript">
+    new Vue({
+        el: "#root",
+        data: {
+            show: true,
+            list:[1,233,33]
+        },
+        methods: {
+            handleClick: function() {
+                this.show = !this.show;
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

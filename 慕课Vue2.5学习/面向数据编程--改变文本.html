@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>改变文本</title>
+    <script type="text/javascript" src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div v-on:click="hClick">{{content}}</div>
+    </div>
+    <script>
+    	new Vue ({
+    		el:"#root",
+    		data: {
+    			content: "hello"
+    		},
+    		methods: {
+    			hClick:function () {
+    				this.content = "world"
+    			}
+    		}
+    	})
+    </script>
+</body>
+
+</html>

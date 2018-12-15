@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>改变文本</title>
+    <script type="text/javascript" src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="root"> 
+        <div v-bind:title= "title">hhh</div> 
+        <!-- 可简写:  数据绑定 -->
+        <input v-model = "content"/>
+        <!-- 双向绑定 -->
+        <div>{{content}}</div>
+    </div>
+
+
+    <script>
+    	new Vue ({
+    		el:"#root",
+    		data: {
+                title:"this is zhuerchong ",
+                content : "this is content"
+    		}
+    	})
+    </script>
+</body>
+
+</html>
