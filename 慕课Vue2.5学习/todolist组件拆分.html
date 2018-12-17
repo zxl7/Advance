@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+    <script type="text/javascript" src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div>
+            <input v-model="inputValue" />
+            <button @click="handleSubmit">提交</button>
+        </div>
+        <ul>
+            <todo-item v-for="(item,index) of list" 
+            :key="index"
+            :content="item">
+            </todo-item>
+        </ul>
+    </div>
+    <script>
+
+        // 全局组件赛
+    Vue.component('todo-item', {
+        props: ["content"],
+        template: '<li>{{content}}</li>'
+    })
+    // var TodoItem = {
+    //     template: '<li>item<li>'
+    // }
+    // 局部组件
+
+    new Vue({
+        el: "#root",
+        // components:{
+        //     'todo-item':TodoItem
+        // },
+        // 局部组件
+        data: {
+            inputValue: '',
+            list: []
+        },
+        methods: {
+            handleSubmit: function() {
+                this.list.push(this.inputValue)
+                this.inputValue = ''
+
+            }
+
+        }
+    })
+    </script>
+</body>
+
+</html>

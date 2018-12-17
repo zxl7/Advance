@@ -16,10 +16,24 @@
         <ul>
             <li v-for = "(item,index) of list" :key="index">{{item}}</li>
         </ul>
+        <!-- <ul>
+            <todo-item v-for= "(item,index) of list" :key="index"></todo-item>
+        </ul> -->
     </div>
     <script>
+        // Vue.component('todo-item',{
+        //     template:'<li>item</li>'
+        // })
+        // var TodoItem = {
+        //     template: '<li>item<li>'
+        // }
+
+
     new Vue({
         el: "#root",
+        // components:{
+        //     'todo-item':TodoItem
+        // },
         data: {
             inputValue:'',
             list:[]
