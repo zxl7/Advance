@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+
+<body>
+    <div>元素一</div>
+    <div>元素二</div>
+    <div>元素三</div>
+    <script type="text/javascript">
+    var $div = $('div'); //jQuery对象
+    var div = $div.get(0); //通过get方法，转化成DOM对象
+    div.style.color = 'red'; //操作dom对象的属性
+    var div2 = $div.get(1);
+    div2.style.color = 'green';
+    </script>
+</body>
+
+</html>

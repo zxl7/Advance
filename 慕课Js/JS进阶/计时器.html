@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>计时器</title>
+
+<body>
+    <form>
+        <input type="text" id="clock" size="50" />
+        <input type="button" value="Stop" onclick="clearInterval(i)" />
+        <input type="button" value="Go" onclick="i",1000">
+<!-- 点击开始重新计时!!  bug -->
+
+
+    </form>
+</body>
+<script type="text/javascript">
+function clock() {
+    var time = new Date();
+    document.getElementById("clock").value = time;
+}
+	var i = setInterval("clock()", 1000);
+</script>
+</head>
+
+</html>
