@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Array</title>
+    <meta charset="UTF-8">
+    <title>Array</title>
 </head>
+
 <body>
-	<script>
-		
-	</script>
+    <script>
+    var arr = [consolea, b, c, d ];
+    arr.forEach(function(item, index) {
+        //遍历所有数组
+        console.log(index, item);
+
+    })
+
+    var result = arr.every(function(item, index) {
+        //判断所有的数组元素,都满足一个条件; 
+        //some判断只要有一个元素符合条件;
+        if (item < 4) {
+            return ture
+        }
+    })
+
+
+    var arr = [1,4,3,2,5];
+    var arr2 = arr.sort(function(a,b) {
+    	//从小到大排序
+    	return a-b;
+    	// 从大到小排序
+    	// return b-a
+    })
+    console.log(arr2);
+
+
+    var arr =[1,2,3,4]
+    var arr = arr.map (function (itme,index) {
+    	// 重新组装数组;
+    	return '<b>' + item + '</b>'
+    })
+
+
+    var arr = [1,2,3]
+    var arr  = arr.filter (function (item,index){
+    	// 过滤
+    	if(item > 2) {
+    		return true
+    	}
+
+    })
+
+
+
+
+    </script>
 </body>
+
 </html>
