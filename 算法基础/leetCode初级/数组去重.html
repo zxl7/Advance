@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+</head>
+
+<body>
+    <script>
+    var removeDuplicates = function(nums) {
+        var res = [];
+
+        for (var i = 0; i < nums.length; i++) {
+            if (res.indexOf(nums[i]) == -1) {
+                res.push(nums[i]);
+            }
+        }
+        return res;
+    }
+    console.log('------------方法四---------------');
+    console.log(removeDuplicates([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]));
+    </script>
+</body>
+
+</html>
