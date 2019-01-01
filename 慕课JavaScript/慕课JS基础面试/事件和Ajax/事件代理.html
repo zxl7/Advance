@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>事件代理</title>
+ </head>
+ <body>
+ 	<div id="div1">
+ 		<a href="http://imooc.com" id="link1">imooc.com</a>
+ 		<p id="p1">激活</p>
+ 		<p id="p2">取消</p>
+ 	</div>
+ 	<div id="div2">
+ 		<p id="p3">取消</p>
+ 		<p id="p4">取消</p>
+ 	</div>
+ 	<!-- 事件绑定 -->
+ 	<script>
+ 		var link1 = document.getElementById('link1')
+ 		link1.addEventListener('click',function(e) {
+ 			e.preventDefault()
+ 			console.log(123)
+ 		})
+ 	</script>
+ </body>
+ </html>
