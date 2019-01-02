@@ -10,7 +10,8 @@
 <body>
     <div ref='app' id="app">{{name}}</div>
     <script>
-    let app = new Vue({
+        //生命周期函数就是Vue实例在某个时间点会自动执行的函数  
+    let vm = new Vue({
         el: "#app",
         data: {
             name: "前端君"
@@ -25,6 +26,7 @@
             console.log(this.$data);
             console.log(this.$el);
         },
+        //有无模板有的话按模板渲染,没有的话就根据选中的HTML渲染
 
         beforeMount() {
             console.log('即将挂载');
@@ -34,6 +36,8 @@
             console.log('挂载完毕');
             console.log(this.$el);
         },
+
+        // 数据发生改变的时候
         beforeUpdate() {
             console.log('=即将更新渲染=');
             let name = this.$refs.app.innerHTML;
@@ -44,6 +48,8 @@
             let name = this.$refs.app.innerHTML;
             console.log('name:' + name);
         },
+        //执行销货方法的时候才会执行
+        //vm.$destroy()
         beforeDestroy() {
             console.log('销毁之前');
         },
