@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type="button" value="按钮1" id="btn1" onclick="show()">
+        <input type="button" value="按钮2" id="btn2">
+        <input type="button" value="按钮3" id="btn3">
+    </div>
+    <script type="text/javascript">
+    function show() {
+        alert('hellow wsww ')
+    }
+    var btn2 = document.getElementById('btn2')
+    var btn3 = document.getElementById('btn3')
+    btn2.onclick = function() {
+        alert('dom0级添加事件!')
+    }
+    // 删除
+    // btn2.onclick= null; 
+    // 删除
+    btn3.addEventListener('click', show, false)
+    // btn3.removeEventListener('click',show,flase )
+    
+    //添加句柄
+    var eventUtil = {
+    	addHandler:function  (element,type,handler) {
+    		if (element.addEventListener) {
+    			element.addEventListener(type,handler,false)
+    		} else if(element.attachEvent){
+    			element.attachEvent('on' + type,handler)
+    		} else {
+    		 	element['on'+type] = handler
+    		}
+    	}
+    }
+
+    //删除句柄
+    var eventUtil = {
+    	removeHandler:function  (element,type,handler) {
+    		if (element.removeEventListener) {
+    			element.removeEventListener(type,handler,false)
+    		} else if(element.detachEvent){
+    			element.detachEvent('on' + type,handler)
+    		} else {
+    		 	element['on'+type] = null
+    		}
+    	}
+    }
+    </script>
+</body>
+
+</html>
