@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    var x = 1;
+    var output = (function() {
+        return x;
+        delete x;
+    })();
+    console.log(output);
+
+    var out = (function (x) {
+    	delete x;
+    	return x;
+    }) (0);
+
+    console.log(out);
+
+    var Employee = {
+    	company:'xyz'
+    }
+    var empl = Object.create(Employee);
+    delete empl.company;
+    console.log(empl.company)
+    </script>
+</body>
+
+</html>
