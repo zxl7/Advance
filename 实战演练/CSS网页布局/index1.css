@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+}
+
+.header .logo img {
+    width: 300px;
+    height: 85px;
+    margin-top: 8px;
+    margin-left: 150px;
+    float: left;
+}
+
+.header .menu {
+    height: 100px;
+    float: right;
+}
+
+.header .menu ul {
+    margin-right: 50px;
+}
+
+.header .menu li {
+    float: right;
+    list-style-type: none;
+    width: 80px;
+    font-family: "微软雅黑";
+    color: #7D7D7D;
+    font-size: 15px;
+    line-height: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.main .pic img {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.topLayer {
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 600px;
+}
+
+.main .btn {
+    z-index: 2;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    top: 400px;
+    margin-top: -150px;
+    right: 50%;
+    margin-right: -250px;
+    text-align: center;
+}
+
+.main .btn p {
+    padding-top: 100px;
+    color: #ffffff;
+    font-size: 45px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+
+.main .btn button {
+    margin-top: 50px;
+    background-color: #F5704F;
+    width: 200px;
+    height: 60px;
+    color: #ffffff;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px3 ge6;
+}
