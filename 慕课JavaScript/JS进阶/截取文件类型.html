@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件类型</title>
+</head>
+<body>
+	<script>
+		var url = "index.txt"
+		function getFormat(url) {
+			//获取.在url中的位置
+			var pos = url.lastIndexOf(".");
+			return url.substr(pos)
+		}
+
+		var format = getFormat(url);
+		var format1 = getFormat('indjshdjshd.html')
+		console.log(format)
+		console.log(format1)
+
+		//编程练习
+		//解析邮箱
+		var email = prompt("请输入邮箱地址:")
+		function getName(name) {
+			var pos = email.indexOf('@')
+			return name.slice(0,pos)
+		}
+		function getName2(name2) {
+			var pos1 = email.indexOf('@')
+			console.log(pos1)
+			return name2.slice(pos1+1)
+		}
+		document.write("邮箱的用户名:"+getName(email)+"<br/>"
+			+"登录的邮箱域名是:"+getName2(email))
+	</script>
+</body>
+</html>
