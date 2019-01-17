@@ -58,6 +58,21 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
+    function removeTransition (event) {
+      if (event.propertyName !== 'transform') return;
+      event.target.classList.remove('playing');
+      //移除高亮的样式??
+    }
+    function playSound(event) {
+      const audio = document.querySelector('audio[data-key="${event.keyCode}"]');
+      //根据触发按键的键码,获取对应音频
+      const key = document.querySelector(`div[data-key="${event.keyCode}"]`); 
+      // 获取页面对应按钮 div 元素
+      if(!audio) return;
+      //处理无效的按键事件
+      
+      key.classList.add('playing');//改变样式
+    }
 
   </script>
 
