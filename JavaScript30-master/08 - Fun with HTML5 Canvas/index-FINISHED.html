@@ -26,6 +26,7 @@ let direction = true;
 function draw(e) {
   if (!isDrawing) return; // stop the fn from running when they are not moused down
   console.log(e);
+	[lastX, lastY] = [e.offsetX, e.offsetY];
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
   // start from
@@ -33,7 +34,7 @@ function draw(e) {
   // go to
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
-  [lastX, lastY] = [e.offsetX, e.offsetY];
+//  [lastX, lastY] = [e.offsetX, e.offsetY];
 
   hue++;
   if (hue >= 360) {
@@ -53,7 +54,7 @@ function draw(e) {
 
 canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
+//  [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
 
@@ -65,7 +66,7 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 
 <style>
   html, body {
-    margin: 0;
+    margin:0;
   }
 </style>
 

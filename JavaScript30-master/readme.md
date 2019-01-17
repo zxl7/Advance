@@ -1,61 +1,88 @@
-![](https://javascript30.com/images/JS3-social-share.png)
+# JavaScript30 - 一个月纯 JS 挑战中文指南
 
-# JavaScript30
+创建日期：2016-12-20  
+最后更新：2018-12-05
 
-Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
+> Repo by: [未枝丫](https://github.com/soyaine)  
+> [JavaScript30](https://javascript30.com) 教程作者：[Wes Bos](https://github.com/wesbos)    
+> 完整指南在 [GitHub](https://github.com/soyaine/JavaScript30)，喜欢请 Star 哦♪(^∇^*)
 
-Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
+## JavaScript30 是什么？
 
-## Community #JavaScript30 Content
+JavaScirpt30 是 Wes Bos 推出的一个 30 天挑战。项目免费提供了 30 个视频教程、30 个挑战的起始文档和 30 个挑战解决方案源代码。目的是帮助人们用纯 JavaScript 来写东西，不借助框架和库，也不使用编译器和引用。
 
-Feel free to submit a PR adding a link to your own recaps, guides or reviews!
+官网的 slogan 如下：
+> Build 30 things in 30 days with 30  tutorial
+> No Frameworks × No Compilers × No Libraries × No Boilerplate
 
-* [Arjun Khode’s blog](http://thesagittariusme.blogspot.com/search/label/JS30) about summaries for each day, including fixed glitches, bugs and extra features
-* [Nitish Dayal's Text Guides](https://github.com/nitishdayal/JavaScript30) are great for those who like reading over watching
-* [Meredith Underell's](http://meredithunderell.com/tag/javascript30/) Quick Lessons Learned
-* [Rowan Weismiller's](http://rowanweismiller.com/blog/javascript-30/) Recaps + Lessons Learned
-* [Thorsten Frommen](https://tfrommen.de/tag/javascript-30/) shares how he solved the exercises before viewing the answers
-* [Soyaine 写的中文指南](https://github.com/soyaine/JavaScript30)包含了过程记录和难点解释
-* [Ayo Isaiah's](https://freshman.tech/archive/#javascript30) Recaps and Lessons Learned
-* [Adriana Rios](https://stpcollabr8nlstn.github.io/JavaScript30/) shares her alternative solutions
-* [Michael Einsohn](http://30daysofjs.michaeleinsohn.com) publishes each challenge after watching the video once
-* [Mike Ekkel](https://medium.com/@mike_ekkel/javascript-30-a-30-day-vanilla-js-challenge-6a733fc9f62c#.9frjtaje9)
-* [Yusef Habib](https://github.com/yhabib/JavaScript30) lessons and tricks learned, and a [gh-page](https://yhabib.github.io/JavaScript30/) to see working all the mini-projects.
-* [Amelie Yeh](https://github.com/amelieyeh/JS30) 30 lessons notes with things I've learned, and those important recaps. and directly view my demos [here](https://amelieyeh.github.io/JS30/) 🇹🇼😄
-* [Winar](https://github.com/winar-jin/JavaScript30-Challenge)的JavaScript30天挑战，记录练习过程，重难点和其他的解决方案。🎨
-* [Rayhatron](https://rayhatron.github.io/blog/) - walkthroughs, recaps and lessons learned.
-* [Andrei Dobra](https://github.com/andreidbr/JS30) Full repo with lessons learned and a [gh-page](https://andreidbr.github.io/JS30/) with all the exercises.
-* [从零到壹全栈部落](https://github.com/liyuechun/JavaScript30-liyuechun),春哥发起的从零到壹全栈部落，旨在带领大家一起学习，一起输出，文档化，代码化，中文视频化，全栈部落口号：输出是最好的学习方式。
-* [Usmaan Ali's](https://github.com/usyyy/javascript/blob/master/JavaScript30/analysis.md) summary of the technical skills learned from each project. He's also posting them as separate blog posts [here](https://medium.com/@usyyy)
-* [Axel](https://github.com/afuh/js30)'s lessons learned and a [showcase](https://afuh.github.io/js30/) with the projects.
-* [Chris](https://github.com/dwatow/JavaScript30) 中文實戰，目標描述、過程紀錄。
-* [Muhammad D. Ramadhan's](https://miayam.github.io) blog. He shamlesly mixed his personal life with 30 day JavaScript challenge so as to increase his learning retention. He also summarised the challenge on [one single page](https://miayam.github.io/js30). Do not read his blog!
-* [Lee Keitel's Blog](https://blog.keitel.xyz/categories/javascript30/) includes summaries of each lesson, what I learned from each one, and my thoughts about the topic taught and using them in the future.
-* [Dustin Hsiao](https://github.com/dustinhsiao21/Javascript30-dustin) 包含了各篇介紹、 效果Demo、各篇詳解及記錄過程，附上部分延伸閱讀及[gh-page](https://dustinhsiao21.github.io/Javascript30-dustin/)。
-* [GuaHsu](https://github.com/guahsu/JavaScript30) - 紀錄各篇練習過程與心得，並嘗試擴充部分練習，也做了一個包含全部練習的[介紹站](http://guahsu.io/JavaScript30/)🇹🇼
-* [Daniela](https://github.com/misslild)'s completed challenges on [GitHub Pages](https://misslild.github.io/WesBos-30day-Coding-challenge/) and [Codepen](https://codepen.io/collection/DapZeP/) :raised_hands: :muscle: :+1:
-* [Dmitrii Pashutskii's](https://github.com/guar47) code of all challenges on [GitHub with Pages](https://github.com/guar47/javascript30Summary) and review [blog posts](https://blog.dpashutskii.com/tag/javascript30/)
-* [Abid Hasan's](https://github.com/sabidhasan/javascript-30) completion of all challenges. This was awesome!! Learned so much! :+1:
-* [Yusong Notes](https://sky172839465.github.io/course/js30) Records Yusong JS 30 days note and demo :star2:
-* [Ding's Implementation](https://github.com/Ding-Fan/javascript30) code and online demo
-* [Herminio Torres](https://github.com/herminiotorres/JavaScript30) lessons and tricks learned, and a [gh-page](https://herminiotorres.github.io/JavaScript30/) to see working all the mini-projects.
-* [Dmytro Borysovskyi](https://github.com/dimabory) says many thanks to for the course to Wes 🤝 It was incredible challenge 👌 The full repository with code available [here](https://github.com/dimabory/dimabory.github.io/tree/gh-pages/src/components/JavaScript30Days) and demos can be reached by the link to [gh-pages](https://dimabory.github.io/#/js30days) 👍👍👍 
-* [Kizito](https://github.com/akhilome/)'s follow along [repo](https://github.com/akhilome/js30) with [completed challenges](https://akhilome.github.io/js30) and [notes](https://akhilome.github.io/js30/notes).
+## 关于《 JavaScript30 中文指南》
 
+英文中描述纯 JavaScript 使用的单词是 vanilla JavaScript，vanilla 有平凡普通的意味，同时也有香草的释义，这个词很美，可惜我找不到适当的汉语来翻译它。我从入门前端时就在用纯 JavaScript 来写东西、写博客，看到这个挑战时很开心，觉得在前端社区各种框架热热闹闹的时候，有人回到最本真的地方，是很难得的一件事。
 
-## Alternative Implementations
-Here are some links of people who have done the tutorials, but in a different language or framework:
+当然不可否认的是，新的工具可以帮助我们提高生产率，但最原始的 JavaScript 想必是很多人的知识结构里所缺失的部分，如果你也想探探究竟，欢迎跟着这份指南，一起逛逛 JavaScript 的原始世界。
 
-* [Thomas Mattacchione](https://github.com/tkjone/clojurescript-30) JavaScript 30 written in ClojureScript
-* [Dave Follett's](https://github.com/davefollett) blog series, [A New Vue on #JavaScript30](https://davefollett.io/categories/a-new-vue-on-javascript30/), where he explores re-implementing #JavaScript30 projects using [Vue](https://vuejs.org).
-* [Akinjide Bankole](https://github.com/akinjide/JS30days) used Node.js with [Jade](http://jadelang.net) to solve the exercises
-* [Adrien Poly](https://github.com/adrienpoly/javascript30-stimulus) a modest attempt to convert Drum Kit, Video Player, Local Tapas, TypeHead to [Stimulus JS](https://stimulusjs.org/) framework in a Rails App.
-* [Bogdan Lazar](https://github.com/tricinel/TypeScript30) all the JavaScript 30 written in [TypeScript](https://www.typescriptlang.org/)
+写这份中文指南的另一个原因是看了 Nitish Dayal 写的 Guides，我决定效仿他，在记录笔记的同时梳理思路，整理形成指南。我相信 Learn by Use 的同时也深信教是最好的学。希望这份指南能够帮助到想要进行练习的人们，特别是那些想要入门的前端小白们。
 
-## A note on Pull Requests
+目前这份指南还在更新之中，欢迎监督我，如果你想要及时获取新的文章，可以[在 GitHub Star/Fork 我的 Repo](https://github.com/soyaine/JavaScript30)。
 
-These are meant to be 1:1 copies of what is done in the video. If you found a better / different way to do things, great, but I will be keeping them the same as the videos.
+## 如何参加挑战
 
-The starter files + solutions will be updated if/when the videos are updated.
+下面是完成 Wes Bos 的 JavaScript30 挑战所能借鉴的文档，每个文档的具体使用建议如下：
 
-Thanks!
+- [JavaScript30 官网](https://javascript30.com)：进入官网注册后可以观看和下载所有教程视频。Wes Bos 还把视频传到了百度云，进入官网直接拉到页面底部就能找到链接。
+- [Nitish Dayal 写的英文指南](https://github.com/nitishdayal/JavaScript30/tree/master/exercises)：这是一份非官方的文字版指南，也是激励我写这一系列文章的主要因素。
+- [挑战初始文档](https://github.com/wesbos/JavaScript30)：这是 Wes Bos 这份教程涉及的代码，你可以直接 Clone 或者下载到本地，然后开始你 30 天的挑战之旅。文档共有 30 个文件夹，每个文件夹中至少有两个文件。
+	- **index-START.html**：是提供给我们的初始文档，方便我们专注于 JavaScript 的编写，这个文档已经将基础的 HTML 和 CSS 部分写好，我们只需要在这个基础上编写 JavaScript 代码，实现特定的功能即可。
+	- **index-FINISHED.html**：已经实现了最终效果的文档，可以查看效果和实现思路。
+- [我写的中文指南源码](https://github.com/soyaine/JavaScript30)：文档结构和 Wes Bos 提供的相同，进入每个文件夹都可查看当前挑战的指南（README.md），我完成挑战时建立的文件是 **index-SOYAINE.html**，里面有核心代码的中文注释。如果阅读过程中发现问题，请[在这里提 issue](https://github.com/soyaine/JavaScript30/issues)。  如果喜欢记得 Star 哟~♪(^∇^*)，鼓励我写出更好的文章。
+
+## 目录
+
+No | Guide | Demo
+--- | --- | ---
+1 | [JavaScript Drum Kit  指南](https://github.com/soyaine/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit) |  [纯 JS 模拟敲鼓效果](http://soyaine.github.io/JavaScript30/01%20-%20JavaScript%20Drum%20Kit/index-SOYAINE.html)
+2 | [JS + CSS Clock 指南](https://github.com/soyaine/JavaScript30/tree/master/02%20-%20JS%20%2B%20CSS%20Clock) |  [纯 JavaScript+CSS 时钟效果](http://soyaine.github.io/JavaScript30/02%20-%20JS%20%2B%20CSS%20Clock/index-SOYAINE.html)
+3 | [CSS Variables 指南](https://github.com/soyaine/JavaScript30/tree/master/03%20-%20CSS%20Variables) |  [用 CSS 变量实现拖动控制参数效果](http://soyaine.github.io/JavaScript30/03%20-%20CSS%20Variables/index-SOYAINE.html)
+4 | [Array Cardio, Day 1 指南](https://github.com/soyaine/JavaScript30/tree/master/04%20-%20Array%20Cardio%20Day%201) | [数组基本操作方法示例一](http://soyaine.github.io/JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-SOYAINE.html)
+5 | [Flex Panel Gallery 指南](https://github.com/soyaine/JavaScript30/blob/master/05%20-%20Flex%20Panel%20Gallery/README.md) | [可伸缩的图片墙在线效果](https://soyaine.github.io/JavaScript30/05%20-%20Flex%20Panel%20Gallery/index-SOYAINE2.html)
+6 | [Type Ahead 指南](https://github.com/soyaine/JavaScript30/blob/master/06%20-%20Type%20Ahead/README.md) |  [根据关键词快速匹配诗句在线效果](https://soyaine.github.io/JavaScript30/06%20-%20Type%20Ahead/index-SOYAINE.html)
+7 | [Array Cardio, Day 2 指南](https://github.com/soyaine/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202) | [数组基本操作方法示例二](http://soyaine.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-SOYAINE.html)
+8 | [Fun with HTML5 Canvas 指南](https://github.com/soyaine/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas) | [彩虹画笔绘画板在线效果](https://soyaine.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-SOYAINE.html)
+9 | [Dev Tools Domination 指南](https://github.com/soyaine/JavaScript30/blob/master/09%20-%20Dev%20Tools%20Domination/README.md) | [Console 调试技巧在线示例](https://soyaine.github.io/JavaScript30/09%20-%20Dev%20Tools%20Domination/index-SOYAINE.html)
+10 | [Hold Shift and Check Checkboxes 指南](https://github.com/soyaine/JavaScript30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/README.md) | [Shift 批量选中在线效果](https://soyaine.github.io/JavaScript30/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-SOYAINE.html)
+11 | [Custom Video Player 指南](https://github.com/soyaine/JavaScript30/blob/master/11%20-%20Custom%20Video%20Player/README.md) | -  
+12 | [Key Sequence Detection 指南](https://github.com/soyaine/JavaScript30/tree/master/12%20-%20Key%20Sequence%20Detection/README.md) | [在线效果](https://soyaine.github.io/JavaScript30/12%20-%20Key%20Sequence%20Detection/index-FINISHED.html)
+13 | [Slide in on Scroll 指南](https://github.com/soyaine/JavaScript30/blob/master/13%20-%20Slide%20in%20on%20Scroll/README.md) | [图片随屏幕滚动而滑入滑出的在线效果](https://soyaine.github.io/JavaScript30/13%20-%20Slide%20in%20on%20Scroll/index-SOYAINE.html)
+14 | [JavaScript References vs. Copying 指南](https://github.com/soyaine/JavaScript30/tree/master/14%20-%20JavaScript%20References%20VS%20Copying) | -
+15 | [LocalStorage](https://github.com/soyaine/JavaScript30/blob/master/15%20-%20LocalStorage/README.md) | [利用 localStorage 模拟在线菜单](https://soyaine.github.io/JavaScript30/15%20-%20LocalStorage/index-SOYAINE.html)
+16 | [Mouse Move Shadow 指南](https://github.com/soyaine/JavaScript30/blob/master/16%20-%20Mouse%20Move%20Shadow/README.md) | [文字阴影随鼠标移动在线效果](https://soyaine.github.io/JavaScript30/16%20-%20Mouse%20Move%20Shadow/index-finished-es5.html)
+17 | [Sort Without Articles 指南](https://github.com/soyaine/JavaScript30/blob/master/17%20-%20Sort%20Without%20Articles/README.md) | [去前缀排序在线效果](https://soyaine.github.io/JavaScript30/17%20-%20Sort%20Without%20Articles/index-finished-Dashrun-es5.html)  
+18 | [Adding Up Times with Reduce 指南](https://github.com/soyaine/JavaScript30/tree/master/18%20-%20AddingUpTimesWithReduce) | [使用 Reduce 进行时间叠加效果](https://soyaine.github.io/JavaScript30/18%20-%20AddingUpTimesWithReduce/index-finished-Dashrun-es6.html)    
+19 | [Webcam Fun 指南](https://github.com/soyaine/JavaScript30/blob/master/19%20-%20Webcam%20Fun/README.md) | [网络摄像头及图片处理在线效果](https://soyaine.github.io/JavaScript30/19%20-%20Webcam%20Fun/index-finished-Dashrun.html)  
+20 | [Speech Detection指南](https://github.com/soyaine/JavaScript30/blob/master/20%20-%20Speech%20Detection/README.md) | [Speech Detection效果](https://soyaine.github.io/JavaScript30/20%20-%20Speech%20Detection/index-finished-Dashrun.html)   
+21 | [Geolocation指南](https://github.com/soyaine/JavaScript30/blob/master/21%20-%20Geolocation/README.md) | [Geolocation效果](https://soyaine.github.io/JavaScript30/21%20-%20Geolocation/index-finished-Dashrun.html)  
+22 | [Follow Along Link Highlighter指南](https://github.com/soyaine/JavaScript30/blob/master/22%20-%20Follow%20Along%20Link%20Highlighter/README.md) | [Follow Along Link Highlighter效果](https://soyaine.github.io/JavaScript30/22%20-%20Follow%20Along%20Link%20Highlighter/index-finished-Dashrun.html) 
+23 | [Speech Synthesis指南](https://github.com/soyaine/JavaScript30/blob/master/23%20-%20Speech%20Synthesis/README.md) | [Speech Synthesis效果](https://soyaine.github.io/JavaScript30/23%20-%20Speech%20Synthesis/index-finished-Dashrun.html)  
+24 | [Sticky Nav指南](https://github.com/soyaine/JavaScript30/blob/master/24%20-%20Sticky%20Nav/README.md) | [Sticky Nav效果](https://soyaine.github.io/JavaScript30/24%20-%20Sticky%20Nav/index-finished-Dashrun.html)  
+25 | [Event Related指南](https://github.com/soyaine/JavaScript30/blob/master/25%20-%20Event%20Related/README.md) | [Event Related效果](https://soyaine.github.io/JavaScript30/25%20-%20Event%20Related/index-finished-Dashrun.html)   
+26 | [Stripe Follow Along Nav指南](https://github.com/soyaine/JavaScript30/blob/master/26%20-%20Stripe%20Follow%20Along%20Nav/README.md) | [Strip Follow Along Nav效果](https://soyaine.github.io/JavaScript30/26%20-%20Stripe%20Follow%20Along%20Nav/index-finished-Dashrun.html)   
+27 | [Click and Drag指南](https://github.com/soyaine/JavaScript30/blob/master/27%20-%20Click%20and%20Drag/README.md) | [Click and Drag效果](https://soyaine.github.io/JavaScript30/27%20-%20Click%20and%20Drag/index-finished-Dashrun.html)   
+28 | [Video Speed Controller指南](https://github.com/soyaine/JavaScript30/blob/master/28%20-%20Video%20Speed%20Controller/README.md) | [Video Speed Controller效果](https://soyaine.github.io/JavaScript30/28%20-%20Video%20Speed%20Controller/index-finished-Dashrun.html)  
+29 | Countdown Timer |  -  
+30 | Whack A Mole | -   
+
+参加挑战并不需要你缴纳费用或是加入什么组织，也不会有人催着你去做什么，你只需要打开电脑，然后开始思考、敲击键盘。相信内在动机的力量，我在这里给出了一些建议和心得，最适合你的方法还需要你自己去摸索。
+
+## 本中文指南贡献者名单
+ 
+Name | Contribution
+--- | ---
+[@DrakeXiang](https://github.com/DrakeXiang) |  No.[11](https://github.com/soyaine/JavaScript30/tree/master/11%20-%20Custom%20Video%20Player)
+[@zzh466](http://github.com/zzh466) | Review
+[@Xing Liu](https://github.com/S1ngS1ng) | Review
+[@大史不说话](https://github.com/dashnowords) |  No.[16](https://github.com/soyaine/JavaScript30/tree/master/16%20-%20Mouse%20Move%20Shadow).[17](https://github.com/soyaine/JavaScript30/tree/master/17%20-%20Sort%20Without%20Articles).[18](https://github.com/soyaine/JavaScript30/tree/master/18%20-%20AddingUpTimesWithReduce).[19](https://github.com/soyaine/JavaScript30/blob/master/19%20-%20Webcam%20Fun).[20](https://github.com/soyaine/JavaScript30/tree/master/20%20-%20Speech%20Detection).[21](https://github.com/soyaine/JavaScript30/tree/master/21%20-%20Geolocation).[22](https://github.com/soyaine/JavaScript30/tree/master/22%20-%20Follow%20Along%20Link%20Highlighter).[23](https://github.com/soyaine/JavaScript30/tree/master/23%20-%20Speech%20Synthesis).[24](https://github.com/soyaine/JavaScript30/tree/master/24%20-%20Sticky%20Nav).[25](https://github.com/soyaine/JavaScript30/tree/master/25%20-%20Event%20Related).[26](https://github.com/soyaine/JavaScript30/tree/master/26%20-%20Strip%20Follow%20Along%20Nav).[27](https://github.com/soyaine/JavaScript30/tree/master/27%20-%20Click%20and%20Drag).[28](https://github.com/soyaine/JavaScript30/tree/master/28%20-%20Video%20Speed%20Controller)
+[@未枝丫](https://github.com/soyaine) | No.[1](https://github.com/soyaine/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit).[2](https://github.com/soyaine/JavaScript30/tree/master/02%20-%20JS%20%2B%20CSS%20Clock).[3](https://github.com/soyaine/JavaScript30/tree/master/03%20-%20CSS%20%Variables).[4](https://github.com/soyaine/JavaScript30/tree/master/04%20-%20Array%20Cardio%20Day%201).[5](https://github.com/soyaine/JavaScript30/blob/master/05%20-%20Flex%20Panel%20Gallery).[6](https://github.com/soyaine/JavaScript30/blob/master/06%20-%20Type%20Ahead).[7](https://github.com/soyaine/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202).[8](https://github.com/soyaine/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas).[9](https://github.com/soyaine/JavaScript30/blob/master/09%20-%20Dev%20Tools%20Domination).[10](https://github.com/soyaine/JavaScript30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/README.md).[12](https://github.com/soyaine/JavaScript30/tree/master/12%20-%20Key%20Sequence%20Detection/README.md).[13](https://github.com/soyaine/JavaScript30/blob/master/13%20-%20Slide%20in%20on%20Scroll/README.md).[14](https://github.com/soyaine/JavaScript30/tree/master/14%20-%20JavaScript%20References%20VS%20Copying)
+
+## JOIN US
+如果对这个系列的指南有什么改进的想法，欢迎[提 issue](https://github.com/soyaine/JavaScript30/issues)，如果你也想参与写作，请看 [wiki](https://github.com/soyaine/JavaScript30/wiki/%E6%8C%87%E5%8D%97%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E)，并联系 Soyaine。
+

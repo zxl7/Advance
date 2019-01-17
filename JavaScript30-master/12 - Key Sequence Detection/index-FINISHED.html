@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Key Detection</title>
-  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+<!--  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>-->
 </head>
 <body>
 <script>
@@ -16,7 +16,7 @@ window.addEventListener('keyup', (e) => {
   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
   if (pressed.join('').includes(secretCode)) {
     console.log('DING DING!');
-    cornify_add();
+//    cornify_add();
   }
   console.log(pressed);
 });
