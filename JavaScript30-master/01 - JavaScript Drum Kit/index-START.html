@@ -72,7 +72,17 @@
       //处理无效的按键事件
       
       key.classList.add('playing');//改变样式
+      audio.currentTime = 0;
+      //每次播放都让音频播放进度归零
+      audio.play();
+      //播放响应的音效
     }
+
+    const keys = Array.from(document.querySelectorAll('.key'));
+    //获取页面所有按钮元素
+    keys.forEach(key => key.addEventListener('transitionend',removeTransition));
+    //添加事件监听
+    window.addEventListener('keydown',playSound);
 
   </script>
 
