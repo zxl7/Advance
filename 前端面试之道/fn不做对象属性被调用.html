@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <title>this</title>
 </head>
-
 <body>
     <script>
     var obj = {
-            x: 10,
-            fn: function() {
-                console.log(this) //
-                console.log(this.x) // undefind
-            }
+        x: 10,
+        fn: function() {
+            console.log(this) //
+            console.log(this.x) // undefind
         }
-            var fn1 = obj.fn;
-            fn1()
+    }
+    var fn1 = obj.fn;
+    fn1()
     </script>
 </body>
 
