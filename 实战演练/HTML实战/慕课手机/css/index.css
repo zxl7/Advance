@@ -63,6 +63,8 @@ nav {
     height: 800px;
     background-color: #e7e7e7;
     position: relative;
+    background: url('../img/bg-screen-1.png') no-repeat center;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -90,7 +92,7 @@ nav {
 
 }
 
-
+jasper
 .screen-1_shadow {
     width: 1233px;
     height: 411px;
@@ -104,3 +106,38 @@ nav {
 }
 
 /* 第二屏 */
+.screen-2 {
+    background-color: #fafafa;
+    height: 800px;
+}
+
+.screen-2_header {
+    font-weight: normal;
+    margin: 0px;
+    font-size: 46px;
+    color: #f01400;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.screen-2_subheader {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
