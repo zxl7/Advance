@@ -13,3 +13,9 @@ a {
 a:hover {
     color: #f01400;
 }
+
+h2,
+h3{
+	margin: 0px;
+	font-weight: normal;
+}

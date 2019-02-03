@@ -70,13 +70,15 @@ nav {
 
 .screen-1_header {
     text-align: center;
-    margin: 0px;
     font-weight: normal;
+    color: white;
+    margin: 0px;
     font-size: 46px;
     padding: 152px;
 }
 
 .screen-1_header b {
+    font-weight: normal;
     color: red;
 }
 
@@ -109,44 +111,70 @@ jasper .screen-1_shadow {
     background-color: #fafafa;
     height: 800px;
     font-weight: normal;
+    overflow: hidden;
 }
 
 .screen-2_header {
     margin: 0px;
     font-size: 46px;
-    color: f01400;
+    font-size: 46px;
+    color: #f01400;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 96px;
 }
 
 .screen-2_subheader {
     margin: 0px;
-    font-size: 46px;
-    color: f01400;
+    line-height: 28px;
+    font-size: 14px;
+    color: #2c3137;
     text-align: center;
     padding-top: 25px;
 }
 
-.screen_phone{
+.screen_phone {
     width: 928px;
     height: 873px;
-    background: url('../img/screen-1-phone.png') no-repeat center;
+    background: url('../img/bg-screen-2.png') no-repeat center;
     margin: 0 auto;
-    z-index: 2;
+    bottom: -30px;
+    position: relative;
 }
 
 .screen_point {
+    padding-right: 230px;
     width: 108px;
-    padding-right: 112px;
     height: 22px;
     font-size: 22px;
     line-height: 22px;
     color: #4d555d;
     background: url('../img/icon-point-right.png') no-repeat center;
-
+    position: absolute;
+    top: 190px;
+    left: -130px;
 }
 
 .screen-2_point_custom_right {
-    padding: 0 0 0 112px;
-    background-image: url('../img/icon-point-right.png');
+    padding: 0 0 0 230px;
+    width: 108px;
+    height: 22px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #4d555d;
+    background: url('../img/icon-point-left.png') no-repeat center;
+    position: absolute;
+    right: 120px;
+    top: 50px;
+}
+
+.big{
+    right: 22px;
+    top: 330px;
+}
+
+
+.screen-3 {
+    background-color: red;
+    height: 800px;
+    font-weight: normal;
 }
