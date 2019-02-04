@@ -173,8 +173,22 @@ jasper .screen-1_shadow {
 }
 
 
+/* 第三屏 */
 .screen-3 {
     background-color: red;
     height: 800px;
     font-weight: normal;
+}
+
+.screen-3_wrap {
+    width: 1200px;
+    height: auto;
+} 
+
+.srceen-3_header {
+    font-size: 46px;
+    line-height: 46px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 96px;
 }
