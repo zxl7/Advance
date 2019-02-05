@@ -94,7 +94,7 @@ nav {
 
 }
 
-jasper .screen-1_shadow {
+.screen-1_shadow {
     width: 1233px;
     height: 411px;
     background: url('../img/screen-1-shadow.png') no-repeat center;
@@ -103,7 +103,7 @@ jasper .screen-1_shadow {
     margin-left: -616px;
     opacity: .8;
     z-index: 1;
-    bottom: 20px;
+    bottom: -7px;
 }
 
 /* 第二屏 */
