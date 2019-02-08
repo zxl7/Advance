@@ -167,7 +167,7 @@ nav {
     top: 50px;
 }
 
-.big{
+.big {
     right: 22px;
     top: 330px;
 }
@@ -181,14 +181,29 @@ nav {
 }
 
 .screen-3_wrap {
-    width: 1200px;
-    height: auto;
-} 
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0px auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
 
 .srceen-3_header {
-    font-size: 46px;
-    line-height: 46px;
-    color: #FFFFFF;
-    text-align: center;
-    padding-top: 96px;
+    position: absolute;
+    color: #fff;
+    top: 90px;
+    left: 10px;
+    width: 580px;
+    font-size: 36px;
+
+}
+
+.srceen-3_subheader {
+    color: #fff;
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    width: 580px;
+    font-size: 16px;
 }
