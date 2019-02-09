@@ -175,7 +175,7 @@ nav {
 
 /* 第三屏 */
 .screen-3 {
-    background-color: red;
+    background-color: #a71316;
     height: 800px;
     font-weight: normal;
 }
@@ -185,18 +185,17 @@ nav {
     min-width: 800px;
     margin: 0px auto;
     height: 100%;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 .srceen-3_header {
     position: absolute;
-    color: #fff;
     top: 90px;
     left: 10px;
     width: 580px;
     font-size: 36px;
-
+    color: #fff;
 }
 
 .srceen-3_subheader {
@@ -206,4 +205,49 @@ nav {
     left: 10px;
     width: 580px;
     font-size: 16px;
+}
+
+.screen-3_phone {
+    width: 729px;
+    height: 900px;
+    position: absolute;
+    top: 200px;
+    left: 465px;
+    background: url(../img/bg-screen-3.png) no-repeat;
+}
+
+.screen-3_features {
+    position: absolute;
+    width: 328px;
+    height: 288px;
+    bottom: 140px;
+    left: 5px;
+}
+
+.screen-3_features-item {
+    float: left;
+    width: 138px;
+    height: 118px;
+    border: 1px solid #D97173;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0 24px 24px 0;
+    color: #fff;
+}
+
+.screen-3_features-item span{
+    height: 36px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 32px 0 9px 0;
+    display: block;
+}
+
+/* 第四屏 */
+
+.screen-4 {
+    height: 800px;
+    font-weight: normal;
 }
