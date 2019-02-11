@@ -289,33 +289,33 @@ nav {
     width: 86px;
     height: 270px;
     flex: auto;
-    background: url('../img/phone-1.png') no-repeat;
+    background: url('../img/phone-1.png') no-repeat center;
 }
 
 .screen-4_type_item2 {
     width: 86px;
     flex: auto;
     height: 270px;
-    background: url('../img/phone-2.png') no-repeat;
+    background: url('../img/phone-2.png') no-repeat center;
 }
 
 .screen-4_type_item3 {
     width: 86px;
     flex: auto;
     height: 270px;
-    background: url('../img/phone-3.png') no-repeat;
+    background: url('../img/phone-3.png') no-repeat center;
 }
 
 .screen-4_type_item4 {
     width: 86px;
     height: 270px;
     flex: auto;
-    background: url('../img/phone-4.png') no-repeat;
+    background: url('../img/phone-4.png') no-repeat center;
 }
 
 .screen-4_type_item {
     margin-top: 325px;
-    margin-right: 75px;
+    margin-right: 20px;
 }
 
 .screen-4_type .p1 {
@@ -331,3 +331,5 @@ nav {
     line-height: 9px;
     color: #93999f;
 }
+
+/* 第五屏 */
