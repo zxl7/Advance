@@ -1,6 +1,5 @@
 header {
     background-color: #f7f7f7;
-
 }
 
 .wrap {
@@ -11,7 +10,7 @@ header {
 }
 
 .logo {
-    width: 150px;
+    width: 7em;
     height: 38px;
     font-size: 20px;
     color: #07111b;
@@ -53,7 +52,7 @@ nav {
 .nav_button {
     background: #000;
     color: #fff;
-    width: 90px;
+    width: 6em;
     text-align: center;
 }
 
@@ -143,7 +142,7 @@ nav {
 
 .screen_point {
     padding-right: 230px;
-    width: 108px;
+    width: 6em;
     height: 22px;
     font-size: 22px;
     line-height: 22px;
@@ -156,9 +155,9 @@ nav {
 
 .screen-2_point_custom_right {
     padding: 0 0 0 230px;
-    width: 108px;
-    height: 22px;
+    width: 6em;
     font-size: 22px;
+    height: 22px;
     line-height: 22px;
     color: #4d555d;
     background: url('../img/icon-point-left.png') no-repeat center;
@@ -181,8 +180,7 @@ nav {
 }
 
 .screen-3_wrap {
-    max-width: 1200px;
-    min-width: 800px;
+    width: 1200px;
     margin: 0px auto;
     height: 100%;
     overflow: hidden;
@@ -237,7 +235,7 @@ nav {
     color: #fff;
 }
 
-.screen-3_features-item span{
+.screen-3_features-item span {
     height: 36px;
     font-size: 36px;
     line-height: 36px;
@@ -250,4 +248,86 @@ nav {
 .screen-4 {
     height: 800px;
     font-weight: normal;
+    background-color: #fff;
+    text-align: center;
+}
+
+.screen-4_wrap {
+    width: 1200px;
+    margin: 0px auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen-4_header {
+    margin-top: 78px;
+    width: 100%;
+    font-size: 42px;
+    color: #f01414;
+}
+
+.screen-4_subheader {
+    font-size: 16px;
+    margin-top: 78px;
+}
+
+.screen-4_type {
+    width: 100%;
+    margin-left: 30px;
+    height: 270px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 78px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.screen-4_type_item1 {
+    width: 86px;
+    height: 270px;
+    flex: auto;
+    background: url('../img/phone-1.png') no-repeat;
+}
+
+.screen-4_type_item2 {
+    width: 86px;
+    flex: auto;
+    height: 270px;
+    background: url('../img/phone-2.png') no-repeat;
+}
+
+.screen-4_type_item3 {
+    width: 86px;
+    flex: auto;
+    height: 270px;
+    background: url('../img/phone-3.png') no-repeat;
+}
+
+.screen-4_type_item4 {
+    width: 86px;
+    height: 270px;
+    flex: auto;
+    background: url('../img/phone-4.png') no-repeat;
+}
+
+.screen-4_type_item {
+    margin-top: 325px;
+    margin-right: 75px;
+}
+
+.screen-4_type .p1 {
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #2c3238;
+}
+
+.screen-4_type .p2 {
+    font-size: 9px;
+    height: 9px;
+    line-height: 9px;
+    color: #93999f;
 }
