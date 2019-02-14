@@ -333,3 +333,67 @@ nav {
 }
 
 /* 第五屏 */
+
+.screen-5 {
+    height: 1377px;
+    overflow: hidden;
+    background: #d9dde1;
+    position: relative;
+}
+
+.screen-5_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.screen-5__heading {
+    font-size: 42px;
+    margin: 0 auto;
+    color: #f01414;
+    margin-top: 180px;
+}
+
+.screen-5__subheading {
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.srceen-5_back {
+    background: url('../img/bg-screen-5.png') no-repeat bottom center;
+    height: 570px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 170px;
+}
+
+.select {
+    height: 333px;
+    width: 100%;
+    margin-top: -33px;
+    background: url(../img/bg-screen-buy.png) no-repeat bottom center #2b333b;
+}
+
+.buy_button {
+    display: inline-block;
+    background-color: red;
+    width: 240px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 3px;
+    margin: 120px 43%;
+
+}
+
+
+.footer {
+    height: 80px;
+    line-height: 80px;
+    background-color: #07111b;
+    text-align: center;
+    color: #fff;
+}
