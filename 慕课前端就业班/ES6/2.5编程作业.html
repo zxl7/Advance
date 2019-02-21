@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+.style {
+    font-size: 36px;
+    color: red;
+}
+</style>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>ES6</li>
+    </ul>
+    <script>
+    var li = document.getElementsByTagName('li');
+    let i = 0
+    for (i = ; i < li.length; i++) {
+    	var  text= li[i].innerText +"我是第"+ i +"个";
+    	console.log(text)
+    }
+
+
+    // li[i].onmouseover = function() {
+    //     li.className = "style";
+    // }
+
+    // li[i].onmouseout = function() {
+    //     li.className = ""
+    // }
+    </script>
+</body>
+
+</html>

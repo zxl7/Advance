@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>引用类型</title>
+</head>
+<body>
+	<script>
+		// 引用类型
+		// function equalObjs(a,b){
+		// 	for(var p in a){
+		// 		if(a[p]!==b[p]) return false;
+		// 	}
+		// 	return true;
+		// }
+		
+		//数组类型 
+		// function equalArray(a,b) {
+		// 	if(a.length !== b.length) return false;
+		// 	for (var i = 0; i < a.length; i++) {
+		// 		if(a[i] !==b[i]) return false;
+		// 	}
+		// return true;
+		// }
+		
+		var a = {namr:'xm'},
+		b=[4];
+		b=[4,a];
+		a=b[0];
+		console.log(a);
+		b=b[1];
+		console.log(b);
+
+
+
+
+	</script>
+</body>
+</html>
+

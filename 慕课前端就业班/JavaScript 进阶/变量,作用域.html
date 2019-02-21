@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>变量,作用域</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <script>
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < 3; i++) {
+        btns[i].onclick = function() {
+            alert(i);
+        }
+    }
+    </script>
+</body>
+
+</html>
