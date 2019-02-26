@@ -9,21 +9,21 @@
 <body>
     <script>
     var family = {
-            me: 'xm',
-            wife: 'xh',
-            setBaby: function(sex) {
-                switch (sex) {
-                    case man:
-                        this.name = niuniu;
-                        break;
-                    case wuman:
-                        this.name = huahua;
-                        break;
-                    default:
-                    this.name = hhhhsb;
-                }
+        me: 'xm',
+        wife: 'xh',
+        setBaby: function(sex) {
+            if (sex == 'male') {
+                this.baby = 'niuniu';
+            } else {
+                this.baby = 'huahau';
             }
         }
+    }
+
+    family.setBaby('male');
+    document.write(family.baby);
+    family.setBaby('famale');
+    document.write(family.baby);
     </script>
 </body>
 

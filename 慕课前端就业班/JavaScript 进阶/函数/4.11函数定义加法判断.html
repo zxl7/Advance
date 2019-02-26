@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>函数定义的位置</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function isNumber(num1) {
+        if (!isNaN(num1)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function add(a, b) {
+        if (isNumber(a) && isNumber(b)) {
+            var aa = parseInt(a);
+            var bb = parseInt(b);
+            console.log(aa+bb) ;
+        } else {
+        	console.log('请输入正确数字类型')
+
+        }
+
+    }
+
+    add(5, 6)
+    </script>
+</body>
+
+</html>

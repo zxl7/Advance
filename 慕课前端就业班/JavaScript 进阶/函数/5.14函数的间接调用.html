@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>函数的间接调用</title>
+</head>
+
+<body>
+    <input type="file" multiple="multiple">
+    <script>
+    var data = [3, 4, 2, 1]
+    var sum = 1;
+
+    function multiply() {
+        for (var i = 0; i < arguments.length; i++) {
+            sum *= arguments[i];
+            console.log(sum)
+        }
+    }
+    multiply.apply(window, data)
+    </script>
+</body>
+
+</html>

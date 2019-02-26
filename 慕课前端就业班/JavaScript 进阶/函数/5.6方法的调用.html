@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8" />
+    <title>方法的调用</title>
+    <style type="text/css">
+    #box {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 10px auto;
+    }
+
+    #close {
+        position: absolute;
+        right: 0px;
+        top: -4px;
+        color: yellow;
+    }
+
+    #btn {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+    }
+    </style>
 </head>
+
 <body>
-	<script>
-		var person = {
-			setPerson:function(property,value) {
-				this.property = 'value'
-			}
+    <div id="box">
+        <span id="close">X</span>
+    </div>
+    <button id="btn">关闭</button>
+    <script type="text/javascript">
+    // 在此处补充代码
+    var box = document.getElementById('box');
+    var btn = document.getElementById('btn');
+    var close = document.getElementById('close');
+    btn.onclick = function onclick() {
+        box.style.display = "none";
+    };
+    close.onclick = function() {
 
-		}
+        btn.onclick();
 
-		person.setPerson(name,xm)
-		
-		
-	</script>
+    };
+    </script>
 </body>
+
 </html>
