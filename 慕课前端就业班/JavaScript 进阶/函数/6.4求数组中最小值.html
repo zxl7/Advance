@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+    function minS() {
+        var min = 0;
+        if (arguments.length == 0) { return; }
+        for (var i = 0; i < arguments.length; i++) {
+            min = min < arguments[i] ? min : arguments[i];
+        }
+        return min;
+    }
+    var data = [2, 4, 1, -1, 56, 3, -7];
+    document.write(minS.apply(window, data));
+    </script>
+</body>
+
+</html>
