@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>是否合法问题--栈方法</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function is_leagl_brackets(string) {
+        var stack = new Stack();
+
+        for (var i = 0; i < string.length; i++) {
+            var item = string[i];
+            if (item == '(') {
+                stack.push(item);
+            } else if (item == ')') {
+                if (stack.isEmpty()) {
+                    return false;
+                } else {
+                    stack.pop();
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    console.log(is_leagl_brackets(")()()()())()))(((())"))
+    </script>
+</body>
+
+</html>

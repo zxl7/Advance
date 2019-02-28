@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简单计算器</title>
+    <style type="text/css">
+    #calculator {
+        width: 500px;
+        margin: 100px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="calculator">
+        <p>
+            <input id="formerInput" value="1"></input>
+            <span id="sign">+</span>
+            <input id="laterInput" value="2"></input>
+            <span>=</span>
+            <span id="resultOutput">3</span>
+        </p>
+        <p>
+            <input type="button" name="" value="+" onclick="addHandler()">
+            <input type="button" name="" value="-" onclick="subtractHandler()">
+            <input type="button" name="" value="*" onclick="multiplyHandler()">
+            <input type="button" name="" value="/" onclick="divideHandler()">
+        </p>
+    </div>
+    <script>
+    //获取元素
+    var calculator = document.getElementById('calculator');
+    var formerInput = document.getElementById('formerInput')
+    var laterInput = document.getElementById('laterInput')
+    var sign = document.getElementById('sign')
+    var resultOutput = document.getElementById('resultOutput')
+
+
+    // 加,减,乘,除
+    function addHandler() {
+        sign.innerHTML = '+';
+        resultOutput.innerHTML = +formerInput.value + +laterInput.value;
+    }
+
+    function subtractHandler() {
+        sign.innerHTML = '-';
+        resultOutput.innerHTML = +formerInput.value - +laterInput.value;
+    }
+
+    function multiplyHandler() {
+        sign.innerHTML = 'x';
+        resultOutput.innerHTML = +formerInput.value * +laterInput.value;
+    }
+
+    function divideHandler() {
+        sign.innerHTML = '/';
+        resultOutput.innerHTML = +formerInput.value / +laterInput.value;
+    }
+    </script>
+</body>
+
+</html>

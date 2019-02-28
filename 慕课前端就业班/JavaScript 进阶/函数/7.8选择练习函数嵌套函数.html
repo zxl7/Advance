@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function count() {
+			var num = 1;
+			return function () {
+				return num++;
+			}
+		}
+
+		document.write(count()() + '<br/>');
+		document.write(count()() + '<br/>');
+		document.write(count()() + '<br/>');
+
+		var fn =  count();
+
+		document.write(fn() + '<br/>');
+		document.write(fn() + '<br/>');
+		document.write(fn() + '<br/>');
+	</script>
+</body>
+</html>
