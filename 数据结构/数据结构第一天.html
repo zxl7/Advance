@@ -10,18 +10,18 @@
     <script>
     function Stack() {
         var items = []; //使用数组存放数据
-        //
+
+        //push⽅方法向栈⾥里里压⼊入⼀一个元素
         this.push = function(item) {
             items.push(item);
         }
 
-
         this.pop = function() {
             return items.pop();
         }
-
+        //top ⽅方法返回栈顶元素
         this.top = function() {
-            return items[item.length - 1]
+            return items[items.length - 1]
         }
 
         //判断栈是否为空
@@ -40,28 +40,71 @@
         }
     }
 
+
+    //实现一个有min方法的栈
+    function MinStack() {
+        var data_stack = new Stack(); //一般栈
+        var min_stack = new Stack(); //最小值栈
+
+        //push的时候,两个栈都要操作
+        this.push = function(item) {
+            data_stack.push(item); //常规栈,进行常规操作
+
+            //如果min_stack为空,直接放⼊入,如果item⼩小于min_stack栈顶元素,放⼊入其中
+            // 这样做的⽬目的,是保证min_stack的栈顶始终保存栈的最⼩小值
+            if (min_stack.isEmpty() || item < min_stack.top()) {
+                min_stack.push(item);
+            } else {
+                // 如果item⼤于等于栈顶元素,把min_stack的栈顶元素再放⼊入⼀一次
+                // min_stack的元素个数要和data_stack 保持⼀一致
+                min_stack.push(min_stack.top());
+            }
+        }
+
+        // // pop的时候,两个栈都pop
+        // this.pop = function() {
+        //     data_stack.pop();
+        //     min_stack.pop();
+        // }
+
+        // 直接取栈顶的元素
+        this.min = function() {
+            return min_stack.top();
+        }
+    }
+
+    minstack = new MinStack();
+    minstack.push(3);
+    minstack.push(6);
+    minstack.push(8);
+    console.log(minstack.min());
+    minstack.push(2);
+    console.log(minstack.min());
+
+
+
     //计算后缀表达式
     function calc_exp(exp) {
         var stack = new Stack();
         for (var i = 0; i < exp.length; i++) {
             var item = exp[i];
-            if (["+","-","*","/"].indexOf(item) >=0) {
+            if (["+", "-", "*", "/"].indexOf(item) >= 0) {
                 var value_1 = stack.pop();
                 var value_2 = stack.pop();
                 //第一弹出放左,第二弹出放右
-                var exp_str = value_2+item+value_1;
+                var exp_str = value_2 + item + value_1;
                 //计算并取整
                 var res = parseInt(eval(exp_str));
                 //计算结果压入栈中
                 stack.push(res.toString());
-            } else{
+            } else {
                 stack.push(item);
             }
         }
         return stack.pop();
     }
 
-    console.log(calc_exp(["4","12","5","/","+"]));
+    console.log(calc_exp(["4", "12", "5", "/", "+"]));
 
 
 
@@ -88,7 +131,6 @@
     }
     console.log(is_leagl_brackets("()()()()()()()"))
     console.log(is_leagl_brackets(")()()()())()))(((())"))
-
     </script>
 </body>
 
