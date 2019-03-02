@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2-1</title>
+    <style>
+    /*补充代码*/
+    li:hover {
+        cursor: pointer;
+
+    }
+    </style>
+</head>
+
+<body>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <script>
+    var li = document.getElementsByTagName("li");
+    for (var i = 0, len = li.length; i < len; i++) {
+        (function(i) {
+            li[i].onclick = function() {
+                alert(i+1);
+
+            }
+        })(i)
+    }
+    </script>
+</body>
+
+</html>
