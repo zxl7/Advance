@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function blog(name, url, friend) {
+        this.name = name;
+        this.url = url;
+        this.friend = friend;
+    }
+
+    blog.prototype = {
+        showIn: function() {
+            alert(this.name + "-----" + this.url);
+        },
+        gets: function() {
+            alert(this.friend)
+        }
+    }
+
+    var pro = new blog("zs", "baidu.com", "lisi")
+    pro.showIn();
+    </script>
+</body>
+
+</html>

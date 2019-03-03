@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test() {
+
+		}
+
+		test.prototype = {
+			color:"red",
+			height:"1.7m",
+			eat:function() {
+				alert(this.color)
+			}
+		}
+
+		var man = new test();
+
+		alert(man.color);
+	</script>
+</body>
+</html>
