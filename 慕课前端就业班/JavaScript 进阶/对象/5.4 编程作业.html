@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>5-4</title>
+</head>
+
+<body>
+    <script>
+    function student() {
+        var privateStore = {};
+
+        function _set(name, sex, age) {
+            privateStore.name = name;
+            privateStore.sex = sex;
+            privateStore.age = age;
+        }
+
+        function _get() {
+            return privateStore;
+        }
+
+        this.get= function() {
+            return _get;
+        }
+
+        this.set= function() {
+            return _set;
+        }
+    }
+    var student1 = new student()
+    student1.set()("小明", "男", 23);
+    console.log(student1.get()())
+    </script>
+</body>
+
+</html>
