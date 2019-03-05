@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    function person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    person.prototype.sayhello = function() {
+    	alert("属性值"+this.name);
+    }
+ 
+
+    function student() {};
+
+    student.prototype = new person("lisi",22) 
+    student.prototype.grade = 3;
+    student.prototype.test = function () {
+    	alert(this.grade)
+    }
+
+
+    </script>
+</body>
+
+</html>
