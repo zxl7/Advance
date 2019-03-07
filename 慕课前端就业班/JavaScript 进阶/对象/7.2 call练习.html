@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Animal (name,food) {
+			this.name = name;
+			this.food = food;
+			this.say = function () {
+				alert(this.name +"喜欢吃"+ this.food)
+			}
+		}
+		function Dog (name,food){
+			Animal.call(this,name,food)
+		}
+
+		var dog1 = new Dog ("dog","骨头")
+		dog1.say()
+	</script>
+</body>
+</html>
