@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+
+<body>
+    <script>
+    function Count() {
+        var num = 0
+        for (var i in arguments) {
+            num += arguments[i];
+        }
+        alert(num)
+    }
+
+    Count(3, 4, 5)
+    </script>
+</body>
+
+</html>
