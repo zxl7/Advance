@@ -58,7 +58,12 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
+    function removeTransition (event) {
+      if(event.propertyName !== 'transform') return;
+      event.target.classList.remove('palying');
+    }
 
+    
   </script>
 
 </body>
