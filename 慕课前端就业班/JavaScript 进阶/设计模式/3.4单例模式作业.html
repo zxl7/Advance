@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var Person = (function() {
+        // 此处填写代码
+        var instance = null;
+        return function() {
+            // 此处填写代码
+            if (!instance) {
+                instance = this;
+            }
+            this.name = 'zhangsan';
+            this.id = Math.random();
+            return instance;
+        }
+    })();
+    var Person1 = new Person();
+    var Person2 = new Person();
+    console.log(Person1 == Person2);
+    </script>
+</body>
+
+</html>
