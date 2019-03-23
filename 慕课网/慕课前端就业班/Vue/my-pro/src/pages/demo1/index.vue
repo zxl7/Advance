@@ -1,5 +1,5 @@
 <template>
   <div>
-    hello world
+    hellworld
   </div>
 </template>
