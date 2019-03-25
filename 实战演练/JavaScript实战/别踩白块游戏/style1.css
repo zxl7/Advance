@@ -1,0 +1,29 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  margin: 150px auto;
+  border: 1px solid black;
+}
+
+#go {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  z-index: 99;
+}
+#go a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border-bottom: 2px dashed #000;
+}
