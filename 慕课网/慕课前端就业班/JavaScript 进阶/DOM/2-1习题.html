@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .li {
+        list-style: none;
+        height: 50px;
+        line-height: 50px;
+        width: 100px;
+        background-color: lightblue;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    //在此处补充代码
+
+    var ul = document.createElement('ul');
+    document.body.appendChild(ul);
+    for (var i = 0; i < 3; i++) {
+        var li = document.createElement('li');
+        ul.appendChild(li);
+        li.innerHTML = '第' + [i+1] + "个li";
+        li.className = 'li'
+    }
+
+    var comment = document.createComment('A commen')
+    ul.insertBefore(comment, ul.firstChild);
+    </script>
+</body>
+
+</html>
