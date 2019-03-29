@@ -1,73 +1,72 @@
 (function() {
+    // console.log(province)
     var provinceNode = document.getElementById("province"), //$(#....)
         cityNode = document.getElementById('city'),
         schoolNode = document.getElementById('school');
-//创建省会
-    var provinceStr = '',
+    //省会的遍历
+    var proStr = '',
         selectPstr = '';
-    for (var i = 0, len = province.length; i < len; i++) {
-        // selectPstr += province[i][0]   province[i][1]
-        selectPstr +=
-            "<option value = " + province[i][0] + ">" + province[i][1] + "</option>";
+    for (var i = 0; i < province.length; i++) {
+        proStr += '<option value = ' + province[i][0] + '>' + province[i][1] + '</option>'
     }
-    provinceNode.html(selectPstr);
+    provinceNode.innerHTML = proStr;
 
-//城市
-    // console.log(typeof provinceNode.val());
-    var cityArr = city[provinceNode.val()],
-        selectCstr = "";
-    console.log(cityArr);
-    for (var i = 0, len = cityArr.length; i < len; i++) {
-        selectCstr +=
-            "<option value = " + cityArr[i][0] + ">" + cityArr[i][1] + "</option>";
+    // 城市的遍历
+
+    var cityArr = city[provinceNode.value];
+    var cityStr = '';
+
+    for (var i = 0; i < cityArr.length; i++) {
+        cityStr += '<option value = ' + cityArr[i][0] + '>' + cityArr[i][1] + '</option>'
     }
-    selectCstr += "<option value='9999'>其他</option>";
-    cityNode.html(selectCstr);
+    cityNode.innerHTML = cityStr;
 
-    //院校
-    var schoolArr = allschool[cityNode.val()],
+
+    // 学校的遍历
+    var schoolArr = allschool[cityNode.value],
         selectSstr = "";
     for (var i = 0, len = schoolArr.length; i < len; i++) {
         selectSstr += "<option >" + schoolArr[i][2] + "</option>";
     }
-    selectSstr += "<option value='9999'>其他</option>";
-    schoolNode.html(selectSstr);
+    schoolNode.innerHTML = selectSstr;
 
-    //省会联动
-    provinceNode.change(function() {
-        var provinceCurrent = provinceNode.val(),
-            cityArr = city[provinceCurrent],
-            selectCstr = "";
-        for (var i = 0, len = cityArr.length; i < len; i++) {
-            selectCstr +=
-                "<option value = " + cityArr[i][0] + ">" + cityArr[i][1] + "</option>";
-        }
-        selectCstr += "<option value='9999'>其他</option>";
-        cityNode.html(selectCstr);
-
-        (schoolArr = allschool[cityNode.val()]), (selectSstr = "");
-        if (schoolArr) {
-            for (var i = 0, len = schoolArr.length; i < len; i++) {
-                selectSstr += "<option >" + schoolArr[i][2] + "</option>";
+    //创建联动
+    provinceNode.change= function() {
+            var provinceCurrent = provinceNode.value(),
+                cityArr = city[provinceCurrent],
+                selectCstr = '';
+            for (var i = 0, len = cityArr.length; i < len; i++) {
+                selectCstr += "<option value = " + cityArr[i][0] + ">" + cityArr[i][1] + "</option>";
             }
-            selectSstr += "<option value='9999'>其他</option>";
-            schoolNode.html(selectSstr);
-        }
-    });
+            selectCstr += "<option value = '9999'>其他</option>";
+            cityNode.html(selectCstr);
 
-    //城市联动
-    cityNode.change(function() {
-        (schoolArr = allschool[cityNode.val()]), (selectSstr = "");
-        if (schoolArr) {
-            for (var i = 0, len = schoolArr.length; i < len; i++) {
-                selectSstr += "<option >" + schoolArr[i][2] + "</option>";
+            schoolArr = allschool[cityNode.value()],
+                selectSstr = '';
+            if (schoolArr) {
+                for (var i = 0, len = schoolArr.length; i < len; i++) {
+                    selectSstr += "<option >" + schoolArr[i][2] + "</option>";
+                }
+                selectSstr += "<option value = '9999'>其他</option>";
+                schoolNode.html(selectSstr);
             }
-            selectSstr += "<option value='9999'>其他</option>";
-            schoolNode.html(selectSstr);
-        } else {
-            selectSstr = "<option value = '9999'>其他</option>";
-            schoolNode.html(selectSstr);
         }
-    });
-})();
+        //城市联动
+        cityNode.change = function() {
 
+            schoolArr = allschool[cityNode.value()],
+                selectSstr = '';
+            if (schoolArr) {
+                for (var i = 0, len = schoolArr.length; i < len; i++) {
+                    selectSstr += "<option >" + schoolArr[i][2] + "</option>";
+                }
+                selectSstr += "<option value = '9999'>其他</option>";
+                schoolNode.html(selectSstr);
+            } else {
+                selectSstr = "<option value = '9999'>其他</option>";
+                schoolNode.html(selectSstr);
+            }
+        }
+    
+
+})()
