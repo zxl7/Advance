@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.login_bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_bg img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.login_box {
+    width: 600px;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    position: absolute;
+}
+
+.login_headline {
+    text-align: center;
+    color: #1D88A2;
+}
+
+.login_headline h1 {
+    margin-top: 15px;
+}
+
+.login_headline p {
+    line-height: 40px;
+    font-size: 17px;
+}
+
+.login_input {
+    margin-left: 172px;
+    margin-top: 22px;
+}
+
+
+
+.login_username,
+.login_password {
+    width: 250px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    font-size: 15px;
+}
+
+.login_btn {
+    margin-top: 22px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.sure {
+    width: 100px;
+    background: rgba(27, 170, 111, 0.4);
+    border: none;
+    outline: none;
+    margin-left: 42px;
+}
+
+.register {
+    width: 100px;
+    display: inline-block;
+    margin-left: 50px;
+    background: rgba(140, 140, 210, 0.4);
+    border: none;
+    outline: none;
+}
+
+
+.admin {
+    width: 50px;
+    background: rgba(222, 66, 18, 0.2);
+    border: none;
+    outline: none;
+    float: right;
+    font-size: 15px;
+
+}
+
+.forgot {
+    margin-left: 183px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
