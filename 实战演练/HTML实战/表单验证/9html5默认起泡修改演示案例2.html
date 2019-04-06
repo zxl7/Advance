@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>表单验证默认样式修改2</title>
+</head>
+<style>
+    .oneline{line-height: 1.5;margin:10px auto;}
+    .oneline label{width:100px;text-indent: 15px;font-size:14px;font-family: "Microsoft Yahei";display: inline-block;}
+    .oneline .sinput{width:60%;height:30px;border-radius: 6px;border:1px solid #e2e2e2;}
+    .oneline input[type="submit"]{margin-left:20px;width:80px;height:30px;border:0;background-color:#5899d0;color:#fff;font-size:14px;border-radius: 6px;}
+    .error-message{color:red;font-size:12px;text-indent: 108px;}
+</style>
+<body>
+<form>
+    <div class="oneline">
+        <label for="name">用户名:</label>
+        <input id="name" name="name" class="sinput"  required>
+    </div>
+    <div class="oneline">
+        <label for="email">Email:</label>
+        <input id="email" name="email" class="sinput"  type="email" required>
+    </div>
+    <div class="oneline">
+        <input type="submit" value="提交">
+    </div>
+</form>
+
+<script>
+		function replaceValidationUI( form ) {
+	    // 阻止默认气泡
+	    form.addEventListener( "invalid", function( event ) {
+	        event.preventDefault();
+	    }, true );
+	    
+	    //阻止提交
+	    form.addEventListener( "submit", function( event ) {
+	        if ( !this.checkValidity() ) {
+	            event.preventDefault();
+	        }
+	    });
+
+	    var submitButton = form.querySelector( "button:not([type=button]), input[type=submit]" );
+	    submitButton.addEventListener( "click", function( event ) {
+	        var invalidFields = form.querySelectorAll( ":invalid" ),
+	            errorMessages = form.querySelectorAll( ".error-message" ),
+	            parent;
+
+	      
+	        for ( var i = 0; i < errorMessages.length; i++ ) {
+	            errorMessages[ i ].parentNode.removeChild( errorMessages[ i ] );
+	        }
+
+	        for ( var i = 0; i < invalidFields.length; i++ ) {
+	            parent = invalidFields[ i ].parentNode;
+	            parent.insertAdjacentHTML( "beforeend", "<div class='error-message'>" + 
+	                invalidFields[ i ].validationMessage +
+	                "</div>" );
+	        }
+
+	        if ( invalidFields.length > 0 ) {
+	            invalidFields[ 0 ].focus();
+	        }
+	    });
+	}
+
+	var forms = document.querySelectorAll( "form" );
+	for ( var i = 0; i < forms.length; i++ ) {
+	    replaceValidationUI( forms[ i ] );
+	}
+	
+</script>
+	
+</body>
+</html>
