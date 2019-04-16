@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>进制转换</title>
+</head>
+
+<body>
+    <script>
+    function Stack() {
+        var items = []; //使用数组存放数据
+
+        //push⽅方法向栈⾥里里压⼊入⼀一个元素
+        this.push = function(item) {
+            items.push(item);
+        }
+
+        this.pop = function() {
+            return items.pop();
+        }
+        //top ⽅方法返回栈顶元素
+        this.top = function() {
+            return items[items.length - 1]
+        }
+
+        //判断栈是否为空
+        this.isEmpty = function() {
+            return items.length == 0;
+        }
+
+        //返回栈的大小
+        this.size = function() {
+            return items.length;
+        }
+
+        //清空栈
+        this.clear = function() {
+            itens = [];
+        }
+    }
+
+
+    function divideBy2(decNumber) {
+    	var remStack = new Stack(),
+    	rem,
+    	binaryString = '';
+
+
+    	while (decNumber > 0) {
+    	 	rem = Math.floor(decNumber % 2);
+    	 	remStack.push(rem);
+    	 	decNumber = Math.floor(decNumber / 2);
+    	 } 
+
+    	 while (!remStack.isEmpty()) {
+    	 	binaryString += remStack.pop().toString();
+    	 }
+    	 return binaryString;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
