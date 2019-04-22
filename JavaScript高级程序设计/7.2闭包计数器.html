@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+</head>
+
+<body>
+	<!-- 函数返回函数创建闭包! -->
+    <script>
+    function makeCounter() {
+        var count = 0;
+
+        function counter() {
+            return count++;
+        }
+        return counter;
+    }
+
+    var doCount = makeCounter();
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+    console.log(doCount());
+
+
+    function makeCounterr() {
+        var count = 0;
+        return {
+            increment: function() {
+                return count++;
+            }
+        }
+    }
+
+    var counte = makeCounterr();
+
+    console.log(counte.increment());
+    console.log(counte.increment());
+    console.log(counte.increment());
+    console.log(counte.increment());
+    console.log(counte.increment());
+    console.log(counte.increment());
+    console.log(counte.increment());	
+    console.log(counte.increment());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 闭包包含的是实际的环境,而并非环境的副本 -->
+	<script>
+		function setTimer(doneMessage,n) {
+			setTimeout(function() {
+				alert(doneMessage);
+			},n);
+
+			doneMessage= "new hhhha "
+
+		}
+		setTimer("oldhjhjghjg",1000)
+	</script>
+</body>
+</html>

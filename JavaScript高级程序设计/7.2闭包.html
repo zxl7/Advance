@@ -8,45 +8,45 @@
 
 <body>
     <script>
-        var printNumTwo;
-for (var i = 0; i < 3; i++) {
-  if(i === 2){
-    printNumTwo = function() {
-      return i;
-    };
-  }
-}
-console.log(printNumTwo());
+    var printNumTwo;
+    for (var i = 0; i < 3; i++) {
+        if (i === 2) {
+            printNumTwo = function() {
+                return i;
+            };
+        }
+    }
+    console.log(printNumTwo());
     // for( var i = 0; i < 10; i++){
-    // 	console.log(i);
+    //  console.log(i);
     // }
 
     //十个数一一对应闭包问题  用立即执行来解决十十对应.
     // function test () {
-    // 	var arr = [];
-    // 	for (var i = 0; i < 10; i++) {
+    //  var arr = [];
+    //  for (var i = 0; i < 10; i++) {
     //立即执行函数
-    // 		(function (j) {
-    // 			arr[j] = function () {
-    // 				document.write( j + "");
-    // 			}
-    // 		}(i));
-    // 	}
-    // 	return arr;
+    //      (function (j) {
+    //          arr[j] = function () {
+    //              document.write( j + "");
+    //          }
+    //      }(i));
+    //  }
+    //  return arr;
     // }
     // var myArr = test();
     // for(var j = 0; j<10; j++) {
-    // 	myArr[j] ();
+    //  myArr[j] ();
     // }  
     // 
 
     // 函数累加器
     // function add() {
-    // 	var num = 0;
-    // 	function a(){
-    // 		console.console.log(++num);
-    // 	}
-    // 	return a;
+    //  var num = 0;
+    //  function a(){
+    //      console.console.log(++num);
+    //  }
+    //  return a;
     // }
     // var myAdd = add();
     // myAdd();
@@ -56,21 +56,21 @@ console.log(printNumTwo());
     // 
     // eater 做缓存
     // function test() {
-    // 	var food = "apple";
-    // 	var obj = {
-    // 		eatFood : function () {
-    // 			if (food != "") {
-    // 				console.log("I an eating" + food);
-    // 				food = "";
-    // 			}else{
-    // 				console.log("There is nothing! empty!");
-    // 			}
-    // 		},
-    // 		pushFood : function (myFood) {
-    // 			food = myFood;
-    // 		}
-    // 	}
-    // 	return obj;
+    //  var food = "apple";
+    //  var obj = {
+    //      eatFood : function () {
+    //          if (food != "") {
+    //              console.log("I an eating" + food);
+    //              food = "";
+    //          }else{
+    //              console.log("There is nothing! empty!");
+    //          }
+    //      },
+    //      pushFood : function (myFood) {
+    //          food = myFood;
+    //      }
+    //  }
+    //  return obj;
     // }
     // var person = test();
 
@@ -83,25 +83,25 @@ console.log(printNumTwo());
     // 
     //输出1~9数字 
     // function test() {
-    // 	var arr = [];
-    //  	for (var i = 0; i < 10; i++) {
+    //  var arr = [];
+    //      for (var i = 0; i < 10; i++) {
 
-    // 		(function (j){
+    //      (function (j){
 
-    // 			arr[i] = function(){
-    //  				document.write(j);
-    //  			}
-    // 		}(i))
+    //          arr[i] = function(){
+    //                  document.write(j);
+    //              }
+    //      }(i))
 
-    //  	}
-    //  	return arr;
+    //      }
+    //      return arr;
     // }
 
 
 
     //  var myArr = test();
     //  for (var j = 0; j < 10; j++) {
-    //  	myArr[j]();
+    //      myArr[j]();
     //  }
     //  
     //  
@@ -151,8 +151,6 @@ console.log(printNumTwo());
     // } 
 
     // var deng = new Deng('deng','xiaoliu');
-     
-    
     </script>
 </body>
 

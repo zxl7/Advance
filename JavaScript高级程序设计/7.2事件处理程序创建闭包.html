@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理程序</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    window.onload = function() {
+        var count = 0,
+            message = "今天天气不错~",
+            div = document.getElementById("message");
+        var button = document.getElementById("clickme");
+        button.onclick = function() {
+            count++;
+            div.innerHTML = message + count + "times!";
+        }
+
+    }
+    </script>
+</body>
+
+</html>
