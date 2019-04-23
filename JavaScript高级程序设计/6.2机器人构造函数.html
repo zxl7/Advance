@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机器人</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function Robot(name, age, owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
+    Robot.prototype.maker = "ObjectsRUs";
+    Robot.prototype.speak = function () {
+    	alert("Warning warning!!")
+    };
+    Robot.prototype.MakeCoffee = function() {
+    	alert("makeCoffee!")
+    }
+    Robot.prototype.blinkLights = function () {
+    	alert("Blink blink!!")
+    }
+
+
+
+    var robby = new Robot("Robby",1956,"Dr.zheng");
+    var rosie = new Robot("Rosie",1962,"Dr.sun");
+
+    robby.onOffSwitch = true;
+    robby.makeOffee = function (){
+    	alert("coffee真好喝,嘿嘿哈哈~");
+    }
+
+    rosie.cleanHouse = function () {
+    	alert("Cleaning! Spic and Span soon....")
+    }
+
+
+
+    </script>
+</body>
+
+</html>
