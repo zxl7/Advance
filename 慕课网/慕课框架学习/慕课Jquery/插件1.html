@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chosen</title>
+    <link href="https://cdn.bootcss.com/chosen/1.8.8.rc6/chosen.css" rel="stylesheet">
+</head>
+
+<body>
+    <select name="dome" id="demo" style="width:300px">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br>
+    <br>
+    <select name="dome2" id="demo2" multiple data-placehoder="请选择...">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="https://cdn.bootcss.com/chosen/1.8.8.rc4/chosen.jquery.js"></script>
+    <script>
+    $(function() {
+        $("#demo").chosen();
+        $("#demo2").chosen({
+            width: "50%"
+        });
+
+    })
+    </script>
+</body>
+
+</html>

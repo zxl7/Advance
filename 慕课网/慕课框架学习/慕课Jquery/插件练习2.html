@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pickadate</title>
+    <link href="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/themes/default.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/themes/default.time.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/themes/default.date.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="text" class="datepicker">
+    <br>
+    <br>
+    <input type="text" class="timepicker">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/picker.js"></script>
+    <script src="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/picker.date.js"></script>
+    <script src="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/picker.time.js"></script>
+    <script src="https://cdn.bootcss.com/pickadate.js/3.6.3/compressed/translations/zh_CN.js"></script>
+    <script>
+    $(function() {
+        $('.datepicker').pickadate();
+        $('.timepicker').pickatime();
+    })
+    </script>
+</body>
+
+</html>
