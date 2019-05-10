@@ -12,7 +12,13 @@
     </div>
 
     <div id="exmaple-3">
-      <button @click="counter+=1">加一</button>
+      <!-- 方法可传参 -->
+      <button @click="say('传参shu')">say</button>
+    </div>
+
+    <div @click="dothis2">
+      <!-- 方法可传参 -->
+      <button @click.stop="dothis">dothis</button>
     </div>
   </div>
 </template>
@@ -27,6 +33,15 @@ export default {
   methods: {
     gltter () {
       this.counter++
+    },
+    say (h) {
+      alert(h)
+    },
+    dothis () {
+      alert(1)
+    },
+    dothis2 () {
+      alert(2)
     }
   }
 }
