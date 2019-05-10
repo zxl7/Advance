@@ -8,6 +8,7 @@ import Demo4 from '@/pages/demo4'
 import Demo5 from '@/pages/demo5'
 import Demo6 from '@/pages/demo6'
 import Demo7 from '@/pages/demo7'
+import Demo8 from '@/pages/demo8'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/demo7',
       name: 'demo7',
       component: Demo7
+    },
+    {
+      path: '/demo8',
+      name: 'demo8',
+      component: Demo8
     }
   ]
 })
