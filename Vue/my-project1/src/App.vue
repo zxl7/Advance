@@ -16,4 +16,8 @@ export default {
   padding: 0;
   list-style: none;
 }
+
+a{
+  text-decoration: none;
+}
 </style>
