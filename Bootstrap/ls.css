@@ -1,0 +1,95 @@
+  /*   *{
+        margin: 0;
+        padding: 0;
+    }
+ */
+  #header {
+      text-decoration: none;
+  }
+
+  #headerh1 {
+      text-decoration: none;
+      color: #E6E6FA;
+      font-family: 微软雅黑;
+      font-size: 33px;
+  }
+
+  #header {
+      background-color: #383D49;
+      color: white;
+      text-align: center;
+      height: 70px;
+  }
+
+  #headerleft {
+      float: left;
+      height: 50px;
+      color: #E6E6FA;
+      line-height: 20px;
+  }
+
+  #headerleft h1 {
+      margin-left: 14px;
+      display: inline-block;
+  }
+
+  #headerright {
+      float: right;
+      height: 60px;
+      text-align: center;
+      line-height: 70px;
+  }
+
+  #headerright a {
+      color: red;
+  }
+
+  .wrap {
+      width: 80%;
+      margin: 0 auto;
+  }
+
+
+
+  .main .left {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+      padding-top: 30px;
+      background: #DBDADA;
+  }
+
+
+  .left div {
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+  }
+
+
+  .left div:hover {
+      background: #EFEEEE;
+      cursor: pointer;
+  }
+
+  .main {
+      display: flex;
+      align-items: center;
+  }
+
+  .main .right {
+      width: 80%;
+      text-align: center;
+      height: 100px;
+      margin: 0 auto;
+  }
+
+/*   .inquire {
+      margin-top: 40px;
+  }
+ */
+
+  .table {
+    margin: 0px 0px 0px 100px;
+  }
