@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bug</title>
+</head>
+<body>
+	<script>
+		var  getId = function (id) {
+			var el = document.createElementById(id)
+			if(!+"\v1") {
+				if (el && el.id === id) {
+					return el;
+				}else {
+					var els = document.all[id],
+					n = els.length;
+					for (var i = 0; i < n; i++) {
+						if (els[i].id === id) {
+							return els[i];
+						}
+					}
+				}
+			}
+			return el;
+		}
+	</script>
+</body>
+</html>

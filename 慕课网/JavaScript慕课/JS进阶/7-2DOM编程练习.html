@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    div:not(:nth-of-type(2)) {
+        width: 500px;
+        height: 100%;
+        background-color: #00c4ff7a;
+        margin: 0 auto;
+    }
+
+    /*ul默认有外边距*/
+
+    ul {
+        width: 300px;
+        height: 100%;
+        background-color: #f9c3e6d6;
+        list-style: none;
+        /*清除默认边距*/
+        margin: 0;
+        padding: 0;
+        margin: 20px auto;
+        margin-bottom: 30px;
+    }
+
+    li {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin: 30px auto;
+        background-color: #cdffc0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button id="btnAdd">添加元素</button>
+        <button id="btnRemove">删除元素</button>
+        <ul id="list">
+            我是ul
+            <li>我是li1</li>
+            <li>我是li2</li>
+            <li>我是li3</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    var list = document.getElementById('list');
+    var addBtn = document.getElementById('btnAdd');
+    var removeBtn = document.getElementById('btnRemove');
+
+    var li = document.getElementsByTagName('li')
+
+
+
+    addBtn.onclick = function() {
+        var txt = document.createTextNode("我是li");
+        var li = document.createElement('li')
+        li.appendChild(txt);
+        list.appendChild(li);
+        go();
+    }
+
+    removeBtn.onclick = function() {
+        list.removeChild(list.lastElementChild)
+
+    }
+
+    function go() {
+        for (var i = 0; i < li.length; i++) {
+            li[i].onmouseover = function(event) {
+                this.style.backgroundColor = "#40C8D6"
+            };
+            li[i].onmouseout = function() {
+                this.style.backgroundColor = "#F67D62"
+            }
+        }
+
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>节点练习</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <ul id="list">
+            <li>第一个li</li>
+            <li>第二个li</li>
+            <li>第三个li</li>
+        </ul>
+    </div>
+    <script>
+      var wrap = document.getElementById('wrap'),
+      list = document.getElementById('list'),
+      arr = ['didijiwo1','didijiwo2','didijiwo3','didijiwo5','didijiwo4','didijiwo6','didijiwo7'];
+      // var text = document.createTextNode(`弟弟救我啾啾啾啾救救我!`);
+      // var li = document.createElement('li');
+      // var ele = li.appendChild(text);
+      // wrap.replaceChild(ele,list)
+      var newUl = document.createElement('ul')
+      for (var i = 0; i < 7; i++) {
+        var li = document.createElement('li'),
+        text = document.createTextNode(arr[i])
+        li.appendChild(text);
+        newUl.appendChild(li);
+      }
+
+      wrap.replaceChild(newUl,list)
+
+
+
+    </script>
+</body>
+
+</html>

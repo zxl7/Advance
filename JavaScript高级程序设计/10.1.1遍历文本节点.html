@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+</head>
+
+<body>
+    <script>
+    var s = "";
+
+    function travel(space, node) {
+        if (node.tagName) {
+            s += space + node.tagName + "<br/>";
+        }
+        var len = node.childNodes.length;
+        for (var i = 0; i < len; i++) {
+            travel(space + "-", node.childNodes[i]);
+        }
+    }
+    travel("你是谁,没有绝对安全的系统", document);
+    document.write(s);
+    </script>
+</body>
+
+</html>

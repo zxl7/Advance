@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>nodelist转为数组</title>
+</head>
+
+<body>
+    <script>
+    function mackArray(nodelist) {
+        try {
+            return Array.prototype.slice.call(nodelist); //一样可以做到
+        } catch (e) {
+            arr = new Array();
+            for (var i = 0, len = nodelist.length; i < len; i++) {
+                arr.push(nodelist[i])
+            }
+        }
+            return arr;
+    }
+    console.log(document.scripts)
+    </script>
+</body>
+
+</html>
