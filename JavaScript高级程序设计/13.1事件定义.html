@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件定义</title>
+</head>
+<body>
+	<button onclick = "alertWindow()">按钮</button>
+	<button id="btn">按钮</button>
+	<script>
+		function alertWindow () {
+			alert("我被点击")
+		}
+
+		var dom0 = function () {
+			alert("Dom0级事件绑定")
+		}
+
+		var btn = document.getElementById('btn')
+		btn.onclick = dom0;
+	</script>
+</body>
+</html>
