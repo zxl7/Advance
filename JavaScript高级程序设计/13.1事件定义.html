@@ -5,19 +5,33 @@
 	<title>事件定义</title>
 </head>
 <body>
+	<!-- html事件 -->
 	<button onclick = "alertWindow()">按钮</button>
 	<button id="btn">按钮</button>
+	<button id="btn2">dom2级事件</button>
 	<script>
+
+		// dom0级事件
 		function alertWindow () {
 			alert("我被点击")
 		}
-
 		var dom0 = function () {
 			alert("Dom0级事件绑定")
 		}
-
 		var btn = document.getElementById('btn')
 		btn.onclick = dom0;
+
+
+		var btn2  = document.getElementById("btn2")
+		btn2.addEventListener('click',function () {
+			alert("dididjiuwo",false)
+		})
+
+
+
+
+
+
 	</script>
 </body>
 </html>
