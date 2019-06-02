@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IE事件处理 </title>
+</head>
+
+<body>
+    <button id="myBtn">按钮</button>
+    <script>
+    var btn = document.getElementById("myBtn")
+    // btn.attachEvent('onclick',function(){
+    // 	alert("clicked")
+    // })
+    // 
+    var click = function() {
+        alert("clicked")
+    }
+
+    btn.attachEvent("onclick", click)
+
+    btn.datachEvent("onclick", click)
+    </script>
+</body>
+
+</html>
