@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>正则表达式</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var str = 'regular expression = regexp';
+    var pa = /lar exp/
+    var pat = new RegExp('lar exp')
+    console.log(pa.test(str) + '/' + pat.test(str) + '/' + pat.exec(str) + '/' + pa.exec(str))
+
+    var str = '一个"普通字符"在匹配字符串的时候，匹配与它相同的一个字符';
+    var pa = /普通字符/
+    var pat = new RegExp('普通字符')
+    console.log(pa.test(str) + '/' + pat.test(str) + '/' + pat.exec(str) + '/' + pa.exec(str))
+
+    var str = '正则表达式';
+    var userInput = '正则';
+    var ppt = new RegExp(userInput)
+    document.write(ppt.exec(ppt)+'/')
+    document.write(ppt.test(ppt))
+
+    </script>
+</body>
+
+</html>
