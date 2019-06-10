@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>正则表达式的特殊字符</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // var str = '/[a\nb]/';
+    // /*此处写代码*/
+    // var pattern=/\/\[a\nb\]\//;
+    // console.log(pattern.exec(str)[0]);
+    // // document.write(pattern.exec(str));
+    // // 
+    // document.write(str)
+
+    var str = '192.168.1.1@Admin';
+    /*此处写代码*/
+    var pattern = /\d\D\d@\w\w\w\w\w/;
+
+    document.write(pattern.exec(str));
+    </script>
+</body>
+
+</html>
