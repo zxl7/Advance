@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>回调函数 </title>
+</head>
+<body>
+	<script>
+		function f() {
+			return new Promise (resolve => {
+				setTimeout(function () {
+					resolve()
+				},1000)
+			})
+		}
+
+		f()
+		.then(function () {
+			console.log(1);
+			return f();
+		})
+	</script>
+</body>
+</html>
