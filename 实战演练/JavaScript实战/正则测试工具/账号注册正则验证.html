@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+margin: 0;
+padding: 0;
+}
+nav {
+width: 100%;
+height: 10vh;
+background: #4cb4dc;
+color: #e2dbbe;
+line-height: 50px;
+overflow: hidden;
+}
+nav p {
+margin-left: 20px;
+}
+section {
+width: 100%;
+height: 90vh;
+background: #e2dbbe;
+position: relative;
+}
+section .container {
+position: absolute;
+left: 20px;
+}
+section .container input {
+margin-bottom: 10px;
+}
+section .container select {
+margin-bottom: 10px;
+}
+section .container span {
+color: #a3a380;
+}
+</style>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <p>用户注册</p>
+        </nav>
+        <section>
+            <div class="container">
+                <p>用户名：</p>
+                <input type="text">
+                <span></span>
+                <br>
+                <p>登录密码：</p>
+                <input type="password">
+                <span></span>
+                <br>
+                <p>确认密码：</p>
+                <input type="password">
+                <span></span>
+                <br>
+                <p>姓名：</p>
+                <input type="text">
+                <span></span>
+                <br>
+                <p>性别：</p>
+                <select>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+                <br>
+                <p>身份证号码：</p>
+                <input type="text">
+                <span></span>
+                <br>
+                <p>邮箱：</p>
+                <input type="email">
+                <span></span>
+                <br>
+                <p>手机号码：</p>
+                <input type="text">
+                <span></span>
+                <br>
+                <button id="bt">提交</button>
+            </div>
+        </section>
+    </div>
+    <script>
+    var input = document.querySelectorAll('input');
+    var span = document.querySelectorAll('span');
+    var bt = document.getElementById('bt');
+
+    var reg = {
+        0: /^[a-zA-Z0-9]{6,15}$/, //用户名
+        1: /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/, //密码
+        2: null,
+        3: /[\u4e00-\u9fa5]{2,}/, //中文姓名
+        4: /(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}$)/, //身份证号
+        5: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/, // 邮箱
+        6: /^1[3|4|5|7|8][0-9]{9}$/ //手机号
+    }
+
+    var hint = {
+        0: '用户名是6-20位字母、数字或“_”,字母开头',
+        1: '密码6-18位，包括数字字母或符号，中间不能有空格',
+        2: '两次输入密码不一致',
+        3: '两位到四位的中文汉字',
+        4: '5位或者18位的数字',
+        5: '邮箱格式不正确',
+        6: '手机号格式不正确'
+    }
+
+    var checkall = [0, 0, 0, 0, 0, 0, 0];
+
+    for (var i = 0; i < input.length; i++) {
+        (function(i) {
+            input[i].oninput = function(e) {
+                if (i != 2) {
+                    if (reg[i].test(this.value)) {
+                        span[i].innerHTML = 'OK';
+                        span[i].style.color = '#a3a380';
+                        checkall[i] = 1;
+                    } else {
+                        span[i].innerHTML = hint[i];
+                        span[i].style.color = 'red';
+                        checkall[i] = 0;
+                    }
+                }
+                if (i == 2) {
+                    if (this.value == input[i - 1].value) {
+                        span[i].innerHTML = 'OK';
+                        span[i].style.color = '#a3a380';
+                        checkall[i] = 1;
+                    } else {
+                        span[i].innerHTML = hint[i];
+                        span[i].style.color = 'red';
+                        checkall[i] = 0;
+                    }
+                }
+                console.log(checkall);
+            }
+        })(i)
+    }
+
+    function check() {
+        for (var p in checkall) {
+            if (checkall[p] == 0) {
+                alert('不正确');
+                return 0;
+            }
+        }
+        alert("正确！！！！");
+        return 0;
+    }
+
+    bt.onclick = function() {
+        check();
+    }
+    </script>
+</body>
+
+</html>

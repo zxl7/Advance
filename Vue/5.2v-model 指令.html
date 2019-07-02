@@ -7,14 +7,22 @@
 </head>
 <body>
 	<div id="app">
-		<input type="text" v-model="msg">
-		<p>你输入:{{ msg }}</p>
+		<p>你输入了:{{ msg }}</p>
+		<h3>文本框</h3>
+		<p>v-model<input type="text" v-model="msg"></p>
+		<p>v-model.lazy<input type="text" v-model.lazy="msg"></p>
+		<p>v-model.number<input type="text" v-model.number="msg"></p>
+		<p>v-model.trim<input type="text" v-model.trim="msg"></p>
+		<hr>
+		<h3>文本域</h3>>
+		
+
 	</div>
 	<script type="text/javascript">
 		let app = new Vue({
 			el:"#app",
 			data:{
-				msg:''
+				msg:'请输入~'
 			}
 		})
 	</script>
