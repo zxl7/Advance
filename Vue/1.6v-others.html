@@ -3,14 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>v-once</title>
+    <title>v-pre & v-cloak & v-once</title>
     <script src="Vue.js"></script>
 </head>
 
 <body>
     <div id="app">
+        <p v-pre>你输入:{{ msg 原样输出不渲染}}</p>
+        <hr>
+        <div v-clock>渲染完成后显示</div>
+        <hr>
+        v-once:<p v-once>你输入:{{ msg }}</p>
+        <p>v-once 只渲染一次，不持续渲染</p>
+        <hr>
         <input type="text" v-model="msg">
-        <p v-once>你输入:{{ msg }}</p>
+        <div>{{msg}}</div>
     </div>
     <script type="text/javascript">
     let app = new Vue({
