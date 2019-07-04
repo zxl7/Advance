@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>new Vue</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-xanadu="color">{{ num }}</div>
+        <button @click='add'>ADD</button>
+    </div>
+    <script>
+    Vue.directive('xanadu', function(el, binding) {
+        console.log(el);
+        console.log(binding)
+        console.log(binding.name)
+        console.log(binding.value)
+        console.log(binding.expression)
+        el.style = 'color:' + binding.value
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 10,
+            color: 'red'
+        },
+        methods: {
+            add: function() {
+                this.num++;
+            }
+
+        }
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <panda></panda>
+    </div>
+    <script>
+    var city = {
+        template: `<div>Panda from SiChuan!</div>`
+    }
+    var pandaCom = {
+        template: `
+        <div>
+        <p>Panda from Chila!</p>
+        <city></city>
+        </div>
+        `,
+        components: {
+            "city": city
+        }
+    }
+
+
+    let vm = new Vue({
+        el: "#app",
+        components: {
+            "panda": pandaCom
+        }
+    });
+    </script>
+</body>
+
+</html>

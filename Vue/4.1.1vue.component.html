@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-组件</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <xuana></xuana>
+        <panda></panda>   
+    </div>
+    <script>
+    Vue.component('xuana', {
+        template: `<div>我是全局组件</div>`
+
+    })
+
+    let vm = new Vue({
+        el: "#app",
+        components: {
+            "panda": {
+                template: `<div>我是局部panda组件</div>`
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
