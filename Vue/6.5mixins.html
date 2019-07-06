@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mixins</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <p><button @click="add">Add</button></p>
+    </div>
+    <script>
+    var addConsole = {
+        updated:function () {
+            console.log('数据变化为' + this.message    )
+        }
+    }
+
+Vue.mixin({
+    updated:function () {
+        console.log('全局混入我最先执行')
+    }
+})
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 1
+        },
+        methods: {
+            add: function() {
+                this.message++
+            }
+        },
+        updated:function (){
+            console.log('我是原生updated最后执行');
+        },
+        mixins:[addConsole]
+
+    })
+
+
+    //原生后执行，混入先执行
+    </script>
+</body>
+
+</html>

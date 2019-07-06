@@ -3,21 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>new Vue</title>
+    <title>propsData</title>
     <script src="Vue.js"></script>
 </head>
 
 <body>
-    <div id="app">
-        {{ message }}
-    </div>
+
+    <header></header>
     <script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            message: 'new Day!'
-        }
-    })
+        var  header_a = Vue.extend({
+            template:`<p>{{message}}--{{a}}</p>`,
+            data:function () {
+                return {
+                    message:'hello ,i am header '
+                }
+            },
+            props:['a']
+        });
+
+        new header_a({propsData:{a:12}}).$mount('header')
     </script>
 </body>
 
