@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>实例事件</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{num}}
+        <p>
+            <button v-on:click="plus">Add</button>
+        </p>
+        <p>
+            <button onclick="reduce()">reduce</button>
+            <button onclick="reduceonce()">reduceonce</button>
+            <button onclick="off()">off</button>
+        </p>
+    </div>
+    <script>
+    let app = new Vue({
+        //挂载元素
+        el: '#app',
+        data: {
+            num: 0
+        },
+        // 方法
+        methods: {
+            plus() {
+                return this.num++;
+            }
+        }
+    });
+
+
+    app.$on('reduce', function() {
+        console.log('执行了reduce方法');
+        this.num--;
+    });
+
+    app.$once('reduceonce',function () {
+        console.log('reduceonce执行')
+        this.num--;
+    })
+
+
+    function reduce() {
+        app.$emit('reduce')
+    }
+
+    function reduceonce (argument) {
+        app.$emit('reduceonce')
+    }
+
+
+    function off() {
+        console.log('关闭某个事件');
+        app.$off('reduce');
+    }
+
+
+    </script>
+</body>
+
+</html>

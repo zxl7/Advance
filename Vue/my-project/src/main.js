@@ -4,11 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/'
-import VueResource from 'vue-resource'
+// import VueResource from 'vue-resource'
 // import MintUI from 'mint-ui'
 // import 'mint-ui/lib/style.css'
 
-Vue.use(VueResource)
+// Vue.use(VueResource)
 // Vue.use(MintUI)
 
 Vue.config.productionTip = false

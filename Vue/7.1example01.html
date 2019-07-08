@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中使用jQ</title>
+    <script src="Vue.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'new Day!'
+        },
+        //在Vue中使用Jq
+        //
+        mounted: function() {
+            $('#app').html('我是jq！')
+        },
+        methods: {
+            add: function() {
+                console.log(app);
+            }
+        }
+    })
+
+    app.add()
+    </script>
+</body>
+
+</html>
