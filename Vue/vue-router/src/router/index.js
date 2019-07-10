@@ -10,29 +10,36 @@ Vue.use(Router)
 
 
 export default new Router({
-  mode:'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
-      component:HelloWorld,
-      alias:'/Home1'
-    },{
-      path:'/params/:newsId(\\d+)/:newsTitle',
+      component: HelloWorld,
+      alias: '/Home1'
+    }, {
+      path: '/params/:newsId(\\d+)/:newsTitle',
       component: Params
-    },{
-      path:'/goHome',
-      redirect:'/'
-    },{
-      path:'/goParams/:newsId(\\d+)/:newsTitle',
-      redirect:'/params/:newsId(\\d+)/:newsTitle'
-    },{
-      path:'/hi1',
-      component:Hi1,
-      alias:'/xana'
-    },{
-      path:'*',
-      component:Error
+      // beforeEnter:(to,from,next) =>{
+      // console.log(to);
+      // console.log(from)
+      // next()
+      // next(flase)
+      // next({path:'/'})
+      // }
+    }, {
+      path: '/goHome',
+      redirect: '/'
+    }, {
+      path: '/goParams/:newsId(\\d+)/:newsTitle',
+      redirect: '/params/:newsId(\\d+)/:newsTitle'
+    }, {
+      path: '/hi1',
+      component: Hi1,
+      alias: '/xana'
+    }, {
+      path: '*',
+      component: Error
     }
   ]
 })
