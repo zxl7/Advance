@@ -3,6 +3,9 @@
     <img src="./assets/logo.png" /><br>
     <router-link to="/"> Home</router-link>
     <router-link to="/params/198/jspang is very"> params</router-link>
+    <router-link to="/goHome">goHome</router-link>
+    <router-link to="/goParams/111/i like Vue.js">goParamse</router-link>
+
     <router-view/>
   </div>
 </template>
