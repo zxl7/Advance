@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" />
-    <router-view />
-    <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;" />
-    <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;" />
+    <img src="./assets/logo.png" /><br>
+    <router-link to="/"> Home</router-link>
+    <router-link to="/params/198/jspang is very"> params</router-link>
+    <router-view/>
   </div>
 </template>
 
