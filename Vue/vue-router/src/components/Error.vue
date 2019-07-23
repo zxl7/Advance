@@ -6,7 +6,7 @@
 export default {
   data () {
     return {
-      msg:' 404 的问候！！'
+      msg: ' 404 的问候！！'
     }
   }
 }

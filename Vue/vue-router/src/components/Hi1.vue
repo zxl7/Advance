@@ -6,7 +6,7 @@
 export default {
   data () {
     return {
-      msg:'I am H111111!'
+      msg: '我是一号组件！'
     }
   }
 }
