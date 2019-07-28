@@ -1,12 +1,12 @@
 <template>
-  <h2>{{msg}}</h2>
+  <p>{{msg}}</p>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      msg: 'I am 我是二号组件!'
+      msg: 'I am 我是二号子组件!'
     }
   }
 }

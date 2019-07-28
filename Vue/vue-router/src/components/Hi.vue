@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>{{msg}}</h2>
+    <p>我有雷神的力量</p>
     <router-view class="childer"></router-view>
   </div>
 </template>
