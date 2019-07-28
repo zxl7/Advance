@@ -14,11 +14,17 @@ export default {
     }
   },
   beforeRouteEnter: (to, from, next) => {
-    console.log('准备进入Params路由模板')
+    console.log('准备进入Params路由模板！！')
+    console.log(to)
+    console.log(from)
     next()
+    // 控制是否允许跳转
+    // 跳转其他页面
   },
   beforeRouteLeave: (to, from, next) => {
-    console.log('准备离开Params路由模板')
+    console.log('准备离开Params路由模板！！')
+    console.log(to)
+    console.log(from)
     next()
   }
 }

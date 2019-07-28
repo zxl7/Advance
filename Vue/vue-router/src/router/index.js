@@ -32,6 +32,8 @@ Vue.use(Router)
 //   ]
 // })
 export default new Router({
+  mode: 'history',
+  // hash
   routes: [
     {
       path: '/',
@@ -49,16 +51,14 @@ export default new Router({
         default: Hi,
         left: Hi2,
         right: Hi1
-      }
+      },
+      alias: '/xana'
+      // alias重定向！
     },
     {
       path: '/params/:newsId(\\d+)/:newsTitle',
       name: 'params',
-      components: {
-        default: Params,
-        left: Hi1,
-        right: Hi2
-      }
+      component: Params
     },
     {
       path: '*',
@@ -66,12 +66,12 @@ export default new Router({
     },
     {
       path: '/goback',
-      redirect: '/'
+      redirect: '/hi'
       // 重定向！！
     },
     {
       path: '/goParams/:newsId(\\d+)/:newsTitle',
-      redirect: '/Params/:newsId/:newsTitle'
+      redirect: '/params/:newsId/:newsTitle'
       // 重定向！！
     }
   ]
