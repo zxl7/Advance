@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>旋转过渡</title>
-	<style>
-		div{
-			background: #EE7474;
-			width: 200px;
-			height: 200px;
-			transition: width 2s, height 2s, transform 2s;
-		}
-		div:hover{
-			width: 400px;
-			height: 400px;
-			-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-			transform: rotate(180deg);
 
-		}
-	</style>
+<head>
+    <meta charset="UTF-8">
+    <title>旋转过渡</title>
+    <style>
+    div {
+        background: #EE7474;
+        width: 200px;
+        height: 200px;
+        transition: width 2s, height 2s, transform 2s;
+    }
+
+    div:hover {
+        width: 400px;
+        height: 400px;
+        -webkit-transform: rotate(180deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+
+    }
+    </style>
 </head>
+
 <body>
-	<p>
-		<b>注意:</b>	该例子无法再IE9 以及更早的IE版本上实现
-	</p>
-	<div>鼠标过来看效果</div>
+    <p>
+        <b>注意:</b> 该例子无法再IE9 以及更早的IE版本上实现
+    </p>
+    <div>鼠标过来看效果</div>
 </body>
+
 </html>

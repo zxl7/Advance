@@ -1,22 +1,90 @@
+html,
+body,
+form,
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
 
-/*rem手机自适应尺寸*/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a img {
+    border: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+input,
+textarea,
+img,
+video,
+object {
+    box-sizing: border-box;
+}
+
+/*重置标签*/
+
 @media screen and (min-width:240px) {
-    html, body, button, input, select, textarea {
-        font-size:9px;
+
+    html,
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 9px;
     }
 }
+
 @media screen and (min-width:320px) {
-	html, body, button, input, select, textarea {
-		font-size:12px;
-	}
+
+    html,
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 12px;
+    }
 }
+
 @media screen and (min-width:360px) {
-	html, body, button, input, select, textarea {
-		font-size:13.5px;
-	}
+
+    html,
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 13.5px;
+    }
 }
+
 @media screen and (min-width:375px) {
-	html, body, button, input, select, textarea {
-		font-size:14.0625px;
-	}
+
+    html,
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 14.0625px;
+    }
 }
+
+/*rem手机自适应尺寸*/
