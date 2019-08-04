@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>new Vue</title>
+    <script src="Vue.js"></script>
+</head>
+
+<body>
+    <!-- html代码 -->
+    <div id="app">
+        <hello>
+            <!-- 如果只有一个slot插槽 那么不需要指定名称 -->
+            <p slot="插槽名称">我是额外的内容</p>
+        </hello>
+    </div>
+    <!-- js -->
+    <script>
+        // js代码
+        var vm = new Vue({
+            el: "#app",
+            components: {
+                hello: {
+                    template: `
+          <div>
+            <p>我是子组件中的内容</p>
+            <slot name="名称"></slot>
+          </div>
+        `
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
