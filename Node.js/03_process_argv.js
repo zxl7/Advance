@@ -13,6 +13,6 @@ let sum = num1 + num2;
 console.log('计算中.....');
 
 // 2秒后输出
-setTimeout(()=>{
-  console.log('结果为:' + sum );
-},2000);
+setTimeout(() => {
+  console.log('结果为:' + sum);
+}, 2000);
