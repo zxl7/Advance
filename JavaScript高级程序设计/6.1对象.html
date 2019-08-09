@@ -1,91 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>对象</title>
 </head>
+
 <body>
-	
-
-
 	<script>
-		// var mrDeng = { 
-		// 	name : "MrDeng",
-		// 	age : 30,
-		// 	sex :"male",
-		// 	health : 100,
-		// 	somke : function () {
-		// 		console.log('I am smoking ! cool');
-		// 		this.health --;
-		// 	},
-		// 	drink : function() {
-		// 		console.log( "i am drink");
-		// 		this.health ++;
-		// 	}
-		// }
-		
-
-
-
 		// xxxx.ssss ='sadas ';增加属性
 		// delete.xxx; 删除属性
+		//1.工厂模式
+		// 对象无法识别，因为所有的实例都指向一个原型
+		function createPerson() {
+			var obj = new Object();
+			obj.name = 'abc';
+			obj.sex = 'female';
+			obj.say = function () {
+				console.log('this.name')
+			}
+			return obj;
+		}
+
+		var person1 = createPerson('Bob')
+
+		//2.构造函数大驼峰式的命名
+		//实例可以识别为一个特定的类型
+		//缺点：每次创建实例时，每个方法都要被创建一次
+
+		function Car(name) {
+			this.name = 'bmw';
+			this.getName = function () {
+				console.log(this.name)
+			}
+
+		}
+		var car = new Car();
+
+		// 2.1构造函数优化
+		// 解决每个方法多次创建
+
+		function Car(name) {
+			this.name = 'bmw';
+			this.getName = getName
+
+		}
+		function getName() {
+			console.log(this.name)
+		}
+		var car = new Car();
+
+		//3. 原型模式
+		// 优点：方法不会重新创建
+		//缺点：1. 所有的属性和方法都共享 2. 不能初始化参数
+		function Person(name) {
+		}
+		person.prototype.name = 'Bob'
+		person.prototype.getName = function () {
+			console.log(this.name)
+		}
+
+		var person1 = new Person()
+
+		//3.1 原型模式优化
+		function Person(name) {
+
+		}
+
+		Person.prototype = {
+			name: 'kevin',
+			getName: function () {
+				console.log(this.name);
+			}
+		};
+
+		var person1 = new Person();
+		//优点：封装性好了一点
+		//缺点：重写了原型，丢失了constructor属性
 
 
-		// 对象的创建方法
-		// 1.var obj = {} plainObject 对象字面量/对象直接量
-		
-		// 2.构造函数 
-			// (1)自带的object()
-			// (2)自定义
-				"加参数可以改变函数"
+		//3.2 原型模式优化
+		function Person(name) {
+		}
 
-				// var obj = new Object();
-				// obj.name = 'abc';
-				// obj.sex = 'female';
-				// obj.say = function () {}
-				
-				// 构造函数
-				// 大驼峰式的命名
-				
-				// function Car () {
-				// 	this.name = 'bmw';
-				// 	this.height = '1400';
-				// 	this.weight = '1000';
-				// 	 
-				// }
-				// 
-				// var car = new Car();
-				// var car1 = new Car();
-				
-		// var str = "sfgdfgfdgdfg这是一个字符串!!!" ;
+		Person.prototype = {
+			constructor: Person,
+			name: 'kevin',
+			getName: function () {
+				console.log(this.name);
+			}
+		};
 
-		// function bytesLength(str) {
-		// 	方法一 
-		// 	var count = str.length;
-		// 	for (var i = 0; i < str.length; i++) {
-		// 		if (str.charCodeAt(i) > 255){
-		// 			count ++;
-		// 		}
-		// 	}
-		
-		// 方法二
-		// var count = 0;
-		// for (var i = 0; i < str.length; i++) {
-		// 	if (str.charCodeAt(i)>255) {
-		// 		count += 2;
-		// 	}else {
-		// 		count ++;
-		// 	} 
-		// }
-		// 		return count;
-		// }
-		
-		
+		var person1 = new Person();
+		// 优点：实例可以通过constructor属性找到所属构造函数
 
-		
-		
 
+		//4.组合模式
+		function Person(name) {
+			this.name = name
+		}
+
+		Person.prototype = {
+			constructor: Person,
+			getName: function () {
+				console.log(this.name)
+			}
+		}
+
+		var person1 = new Person()
+		// 该共享的共享，该私有的私有，使用最广泛的方式
 	</script>
-		
+
 </body>
+
 </html>

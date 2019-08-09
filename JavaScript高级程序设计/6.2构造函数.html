@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>构造函数</title>
 </head>
+
 <body>
 	构造函数的内部原理:
 	new
 	会让函数头部隐式的加上this = {} --- (var this = {})
-
 	执行this.xxx = XXX;
-
 	隐式的返回this(尾部retuen this;)
 
 
 	<script>
-	function Student (name,age,sex){
-		// var this = {
-		// 	name  : ''
-		// 	age :
-		// };
-		this.name = name;
-		this.age = age;
-		this.grade = 2017;
-		//return this;
-	}
+		function Student(name, age, sex) {
+			// var this = {
+			// 	name  : ''
+			// 	age :
+			// };
+			this.name = name;
+			this.age = age;
+			this.grade = 2017;
+			//return this;
+		}
 
-	var student = new Student ('zhanghua','18','male'); 
+		var student = new Student('zhanghua', '18', 'male'); 
 	</script>
 </body>
+
 </html>
