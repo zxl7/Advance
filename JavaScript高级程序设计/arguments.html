@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+
 <body>
 	<script>
 		var num = (function (n) {
-			if (n==1){
+			if (n == 1) {
 				return 1;
 			}
-			return n *arguments.callee(n-1);
+			return n * arguments.callee(n - 1);
 		}(20))
 		// arguments引用指向自身.
 	</script>
 </body>
+
 </html>
