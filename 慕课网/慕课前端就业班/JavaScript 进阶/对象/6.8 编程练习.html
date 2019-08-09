@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //补充代码
+        function Animal(name, age) {
+            this.name = name;
+            this.age = age;
+            this.getInfo = function () {
+                alert("动物名称:" + this.name + "动物年龄" + this.age)
+            }
+        }
+
+        function Cat(name, age) {
+            Animal.call(this, name, age)
+        }
+        function Dog(name, age) {
+            Animal.apply(this, [name, age])
+        }
+
+        var cat = new Cat("cat", 2)
+        var dog = new Dog("dog", 4)
+
+        cat.getInfo()
+        dog.getInfo()
+
+
+    </script>
+</body>
+
+</html>
