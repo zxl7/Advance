@@ -8,6 +8,27 @@
 
 <body>
     <script>
+        // 1.原型链继承
+        // 引用类型的属性被所有实例共享
+        function Parent() {
+            this.name = 'Bob'
+        }
+
+        Parent.prototype.getName = function () {
+            console.log(this.name)
+
+        }
+
+        function Child() {
+
+        }
+        Child.prototype = new Parent()
+        var child = new Child()
+
+        console.log(child1, getName())//Bob
+
+        // 2.借用构造函数
+        // 方法都在构造函数中定义，每次创建实例都会创建一遍方法
         // function Person(name,age,sex){
         // 	this.name = name;
         // 	this.age = age;
@@ -18,8 +39,59 @@
         // 	this.grade = grade;
         // }
         // var student = new Student();
-        // 
-        // 
+        function Parent() {
+            this.names = ['kevin', 'dais']
+        }
+
+        function Childs() {
+            Parent.call(this)
+        }
+
+        var child1 = new Child()
+        child1.names.push('add') //['kevin','dais','add']
+        console.log(child1.names)
+        var child2 = new Child()
+        console.log(child2.names) //['kevin','dais]
+
+        //组合继承
+        // 原型链继承和经典继承双剑合璧。
+        // 优点：融合原型链继承和构造函数的优点， 最常用的继承模式。
+
+        function Parent(name) {
+            this.name = name;
+            this.colors = ['red', 'blue', 'green'];
+        }
+
+        Parent.prototype.getName = function () {
+            console.log(this.name)
+        }
+
+        function Child(name, age) {
+
+            Parent.call(this, name);
+
+            this.age = age;
+
+        }
+
+        Child.prototype = new Parent();
+        Child.prototype.constructor = Child;
+
+        var child1 = new Child('kevin', '18');
+
+        child1.colors.push('black');
+
+        console.log(child1.name); // kevin
+        console.log(child1.age); // 18
+        console.log(child1.colors); // ["red", "blue", "green", "black"]
+
+        var child2 = new Child('daisy', '20');
+
+        console.log(child2.name); // daisy
+        console.log(child2.age); // 20
+        console.log(child2.colors); // ["red", "blue", "green"]
+
+
         // Father.prototype.LastName = "Deng";
         // function Father{
         // }
