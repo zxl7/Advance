@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第二天</title>
+</head>
+
+<body>
+  <script>
+    function Queue() {
+      var items = []
+      //push尾部增加
+      this.enqueue = function (item) {
+        items.push(item)
+      }
+      //shift出队列
+      this.dequeue = function () {
+        return items.shift()
+      }
+      // 返回队列最前
+      this.head = function () {
+        return items[0]
+      }
+      // 队列长度
+      this.size = function () {
+        return items.length
+      }
+      // 队列清空
+      this.clear = function () {
+        items = []
+      }
+      // 判断队列是否为空
+      this.isEmpty = function () {
+        return items.length == 0
+      }
+    }
+
+    // 约赛夫环
+    function delRing(arrList) {
+      // 将数组中的元素都放到队列中
+      var queue = new Queue()
+      for (let i = 0; i < arrList.length; i++) {
+        queue.enqueue(arrList[i])
+      }
+      var index = 0
+      while (queue.size() != 1) {
+        //弹出一个元素判断是否需要删除
+        var item = queue.dequeue()
+        index += 1
+        // 将不删除的元素放进队伍
+        if (index % 3 != 0) {
+          queue.enqueue(item)
+        }
+      }
+      return queue.head()
+    }
+
+    // 准备数据
+    var arrList = [];
+    for (let i = 0; i < 100; i++) {
+      arrList.push(i)
+    }
+    console.log(delRing(arrList));
+
+    // 斐波拉契数列
+    function fibonac(n) {
+      var queue = new Queue()
+      var index = 0
+      // 先放入序列的前两个数值
+      queue.enqueue(1)
+      queue.enqueue(1)
+      while (index < n - 2) {
+        // 出队列一个元素
+        var delItem = queue.dequeue()
+        // 取队列中的第一个元素
+        var headItem = queue.head()
+        var nextItem = delItem + headItem
+        // 将计算结果放入队列
+        queue.enqueue(nextItem)
+        index += 1
+      }
+      queue.dequeue()
+      return queue.head()
+    }
+    console.log(fibonac(7));
+
+    function QueueStack() {
+      var queue_1 = new Queue()
+      var queue_2 = new Queue()
+      var data_queue = null
+      var empty_queue = null
+
+      var init_queue = function () {
+        if (queue_1.isEmpty() && queue_2.isEmpty()) {
+          data_queue
+        }
+      }
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
