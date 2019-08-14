@@ -8,42 +8,55 @@
 
 <body>
     <script>
-    var obj = {
-        name: "abc",
-        age: "123",
-        card: ['visa', 'mastera'],
-        wife: {
-            name: 'sdsd',
-            son: {
-                name: "aaa"
-            }
-        }
-    }
-    var obj1 = {
-
-    }
-    <!-- 深层拷贝 -->
-    function deepClone(origin, target) {
-        var target = target || {},
-            toStr = Object.prototype.toString,
-            arrStr = "[object Array]";
-        for (var prop in origin) {
-            if (origin.hasOwnProperty(prop)) {
-                if (origin[prop] !== 'null' && typeof(origin[prop]) == 'object') {
-                    // if (toStr.call(origin[prop]) == arrStr) {
-                    //     target[prop] = [];
-                    // } else {
-                    //     target[prop] = {};
-                    // }
-                    target[prop] = toStr.call(origin[prop]) == arrStr ? [] : {};
-                    deepClone(origin[prop], target[prop]);
-                } else {
-                    target[prop] = origin[prop];
+        var obj = {
+            name: "abc",
+            age: "123",
+            card: ['visa', 'mastera'],
+            wife: {
+                name: 'sdsd',
+                son: {
+                    name: "aaa"
                 }
             }
         }
-        return target;
-    }
+        // 浅拷贝Object.assign()
+        var initalObj = object.assign({}, obj)
+        // 当object只有一层的时候，是深拷贝
+
+        // 浅拷贝Array.prototype.concat()
+        obj.concat()
+        // 浅拷贝Array.prototype.slice()
+        obj.slice()
+
+
+
+        // 1.深层拷贝JSON
+        let deepCopy = JSON.parse(JSON.stringify(obj))
+        // 用JSON.stringify将对象转成JSON字符串，再用JSON.parse()把字符串解析成对象，对象会开辟新的栈，实现深拷贝。
+        // 这种方法虽然可以实现数组或对象深拷贝,但不能处理函数
+
+        // 2.深层拷贝
+        function deepClone(origin, target) {
+            var target = target || {},
+                toStr = Object.prototype.toString,
+                arrStr = "[object Array]";
+            for (var prop in origin) {
+                if (origin.hasOwnProperty(prop)) {
+                    if (origin[prop] !== 'null' && typeof (origin[prop]) == 'object') {
+                        // if (toStr.call(origin[prop]) == arrStr) {
+                        //     target[prop] = [];
+                        // } else {
+                        //     target[prop] = {};
+                        // }
+                        target[prop] = toStr.call(origin[prop]) == arrStr ? [] : {};
+                        deepClone(origin[prop], target[prop]);
+                    } else {
+                        target[prop] = origin[prop];
+                    }
+                }
+            }
+            return target;
+        }
     </script>
 </body>
 
