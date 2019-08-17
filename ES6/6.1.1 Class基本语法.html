@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class的基本语法</title>
+</head>
+
+<body>
+    <script>
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = y
+        //         this.y = x
+        //     }
+
+        //     toString() {
+        //         return '(' + this.x + ',' + this.y + ')'
+        //     }
+        // }
+
+        // var p = new Point()
+        // p.toString()
+
+        // Object.assign(Point, prototype, {
+        //     toString() {}
+        //     toValue() {}
+
+        // })
+
+        //基本定义和生成实例
+        class Parent {
+            constructor(name = 'mukewa') {
+                this.name = name;
+            }
+        }
+
+        let v_parent = new Parent('v')
+        console.log('构造函数和实例', v_parent) {
+
+            // 继承
+            class Parent {
+                consturctor(name = 'kjjk') {
+                    this.name = name
+                }
+            }
+
+            class Child extends Parent { }
+            console.log('继承', new Child());
+        }
+    </script>
+</body>
+
+</html>
