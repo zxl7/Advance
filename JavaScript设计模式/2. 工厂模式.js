@@ -1,3 +1,6 @@
+// 将new操作单独封装
+// 遇到new时，就要考虑工厂模式
+
 class Product {
   constructor(name) {
     this.name = name
