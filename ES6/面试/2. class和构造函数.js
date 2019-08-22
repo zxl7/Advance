@@ -1,5 +1,4 @@
 // 构造函数
-
 function MathHandle(x, y) {
   this.x = x
   this.y = y
@@ -24,10 +23,11 @@ class MathHandle {
 
   }
 }
-// typeof MathHandle    //'functuon'
-// MathHandle === MathHandle.prototype.constructir  //true
+
+// typeof MathHandle    //'functuon'   证明class 是语法糖
+// MathHandle === MathHandle.prototype.constructir  //true  class的原型
+// m.__proyo__ === MathHandle.prototype   //true
+
 
 const m = new MathHandle(1, 2)
 console.log(m.add());
-
-// m.__proyo__ === MathHandle.prototype

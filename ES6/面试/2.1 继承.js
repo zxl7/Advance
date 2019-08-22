@@ -34,7 +34,7 @@ class Animal {
 
 class Dog extends Animal {
   constructor(name) {
-    super(name)
+    super(name) // super参数于constructor
     this.name = name
   }
   say() {
@@ -45,3 +45,10 @@ class Dog extends Animal {
 const dog = new Dog('哈士奇')
 dog.say()
 dog.eat()
+
+
+
+// 区别：
+// class更易读和理解
+// class语法贴合面向对象的写法
+// 本质语法糖，使用prototype
