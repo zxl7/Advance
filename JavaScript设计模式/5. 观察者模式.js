@@ -27,7 +27,6 @@ class Observer {
     this.name = name
     this.subject = subject
     this.subject.attach(this)
-
   }
   update() {
     console.log('${this.name} update,state:${this.subject.getState}')
