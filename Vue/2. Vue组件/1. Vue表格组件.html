@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>表格组件</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{header}}</h1>
+    <table>
+
+      <tbody>
+        <tr v-for="item in items">
+          <td>
+            <img :src="item.photoUrl" className="ui mini rounded image" />
+          </td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.phone}}</td>
+          <td>{{item.department}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--学习前端达人 公众号  -->
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        header: "前端达人开发部",
+        items: [
+          {
+            "firstName": "amelia",
+            "lastName": "austin",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/1.jpg",
+            "email": "amelia.austin@example.com",
+            "phone": "(651)-507-3705",
+            "department": "Engineering"
+          },
+          {
+            "firstName": "bobbie",
+            "lastName": "murphy",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/2.jpg",
+            "email": "bobbie.murphy@example.com",
+            "phone": "(925)-667-7604",
+            "department": "Management"
+          },
+          {
+            "firstName": "kristin",
+            "lastName": "terry",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/3.jpg",
+            "email": "kristin.terry@example.com",
+            "phone": "(021)-544-1184",
+            "department": "Sales"
+          },
+          {
+            "firstName": "brandon",
+            "lastName": "griffin",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/men/1.jpg",
+            "email": "brandon.griffin@example.com",
+            "phone": "(509)-317-9506",
+            "department": "Management"
+          },
+          {
+            "firstName": "tammy",
+            "lastName": "gibson",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/4.jpg",
+            "email": "tammy.gibson@example.com",
+            "phone": "(815)-727-0663",
+            "department": "Support"
+          },
+        ]
+      }
+    })
+  </script>
+</body>
+
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue新手入门篇（一）</title>
+  <style>
+    h1.ui.center.header {
+      margin-top: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main">
+    <h1 class="ui center aligned header">{{ heading }}</h1>
+    <div class="ui container">
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th @click="sortBy = 'firstName'">First Name</th>
+            <th @click="sortBy = 'lastName'">Last Name</th>
+            <th @click="sortBy = 'email'">Email</th>
+            <th @click="sortBy = 'phone'">Phone</th>
+            <th @click="sortBy = 'department'">Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(employee, index) in sortedEmployees" :key="index">
+            <td>
+              <img :src="employee.photoUrl" class="ui mini rounded image" />
+            </td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.department }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="6"></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#main",
+      data: {
+        heading: "前端达人开发部",
+        sortBy: 'department',
+        employees: [
+          {
+            "firstName": "amelia",
+            "lastName": "austin",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/1.jpg",
+            "email": "amelia.austin@example.com",
+            "phone": "(651)-507-3705",
+            "department": "Engineering"
+          },
+          {
+            "firstName": "bobbie",
+            "lastName": "murphy",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/2.jpg",
+            "email": "bobbie.murphy@example.com",
+            "phone": "(925)-667-7604",
+            "department": "Management"
+          },
+          {
+            "firstName": "kristin",
+            "lastName": "terry",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/3.jpg",
+            "email": "kristin.terry@example.com",
+            "phone": "(021)-544-1184",
+            "department": "Sales"
+          },
+          {
+            "firstName": "brandon",
+            "lastName": "griffin",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/men/1.jpg",
+            "email": "brandon.griffin@example.com",
+            "phone": "(509)-317-9506",
+            "department": "Management"
+          },
+          {
+            "firstName": "tammy",
+            "lastName": "gibson",
+            "photoUrl": "https://www.qianduandaren.com/demo/vue/img/women/4.jpg",
+            "email": "tammy.gibson@example.com",
+            "phone": "(815)-727-0663",
+            "department": "Support"
+          },
+        ]
+      },
+      computed: {
+        sortedEmployees() {
+          return this.employees.sort((a, b) => a[this.sortBy].localeCompare(b[this.sortBy]));
+        }
+      }
+    });
+  </script>
+</body>
+
+</html> -->
