@@ -9,28 +9,6 @@ import Error from '@/components/Error'
 
 Vue.use(Router)
 
-// export default new Router({
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'HelloWorld',
-//       component: HelloWorld
-//     },
-//     {
-//       path: '/Hi',
-//       name: 'Hi',
-//       component: Hi,
-//       children: [
-//         { path: 'hi1', name: 'hi1', component: Hi1 },
-//         { path: 'hi2', name: 'hi2', component: Hi2 }
-//       ]
-//     },
-//     {
-//       path: '*',
-//       component: Error
-//     }
-//   ]
-// })
 export default new Router({
   mode: 'history',
   // hash

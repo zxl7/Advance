@@ -29,28 +29,28 @@
     </transition>
   </div>
 </template>
-
 <script>
 export default {
   name: 'App',
   methods: {
-    Go () {
+    Go() {
       this.$router.go(1)
     },
-    goBack () {
+    goBack() {
       this.$router.go(-1)
     },
-    goHome () {
+    goHome() {
       this.$router.push('/')
     }
   }
 }
-</script>
 
+</script>
 <style>
 * {
   margin: 0px;
 }
+
 #app {
   text-align: center;
   color: #2c3e50;
@@ -63,6 +63,7 @@ export default {
   background-color: #ccc;
   height: 300px;
 }
+
 .right {
   float: right;
   width: 50%;
@@ -73,14 +74,18 @@ export default {
 .fade-enter {
   opacity: 0;
 }
+
 .fade-leave {
   opacity: 1;
 }
+
 .fade-enter-active {
   transition: opacity 0.5s;
 }
+
 .fade-leave-active {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
 </style>
