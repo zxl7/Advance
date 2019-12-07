@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
       msg: 'Vue终将被我征服！！'
     }
