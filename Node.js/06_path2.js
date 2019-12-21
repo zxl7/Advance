@@ -12,3 +12,4 @@ pathObj.base = 'mick_die.good';
 // 接收路径对象，转换成路径字符串
 myPath = path.format(pathObj);
 console.log(myPath);
+ 

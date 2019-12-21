@@ -13,4 +13,4 @@ const myPath = path.join(__dirname,'//one//','//two//','//three///');
 
 const str = './//abc////efg.js';
 let temp = path.resolve(str);
-console.log(temp);
+console.log(temp); 
