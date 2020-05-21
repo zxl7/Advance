@@ -1,50 +1,48 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 body {
-    background-color: #C0C4df;
-    font-size: 16px;
+  background-color: #c0c4df;
+  font-size: 16px;
 }
 
 a {
-    color: white;
+  color: white;
 }
 
 header {
-    background-color: #518FAB;
+  background-color: #518fab;
 }
 
 .middle {
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 3rem;
-
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
 }
 
 .right {
-    float: right;
-    margin-top: -1.5rem;
-    color: #fff;
-    font-size: 1rem;
+  float: right;
+  margin-top: -1.5rem;
+  color: #fff;
+  font-size: 1rem;
 }
 
 /* header完成 */
 .form {
-    text-align: center;
-    padding: 7rem;
+  text-align: center;
+  padding: 7rem;
 }
-
 
 /* 表单样式 */
 
 footer {
-    margin-top: 1rem;
-    background-color: #518FAB;
-    line-height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
+  margin-top: 1rem;
+  background-color: #518fab;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
