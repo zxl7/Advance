@@ -1,8 +1,10 @@
-module.exports = {
-  entry: {
-    app: './app.js'
-  },
+// ./webpack.config.js
+/** @type {import('webpack').Configuration} */
+const config = {
+  entry: './src/index.js',
   output: {
-    filename: '[name].[hash:5].js  '
-  }
+    filename: 'bundle.js'
+  },
+  mode: 'none'
 }
+module.exports = config
