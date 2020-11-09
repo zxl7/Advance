@@ -1,11 +1,12 @@
 module.exports = function b(ctx) {
   ctx.body = {
-    message: 'bbbbb',
+    message: '这是路径b',
   }
+  console.log(ctx)
 }
 
 // export default {
-//   aaa() {
+//   b() {
 //     ctx.body = {
 //       message: 'bbb',
 //     }

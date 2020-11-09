@@ -1,5 +1,6 @@
 const koa = require('koa')
-const statics = require('koa-statics')
+const path = require('path')
+const statics = require('koa-static')
 
 const app = new koa()
 
