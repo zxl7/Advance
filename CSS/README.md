@@ -65,6 +65,33 @@ div::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过�
 div::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去
 div::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
 div::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件注意此方案有兼容性问题，一般需要隐藏滚动条时我都是用一个色块通过定位盖上去，或者将子级元素调大，父级元素使用 overflow-hidden 截掉滚动条部分。暴力且直接。
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(#101f1c, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(#101f1c, 1);
+}
+
 ```
 
 5. 使用 css 写出一个三角形角标
