@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <h1>个人作品集</h1>
+    <h1>作品集</h1>
     <main class="main">
       <div class="rounds">
         <div class="round1"></div>
@@ -28,6 +27,11 @@ export default class Home extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+.home {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
 .main {
   height: 400px;
   width: 400px;
