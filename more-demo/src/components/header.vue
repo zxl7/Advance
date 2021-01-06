@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import routers from '@/router/routers'
+import routers from "@/router/routers";
 
 export default {
   data() {

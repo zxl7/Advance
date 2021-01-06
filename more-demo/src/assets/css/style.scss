@@ -1,0 +1,17 @@
+@mixin dfJcAc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin dfJsaAc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin dgJsa {
+  display: grid;
+  grid-template-columns: repeat(7, 14%);
+  justify-content: space-around;
+}

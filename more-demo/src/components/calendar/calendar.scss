@@ -1,0 +1,33 @@
+.calendar {
+  .calendar-header {
+    text-align: center;
+    height: 2.5rem;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 1rem;
+    color: #615f6c;
+    @include dfJcAc;
+  }
+
+  .days-tab-text {
+    margin: 0 1rem;
+  }
+  .calendar-view {
+    margin-top: 1rem;
+    .weeks-nav {
+      @include dgJsa;
+    }
+    .days-view {
+      display: grid;
+      grid-template-columns: repeat(7, 12%);
+      justify-content: space-around;
+    }
+    .days-item {
+      height: 3rem;
+      width: 3rem;
+      justify-self: center;
+      line-height: 3rem;
+      border-radius: 50%;
+    }
+  }
+}

@@ -16,7 +16,6 @@ export default {
 
 <style lang="scss">
 @import './assets/css/reset.css';
-@import './assets/css/style.scss';
 
 #app {
   font-family: serif;
