@@ -19,37 +19,23 @@ export default {
     }
   },
 
-  //   图片转base64
-  imageUrlToBase64(imageUrl, fileName) {
-    const image = new Image()
-    image.setAttribute('crossOrigin', 'anonymous')
-    image.src = imageUrl
-    image.onload = () => {
-      const canvas = document.createElement('canvas')
-      canvas.width = image.width
-      canvas.height = image.height
-      const context = canvas.getContext('2d')
-      context.drawImage(image, 0, 0, image.width, image.height)
-      const quality = 0.8
-      // base64类型
-      const dataURL = canvas.toDataURL('image/jpeg', quality)
-      // 图片的显示
-      this.fileList.push({ content: dataURL, file: 'File', name: fileName })
-      this.base64ToFile(dataURL, fileName)
-    }
+  // Blob文件
+  blobToFile(base64Data, fileName) {
+    const blob = this.base64ToBlob(`${base64Data.value}`, 'image/jpeg')
+    blob.lastModifiedDate = new Date()
+    blob.name = fileName
+    const file = { file: new File([blob], blob.name, { type: blob.type }) }
   },
-  // 转文件
-  base64ToFile(dataURL, fileName) {
-    const arr = dataURL.split(',')
+  base64ToBlob(dataUrl, type) {
+    // 生成Blob
+    const arr = dataurl.split(',')
     const mime = arr[0].match(/:(.*?);/)[1]
-    const bytes = atob(arr[1]) // 解码base64
-    let n = bytes.length
-    const ia = new Uint8Array(n)
-    // eslint-disable-next-line no-plusplus
+    const bstr = atob(dataUrl)
+    let n = bstr.length
+    const u8arr = new Uint8Array(n)
     while (n--) {
-      ia[n] = bytes.charCodeAt(n)
+      u8arr[n] = bstr.charCodeAt(n)
     }
-    const file = { file: new File([ia], fileName, { type: mime }) }
-    this.afterRead(file)
+    return new Blob([u8arr], { type })
   },
 }

@@ -7,8 +7,15 @@ var a2 = document.getElementById('iframe').contentWindow.document.getElementsByC
 ```
 
 ## Data 对象
-
 ```js
+  // 分钟处理为 0天0小时0分钟
+  averageTime(time) {
+    const days = Math.floor(time / 1440)
+    const hours = Math.floor(time % 1440 / 60)
+    const minute = time % 60
+    return `${days}天 ${hours}小时 ${minute}分钟`
+  },
+  
   formatDateTime () {
     let date = new Date()
     let y = date.getFullYear()
