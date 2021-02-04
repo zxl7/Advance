@@ -26,16 +26,14 @@ export default {
     blob.name = fileName
     const file = { file: new File([blob], blob.name, { type: blob.type }) }
   },
+
   base64ToBlob(dataUrl, type) {
-    // 生成Blob
-    const arr = dataurl.split(',')
-    const mime = arr[0].match(/:(.*?);/)[1]
     const bstr = atob(dataUrl)
     let n = bstr.length
     const u8arr = new Uint8Array(n)
     while (n--) {
       u8arr[n] = bstr.charCodeAt(n)
     }
-    return new Blob([u8arr], { type })
+    console.log(new Blob([u8arr], { type }))
   },
 }
