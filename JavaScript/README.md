@@ -34,6 +34,17 @@ var a2 = document.getElementById('iframe').contentWindow.document.getElementsByC
 ```
 
 ## 函数技巧
+```js
+// 获取基本类型
+function getType(obj){
+  let type  = typeof obj;
+  if (type !== "object") {    // 先进行typeof判断，如果是基础数据类型，直接返回
+    return type;
+  }
+  // 对于typeof返回结果是object的，再进行如下的判断，正则返回结果
+  return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/, '$1');  // 注意正则中间有个空格
+}
+```
 
 ```js
 // 函数触发一次
