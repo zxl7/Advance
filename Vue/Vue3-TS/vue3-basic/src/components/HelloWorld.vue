@@ -10,9 +10,9 @@
 import { computed, reactive, toRefs } from 'vue'
 
 interface DataProps {
-  msg: number
-  double: number
-  increase: () => void
+  msg: number;
+  double: number;
+  increase: () => void;
 }
 
 export default {
@@ -36,6 +36,7 @@ export default {
       })
     })
     const refData = toRefs(data)
+    console.log('%c 🍩 refData: ', 'font-size:20px;background-color: #42b983;color:#fff;', refData);
     return {
       ...data
     }
