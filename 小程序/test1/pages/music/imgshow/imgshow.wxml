@@ -1,0 +1,8 @@
+<view id="imgsection">
+  <view class="title">小程序显示图片</view>
+  <view class="imglist">
+    <image class="imgicon"
+      src="https://6669-first-azzkg-1300263326.tcb.qcloud.la/%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%901/z4NmixmjFpQ.jpg?sign=824f7fa83c20d14092f9c1640aafd88c&t=1615200201">
+    </image>
+  </view>
+</view>
