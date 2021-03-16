@@ -17,6 +17,12 @@ let routers = [
     title: '圆',
     component: () => import(/* webpackChunkName: "round" */ '../views/css3/round.vue'),
   },
+  {
+    path: '/vis',
+    name: 'vis',
+    title: '可视化📈',
+    component: () => import(/* webpackChunkName: "vis" */ '../views/vis/index.vue'),
+  },
 ]
 
 export default routers

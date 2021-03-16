@@ -28,10 +28,10 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { Options, Vue } from "vue-class-component"
 
 @Options({
-  components: {},
+  components: {}
 })
 export default class Home extends Vue {}
 </script>
@@ -85,7 +85,7 @@ export default class Home extends Vue {}
 .blubb-1:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -106,7 +106,7 @@ export default class Home extends Vue {}
 .blubb-2:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -127,7 +127,7 @@ export default class Home extends Vue {}
 .blubb-3:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -148,7 +148,7 @@ export default class Home extends Vue {}
 .blubb-4:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -169,7 +169,7 @@ export default class Home extends Vue {}
 .blubb-5:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -190,7 +190,7 @@ export default class Home extends Vue {}
 .blubb-6:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -211,7 +211,7 @@ export default class Home extends Vue {}
 .blubb-7:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -232,7 +232,7 @@ export default class Home extends Vue {}
 .blubb-8:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background: #fff;
@@ -253,7 +253,7 @@ export default class Home extends Vue {}
 .sparkle-1:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   background: #fff;
@@ -274,7 +274,7 @@ export default class Home extends Vue {}
 .sparkle-2:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 9px;
   height: 9px;
   background: #fff;
@@ -295,7 +295,7 @@ export default class Home extends Vue {}
 .sparkle-3:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   background: #fff;
@@ -316,7 +316,7 @@ export default class Home extends Vue {}
 .sparkle-4:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 11px;
   height: 11px;
   background: #fff;
@@ -337,7 +337,7 @@ export default class Home extends Vue {}
 .sparkle-5:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 12px;
   height: 12px;
   background: #fff;
@@ -358,7 +358,7 @@ export default class Home extends Vue {}
 .sparkle-6:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 13px;
   height: 13px;
   background: #fff;
@@ -379,7 +379,7 @@ export default class Home extends Vue {}
 .sparkle-7:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 14px;
   height: 14px;
   background: #fff;
@@ -400,7 +400,7 @@ export default class Home extends Vue {}
 .sparkle-8:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 15px;
   height: 15px;
   background: #fff;
@@ -421,7 +421,7 @@ export default class Home extends Vue {}
 .sparkle-9:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   background: #fff;
@@ -442,7 +442,7 @@ export default class Home extends Vue {}
 .sparkle-10:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 17px;
   height: 17px;
   background: #fff;
