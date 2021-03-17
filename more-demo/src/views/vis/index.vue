@@ -14,7 +14,7 @@ import Bar from "@/components/vis/Bar.vue"
 export default {
   components: {
     Polar,
-    Bar
+    Bar,
     Smoothed
   }
 }
