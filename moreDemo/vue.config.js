@@ -3,7 +3,7 @@ module.exports = {
   lintOnSave: false,
   chainWebpack: (config) => {
     config.plugin('html').tap((args) => {
-      args[0].title = '扬帆✨'
+      args[0].title = '扬帆起航 乘风破浪✨'
       return args
     })
   },
