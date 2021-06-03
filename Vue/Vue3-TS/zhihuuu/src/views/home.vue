@@ -1,16 +1,13 @@
 <template>
-  <ColumnList />
+  <div>1</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ColumnList from './components/ColumnList.vue'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    ColumnList,
-  },
+  components: {},
 })
 </script>
 
