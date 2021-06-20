@@ -14,3 +14,6 @@ build/Release
 
 dist
 node_modules
+.DS_Store
+.DS_Store
+Vue/.DS_Store
