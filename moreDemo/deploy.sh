@@ -8,6 +8,6 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f https://github.com/Xanadu-zxl/advance.git master:gh-pages
+git push -f https://github.com/zxl7/advance.git master:gh-pages
 cd -
 

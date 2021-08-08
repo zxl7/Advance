@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+
+    测试测试测试
     <h1>˘</h1>
     <div class="frame">
       <main class="center">
