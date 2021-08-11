@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-no-undef */
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 class TodoList extends Component {
   constructor(props) {
     super(props)
@@ -10,12 +9,12 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div>
+      <Fragment>
         <div>
-          <input value={this.state.inputValue} onChange = {this.handlerChangedInput}></input>
+          <input value={this.state.inputValue} onChange={this.handlerChangedInput}></input>
           <button>提交</button>
         </div>
-      </div>
+      </Fragment>
     )
   }
 
