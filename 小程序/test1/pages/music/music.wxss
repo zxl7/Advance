@@ -1,7 +1,0 @@
-.item-link{
-  margin: 20px;
-  padding:10px 15px;
-  background-color: #4ea6ec;
-  color: #fff;
-  border-radius: 4px;
-}
