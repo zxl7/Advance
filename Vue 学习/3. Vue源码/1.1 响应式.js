@@ -13,7 +13,7 @@ Object.defineProperty(obj, "name", {
         console.log('set', _name)
         return _name
     },
-    get: (newVal) => {
+    set: (newVal) => {
         console.log('get', newVal)
         _name = newVal
     }
