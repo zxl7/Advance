@@ -1,5 +1,4 @@
 # Vue 👊
-
 ## 同时引入两个UI
 `cnpm i babel-plugin-component -D`
 然后修改.babelrc：
