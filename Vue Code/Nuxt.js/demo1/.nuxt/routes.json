@@ -1,0 +1,16 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/zxl/Desktop/private/advance/Nuxt.js/demo1/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_dcb1825e"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/zxl/Desktop/private/advance/Nuxt.js/demo1/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_9d41ccd4"
+  }
+]
