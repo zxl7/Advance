@@ -22,7 +22,7 @@ export default {
   name: 'App',
   data () {
     return {
-      message: '拉勾教育'
+      message: '测试数据'
     }
   },
   methods: {

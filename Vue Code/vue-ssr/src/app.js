@@ -11,7 +11,7 @@ Vue.use(VueMeta)
 
 Vue.mixin({
   metaInfo: {
-    titleTemplate: '%s - 拉勾教育'
+    titleTemplate: '%s - 测试数据'
   }
 })
 
