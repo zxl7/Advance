@@ -115,3 +115,11 @@ Array.prototype.myFindIndex = function (fn, context) {
 
 // Array.prototype.concat()
 // concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+Array.prototype.myConcat = function () {
+  let arr = [...this]
+  arguments = [...arguments]
+  arguments.forEach((item) => {
+    Array.isArray(item) ? item.forEach((x) => arr.push(x)) : arr.push(item)
+  })
+  return arr
+}
